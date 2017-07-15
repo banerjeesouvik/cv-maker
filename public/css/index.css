@@ -1,0 +1,78 @@
+body, html{
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: arial,verdana;
+}
+#progress-bar{
+  position: absolute;
+  height: 6vh;
+  width: 100vw;
+  background-color: #222222;
+}
+#steps{
+  position: absolute;
+  top: 6vh;
+  height: 94vh;
+  width: 18vw;
+  background: linear-gradient(#222222, #444444);
+}
+#main-tab{
+  position: absolute;
+  top: 6vh;
+  left: 18vw;
+  float: none;
+  height: 94vh;
+  width: 59vw;
+  background-color: #eeeeee;
+}
+#view-pane{
+  position: absolute;
+  top: 6vh;
+  left: 77vw;
+  height: 94vh;
+  width: 22.5vw;
+  background-color: #eeeeee;
+  border-left: 1px solid gray;
+}
+.steps-element{
+  position: relative;
+  height: 5vh;
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+  padding-top: 1.5vh;
+  font-size: 16px;
+  color: #999;
+  font-family: Arial, verdana;
+  border: 1px solid transparent;
+}
+.steps-element:hover{
+  background-color: #eeeeee;
+  color: black;
+  border-radius: 2px;
+  cursor: pointer;
+}
+input[type=text]{
+  margin-left: 5vw;
+  margin-top: 10vh;
+  width: 80%;
+  height: 5vh;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+input[type=text]:focus{
+  background-color: #444;
+  color: #fff;
+}
+input::-webkit-input-placeholder{
+  padding: 10px;
+}
+input:focus::-webkit-input-placeholder{
+  color: #fff;
+}
