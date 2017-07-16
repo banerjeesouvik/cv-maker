@@ -22,5 +22,5 @@ function updateProgressBar() {
   $(`#progress-bar-div .point:eq(${currentPage + 1})`).css('background-color', 'cornflowerblue');
 }
 function loadNextPage() {
-  return $('#main-tab').load(`./pages/${++currentPage}.html`);
+  $('#main-tab').load(`./pages/${++currentPage}.html`);
 }
