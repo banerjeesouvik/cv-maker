@@ -1,6 +1,6 @@
-input[type=text]{
+input[type=text],input[type=email]{
   margin-left: 5vw;
-  margin-top: 10vh;
+  margin-top: 8vh;
   width: 80%;
   height: 5vh;
   background-color: #fff;
@@ -11,7 +11,7 @@ input[type=text]{
   border: 1px solid transparent;
   border-radius: 10px;
 }
-input[type=text]:focus{
+input[type=text]:focus,input[type=email]:focus{
   background-color: #444;
   color: #fff;
 }
@@ -24,6 +24,18 @@ input:focus::-webkit-input-placeholder{
 label{
   position: absolute;
   margin-left: 5vw;
-  margin-top: 8vh;
+  margin-top: 6vh;
   padding: 5px;
+}
+select{
+  position: relative;
+  margin-left: 11vw;
+  margin-top: 5vh;
+  padding: 5px;
+  width: 10vw;
+  height: 6vh;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 5px;
+  font-size: 15px;
 }

@@ -1,7 +1,16 @@
 <link rel="stylesheet" href="../css/pages.css">
 <form id="basic-info-form">
   <label>Name</label><br>
-  <input type="text" name="name" placeholder="Name" autofocus/><br>
+  <input type="text" name="name" placeholder="Name" required autofocus/><br>
   <label>Age</label><br>
-  <input type="text" name="age" placeholder="dd/mm/yyyy"/><br>
+  <input type="text" name="age" placeholder="dd/mm/yyyy" required/><br>
+  <label>Gender</label>
+  <select required>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select><br>
+  <label>Email id</label><br>
+  <input type="email" name="email" placeholder="youremailid@example.com" required/><br>
+  <label>Mobile</label><br>
+  <input type="text" name="mobile" placeholder="+91" required/>
 </form>
