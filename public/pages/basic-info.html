@@ -1,11 +1,13 @@
-<link rel="stylesheet" href="../css/pages.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <form id="basic-info-form">
   <label>Name</label><br>
   <input type="text" name="name" placeholder="Name" required autofocus/><br>
-  <label>Age</label><br>
-  <input type="text" name="age" placeholder="dd/mm/yyyy" required/><br>
-  <label>Gender</label>
-  <select required>
+  <label>Date of Birth</label><br>
+  <input type="text" name="dob" placeholder="dd/mm/yyyy" style="width:30%;" onfocus="(this.type='date')" onfocusout="(this.type='text')"required/><br>
+  <label>Gender</label><br>
+  <select class="styled-select" required>
     <option value="male">Male</option>
     <option value="female">Female</option>
   </select><br>
@@ -13,4 +15,5 @@
   <input type="email" name="email" placeholder="youremailid@example.com" required/><br>
   <label>Mobile</label><br>
   <input type="text" name="mobile" placeholder="+91" required/>
+  <button id="next-button">Save and next</button>
 </form>
