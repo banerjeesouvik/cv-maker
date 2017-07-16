@@ -74,10 +74,21 @@ input[type=text],input[type=email]{
   border: 1px solid transparent;
   border-radius: 10px;
 }
-input[type=text]:hover,input[type=email]:hover{
-  box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
+input[type=date]{
+  margin-left: 5vw;
+  margin-top: 8vh;
+  height: 5vh;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding:5px;
+  padding-left: 30px;
+  font-size: 15px;
 }
-input[type=text]:focus,input[type=email]:focus{
+input[type=date]::-webkit-inner-spin-button{
+    display:none;
+}
+input[type=text]:focus,input[type=email]:focus,input[type=date]:focus{
   background-color: #444;
   color: #fff;
 }
@@ -94,16 +105,18 @@ label{
   padding: 5px;
 }
 select{
-  position: relative;
-  margin-left: 11vw;
-  margin-top: 5vh;
-  padding: 5px;
-  width: 10vw;
-  height: 6vh;
+  margin-left: 5vw;
+  margin-top: 8vh;
+  height: 5vh;
+  background-color: #fff;
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: 10px;
   padding: 5px;
   font-size: 15px;
+}
+select:focus{
+  background-color: #444;
+  color: #fff;
 }
 button{
   position: relative;
