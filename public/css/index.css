@@ -58,3 +58,6 @@ body, html{
   background-color: #eee;
   color: black;
 }
+.progress-bar-completed{
+  background-color: cornflowerblue;
+}
