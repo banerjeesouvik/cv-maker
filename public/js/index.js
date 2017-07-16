@@ -5,13 +5,11 @@ $(document).ready(function () {
   $('.steps-element:first ').addClass('active-element');
 
   $('#main-tab').ready(function () {
-    $('#next-button').click(progressCompletion);
+    $('#next-button').click(function (e) {
+      e.preventDefault();
+      $('.point:first').css('background-color', 'cornflowerblue');
+      $('.line:first').css('background-color', 'cornflowerblue');
+    });
   });
+  
 });
-
-
-function progressCompletion(e) {
-  e.preventDefault();
-  $('.point:first').css('background-color', 'cornflowerblue');
-  $('.line:first').css('background-color', 'cornflowerblue');
-}
