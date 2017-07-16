@@ -1,0 +1,23 @@
+#progress-bar-div{
+  position: absolute;
+  margin: 2vh;
+  margin-left: 14vw;
+  height: 15px;
+  width: 75vw;
+}
+.point{
+  position: relative;
+  float: left;
+  height: 15px;
+  width: 15px;
+  border-radius: 20%;
+  background-color: #555;
+}
+.line{
+  position: relative;
+  float: left;
+  margin-top: 4px;
+  height: 50%;
+  width: 8%;
+  background-color: #555;
+}
