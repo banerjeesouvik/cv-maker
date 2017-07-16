@@ -1,0 +1,29 @@
+input[type=text]{
+  margin-left: 5vw;
+  margin-top: 10vh;
+  width: 80%;
+  height: 5vh;
+  background-color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 5px;
+  padding-left: 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+input[type=text]:focus{
+  background-color: #444;
+  color: #fff;
+}
+input::-webkit-input-placeholder{
+  padding: 10px;
+}
+input:focus::-webkit-input-placeholder{
+  color: #fff;
+}
+label{
+  position: absolute;
+  margin-left: 5vw;
+  margin-top: 8vh;
+  padding: 5px;
+}
