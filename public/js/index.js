@@ -3,7 +3,7 @@ $('#main-tab').load('./pages/0.html');
 $('.steps-element:first ').addClass('active-element');
 var currentPage = 0;
 $(document).ready(function () {
-  $('.forms').submit(function (e){
+  $('#form-0').submit(function (e){
     e.preventDefault();
     //saveData();
     changeStep();
