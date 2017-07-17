@@ -74,8 +74,22 @@ input[type=text],input[type=email]{
   border: 1px solid transparent;
   border-radius: 10px;
 }
-input[type=text]:hover,input[type=email]:hover{
-  box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
+input:hover{
+  box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);o
+}
+input[type=date]{
+  margin-left: 5vw;
+  margin-top: 8vh;
+  height: 5vh;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding:5px;
+  padding-left: 30px;
+  font-size: 15px;
+}
+input[type=date]::-webkit-inner-spin-button{
+    display:none;
 }
 input[type=date]{
    margin-left: 5vw;
@@ -112,15 +126,16 @@ select{
   margin-top: 8vh;
   height: 5vh;
   background-color: #fff;
-   border: 1px solid transparent;
+  border: 1px solid transparent;
   border-radius: 10px;
   padding: 5px;
   font-size: 15px;
 }
 select:focus{
-   background-color: #444;
-   color: #fff;
- }
+  background-color: #444;
+  color: #fff;
+}
+
 button{
   position: relative;
   margin-top: 4vh;
@@ -136,4 +151,31 @@ button{
 }
 button:hover{
   box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
+}
+#headline{
+  margin-left: 3vw;
+  color: #299;
+}
+#picture-box{
+  position: absolute;
+  margin-left: 2vw;
+  height: 20vw;
+  width: 20vw;
+  background-image: url('../images/user_profile_male.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#upload{
+  position:absolute;
+  padding: 2px;
+  right: 2%;
+  bottom: 0%;
+  height: 15%;
+  width: 15%;
+  background-image: url('../images/camera.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#upload:hover{
+  background-image: url('../images/camera2.png');
 }
