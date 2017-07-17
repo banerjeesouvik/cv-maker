@@ -2,9 +2,9 @@
   <label>Name</label><br>
   <input type="text" name="name" placeholder="Name" required autofocus/><br>
   <label>Date of Birth</label><br>
-  <input type="text" name="dob" placeholder="dd/mm/yyyy" required/><br>
-  <label>Gender</label>
-  <select required>
+  <input type="text" name="dob" placeholder="dd/mm/yyyy" style="width:30%;" onfocus="(this.type='date')"required/><br>
+  <label>Gender</label><br>
+  <select class="styled-select" required>
     <option value="male">Male</option>
     <option value="female">Female</option>
   </select><br>
@@ -13,4 +13,5 @@
   <label>Mobile</label><br>
   <input type="text" name="mobile" placeholder="+91" required/>
   <button id="next-button">Save and next</button>
+  <script src="../js/form-submit-listener.js"></script>
 </form>

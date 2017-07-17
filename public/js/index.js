@@ -1,16 +1,4 @@
-$('#progress-bar').load('./pages/progress-bar.html');
-$('#main-tab').load('./pages/0.html');
-$('.steps-element:first ').addClass('active-element');
 var currentPage = 0;
-$(document).ready(function () {
-  $('#form-0').submit(function (e){
-    e.preventDefault();
-    //saveData();
-    changeStep();
-    updateProgressBar();
-    loadNextPage();
-  });
-});
 function saveData() {
 }
 function changeStep() {
@@ -24,3 +12,8 @@ function updateProgressBar() {
 function loadNextPage() {
   $('#main-tab').load(`./pages/${++currentPage}.html`);
 }
+$(document).ready(function () {
+  $('#progress-bar').load('./pages/progress-bar.html');
+  $('#main-tab').load('./pages/0.html');
+  $('.steps-element:first ').addClass('active-element');
+});
