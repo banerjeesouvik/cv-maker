@@ -137,9 +137,9 @@ select:focus{
 }
 
 button{
-  position: relative;
-  margin-top: 4vh;
-  float: right;
+  position: absolute;
+  bottom: 4vh;
+  right: 4vw;
   margin-right: 5vw;
   width: 10vw;
   height: 5vh;
@@ -159,8 +159,8 @@ button:hover{
 #picture-box{
   position: absolute;
   margin-left: 2vw;
-  height: 20vw;
-  width: 20vw;
+  height: 25vw;
+  width: 22vw;
   background-image: url('../images/user_profile_male.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -172,10 +172,10 @@ button:hover{
   bottom: 0%;
   height: 15%;
   width: 15%;
-  background-image: url('../images/camera.png');
+  background-image: url('../images/camera2.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 #upload:hover{
-  background-image: url('../images/camera2.png');
+  background-image: url('../images/camera.png');
 }
