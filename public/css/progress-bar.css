@@ -13,6 +13,9 @@
   border-radius: 20%;
   background-color: #555;
 }
+.progresspoint{
+  border-radius: 20%;
+}
 .line{
   position: relative;
   float: left;
@@ -20,4 +23,9 @@
   height: 50%;
   width: 8%;
   background-color: #555;
+}
+.progressline,.progresspoint{
+  background-color: cornflowerblue;
+  width: 0%;
+  height: 100%;
 }

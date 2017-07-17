@@ -5,8 +5,8 @@ var div = $('<div class="point"></div>');
 div.css('background-color', 'cornflowerblue');
 $('#progress-bar-div').append(div);
   for(var i=0; i<10; i++){
-    $('#progress-bar-div').append('<div class="line"></div>');
-    $('#progress-bar-div').append('<div class="point"></div>');
+    $('#progress-bar-div').append('<div class="line"><div class="progressline"></div></div>');
+    $('#progress-bar-div').append('<div class="point"><div class="progresspoint"></div></div>');
   }
 
 </script>

@@ -6,8 +6,10 @@ function changeStep() {
   $(`#steps .steps-element:eq(${currentPage + 1})`).addClass('active-element');
 }
 function updateProgressBar() {
-  $(`#progress-bar-div .line:eq(${currentPage})`).css('background-color', 'cornflowerblue');
-  $(`#progress-bar-div .point:eq(${currentPage + 1})`).css('background-color', 'cornflowerblue');
+  var index = currentPage;
+  $(`.line .progressline:eq(${index})`).animate({width: '100%'},function () {
+    $(`.point .progresspoint:eq(${index})`).animate({width: '100%'});
+  });
 }
 function loadNextPage() {
   $('#main-tab').load(`./pages/${++currentPage}.html`);
