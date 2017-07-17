@@ -1,4 +1,4 @@
-var currentPage = 0;
+var currentPage = 1;
 function saveData() {
 }
 function changeStep() {
@@ -16,6 +16,6 @@ function loadNextPage() {
 }
 $(document).ready(function () {
   $('#progress-bar').load('./pages/progress-bar.html');
-  $('#main-tab').load('./pages/0.html');
+  $('#main-tab').load('./pages/1.html');
   $('.steps-element:first ').addClass('active-element');
 });
