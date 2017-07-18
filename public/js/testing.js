@@ -6,15 +6,15 @@ btn.onclick=function(){
   var request=new XMLHttpRequest();
   request.onreadystatechange= function(){
     if(request.readyState===XMLHttpRequest.DONE){
-      if(request.status=='SUCCESS'){
-        alert('You are registered successfully');
+      if(request.status==200){
+        alert('Data Fetched Succesfully');
+        console.log(request.responseText);
         
       }
-      else if(request.status=='FAIL')
-        alert('Either uername already exists or something went wrong. Please try again.');
+      else
+        alert('Data fetch not successfull');
     }
   }
-  request.open('GET','http://postalpincode.in/api/pincode/'+pin.value,true);
-  request.setRequestHeader('Content-Type','application/json');
+  request.open('GET','https://maps.googleapis.com/maps/api/geocode/json?address='+pin.value,true);
   request.send();
 }
