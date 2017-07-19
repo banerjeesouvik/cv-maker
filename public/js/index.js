@@ -1,4 +1,4 @@
-var currentPage = 1;
+var currentPage = 0;
 function saveData() {
 }
 function changeStep() {
@@ -16,19 +16,6 @@ function loadNextPage() {
 }
 $(document).ready(function () {
   $('#progress-bar').load('./pages/progress-bar.html');
-<<<<<<< HEAD
-  $('#main-tab').load('./pages/basic-info.html');
-=======
-  $('#main-tab').load('./pages/1.html');
->>>>>>> upstream/master
+  $('#main-tab').load('./pages/2.html');
   $('.steps-element:first ').addClass('active-element');
-
-  $('#main-tab').ready(function () {
-    $('#next-button').click(function (e) {
-      e.preventDefault();
-      $('.point:first').css('background-color', 'cornflowerblue');
-      $('.line:first').css('background-color', 'cornflowerblue');
-    });
-  });
-  
 });
