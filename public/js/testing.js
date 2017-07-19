@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var pin=document.getElementById('zip');
 var btn=document.getElementById('btn');
 
@@ -18,3 +19,17 @@ btn.onclick=function(){
   request.open('GET','https://maps.googleapis.com/maps/api/geocode/json?address='+pin.value,true);
   request.send();
 }
+=======
+
+$('#zip').focusout(function () {
+  var zipcode = $('#zip').val().trim();
+  var url = `https://postalpincode.in/api/pincode/${zipcode}`;
+  $.getJSON(url, function (json, status, obj) {
+    if(status != "error"){
+      console.log(json);
+    }else{
+      console.log(obj);
+    }
+  });
+});
+>>>>>>> upstream/master

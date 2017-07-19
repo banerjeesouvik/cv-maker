@@ -63,7 +63,11 @@ body, html{
 }
 input[type=text],input[type=email]{
   margin-left: 5vw;
+<<<<<<< HEAD
   margin-top: 8vh;
+=======
+  margin-top: 7vh;
+>>>>>>> upstream/master
   width: 80%;
   height: 5vh;
   background-color: #fff;
@@ -74,6 +78,12 @@ input[type=text],input[type=email]{
   border: 1px solid transparent;
   border-radius: 10px;
 }
+<<<<<<< HEAD
+=======
+input:hover{
+  box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);o
+}
+>>>>>>> upstream/master
 input[type=date]{
   margin-left: 5vw;
   margin-top: 8vh;
@@ -88,7 +98,25 @@ input[type=date]{
 input[type=date]::-webkit-inner-spin-button{
     display:none;
 }
+<<<<<<< HEAD
 input[type=text]:focus,input[type=email]:focus,input[type=date]:focus{
+=======
+input[type=date]{
+   margin-left: 5vw;
+   margin-top: 7vh;
+   height: 5vh;
+   background-color: #fff;
+   border: 1px solid transparent;
+   border-radius: 10px;
+   padding:5px;
+   padding-left: 30px;
+   font-size: 15px;
+ }
+ input[type=date]::-webkit-inner-spin-button{
+     display:none;
+  }
+input[type=text]:focus,input[type=email]:focus,,input[type=date]:focus{
+>>>>>>> upstream/master
   background-color: #444;
   color: #fff;
 }
@@ -118,19 +146,61 @@ select:focus{
   background-color: #444;
   color: #fff;
 }
+<<<<<<< HEAD
 button{
   position: relative;
   margin-top: 4vh;
   float: right;
+=======
+
+button{
+  position: absolute;
+  bottom: 4vh;
+  right: 4vw;
+>>>>>>> upstream/master
   margin-right: 5vw;
   width: 10vw;
   height: 5vh;
   border: 1px solid transparent;
   padding: 5px;
+<<<<<<< HEAD
   background-color: cornflowerblue;
+=======
+  background-color: #299;
+>>>>>>> upstream/master
   color: white;
   border-radius: 5px;
 }
 button:hover{
   box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
 }
+<<<<<<< HEAD
+=======
+#headline{
+  margin-left: 3vw;
+  color: #299;
+}
+#picture-box{
+  position: absolute;
+  margin-left: 2vw;
+  height: 25vw;
+  width: 22vw;
+  background-image: url('../images/user_profile_male.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#upload{
+  position:absolute;
+  padding: 2px;
+  right: 2%;
+  bottom: 0%;
+  height: 15%;
+  width: 15%;
+  background-image: url('../images/camera2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#upload:hover{
+  background-image: url('../images/camera1.png');
+}
+>>>>>>> upstream/master
