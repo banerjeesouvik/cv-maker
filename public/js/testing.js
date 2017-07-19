@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var pin=document.getElementById('zip');
 var btn=document.getElementById('btn');
 
