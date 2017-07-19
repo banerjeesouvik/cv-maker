@@ -136,7 +136,6 @@ select:focus{
   background-color: #444;
   color: #fff;
 }
-
 button{
   position: relative;
   margin-top: 4vh;
@@ -155,14 +154,14 @@ button:hover{
   box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
 }
 #headline{
-  margin-left: 3vw;
+  margin-left: 1vw;
   color: #299;
 }
 #picture-box{
   position: absolute;
   margin-left: 2vw;
-  height: 25vw;
-  width: 22vw;
+  height: 15vw;
+  width: 14vw;
   background-image: url('../images/user_profile_male.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
