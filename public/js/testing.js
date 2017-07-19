@@ -2,22 +2,37 @@
 var pin=document.getElementById('zip');
 var btn=document.getElementById('btn');
 
-btn.onclick=function(){
+function fill_address(data){
+    var city=document.getElementById('city');
+    var state=document.getElementById('state');
+    var country=document.getElementById('country');
 
-  var request=new XMLHttpRequest();
-  request.onreadystatechange= function(){
-    if(request.readyState===XMLHttpRequest.DONE){
-      if(request.status==200){
-        alert('Data Fetched Succesfully');
-        console.log(request.responseText);
-        
+    city.value=data.Circle;
+    state.value=data.State;
+    country.value=data.Country;
+}
+
+btn.onclick=function(){
+  var xhr=new XMLHttpRequest();
+  xhr.onreadystatechange= function(){
+    if(xhr.readyState===XMLHttpRequest.DONE){
+      if(xhr.status===200){
+        var responseText=JSON.parse(xhr.responseText);
+        if(responseText.Status=='Success'){
+          //alert('Data Fetched Succesfully');
+          fill_address(responseText.PostOffice[0]);
+        }
+        else
+          alert('Invalid Pincode');
       }
       else
-        alert('Data fetch not successfull');
+        alert('Some error occurred during data fetch');
     }
   }
-  request.open('GET','https://maps.googleapis.com/maps/api/geocode/json?address='+pin.value,true);
-  request.send();
+  xhr.open('POST','http://localhost:3000/pincode',true);
+  xhr.setRequestHeader('Content-Type','application/json');
+  xhr.send(JSON.stringify({pincode: pin.value}));
+
 }
 =======
 
