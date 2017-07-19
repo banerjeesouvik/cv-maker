@@ -14,13 +14,13 @@ app.post('/pincode', function (req, res) {
   var pin=req.body.pincode;
   request(`http://postalpincode.in/api/pincode/${pin}`,function(error,response,body){
 	if(error){
-		res.status(500).send(err.toString());
+		res.status(500).send(error.toString());
 	}
 	if(response){
 		res.status(response.statusCode).send(body.toString());
 	}
   })
-  
+
 });
 
 app.listen(port, () =>{

@@ -1,5 +1,3 @@
-
-
 if(window.File && window.FileReader){
   $('#picture').change(function (e) {
     var file = e.target.files[0];
