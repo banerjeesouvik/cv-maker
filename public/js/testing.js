@@ -28,22 +28,8 @@ btn.onclick=function(){
         alert('Some error occurred during data fetch');
     }
   }
-  xhr.open('POST','http://localhost:3000/pincode',true);
+  xhr.open('POST','/pincode',true);
   xhr.setRequestHeader('Content-Type','application/json');
   xhr.send(JSON.stringify({pincode: pin.value}));
 
 }
-=======
-
-$('#zip').focusout(function () {
-  var zipcode = $('#zip').val().trim();
-  var url = `https://postalpincode.in/api/pincode/${zipcode}`;
-  $.getJSON(url, function (json, status, obj) {
-    if(status != "error"){
-      console.log(json);
-    }else{
-      console.log(obj);
-    }
-  });
-});
->>>>>>> upstream/master
