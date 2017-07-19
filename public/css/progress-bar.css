@@ -21,8 +21,6 @@
   width: 8%;
   background-color: #555;
 }
-<<<<<<< HEAD
-=======
 .progressline,.progresspoint{
   background-color: #299;
   width: 0%;
@@ -32,4 +30,3 @@
   border-radius: 20%;
   background-color: #f44;
 }
->>>>>>> upstream/master

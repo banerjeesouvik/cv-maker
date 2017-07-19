@@ -1,17 +1,22 @@
 var pin=document.getElementById('zip');
-var btn=document.getElementById('btn');
 
 function fill_address(data){
     var city=document.getElementById('city');
+    var dist=document.getElementById('dist');
     var state=document.getElementById('state');
     var country=document.getElementById('country');
 
-    city.value=data.Circle;
-    state.value=data.State;
-    country.value=data.Country;
+    if(data.Circle!='NA')
+      city.value=data.Circle;
+    if(data.District!='NA')
+      dist.value=data.District;
+    if(data.State!='NA')
+      state.value=data.State;
+    if(data.Country!='NA')
+      country.value=data.Country;
 }
 
-btn.onclick=function(){
+pin.onchange=function(){
   var xhr=new XMLHttpRequest();
   xhr.onreadystatechange= function(){
     if(xhr.readyState===XMLHttpRequest.DONE){
@@ -31,5 +36,4 @@ btn.onclick=function(){
   xhr.open('POST','/pincode',true);
   xhr.setRequestHeader('Content-Type','application/json');
   xhr.send(JSON.stringify({pincode: pin.value}));
-
 }
