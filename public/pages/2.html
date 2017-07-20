@@ -1,11 +1,24 @@
 <form id="form-1" class="forms">
   <h2 id="headline">Choose your picture</h2>
   <div id="picture-box">
+    <div id="loading" style="display: none"></div>
     <input type="file" accept="image/*" id="picture" name='picture' style="display: none;"/>
     <div id="upload" onclick="$('#picture').click();"></div>
   </div>
-  <canvas style="display: none;" id="resize"></canvas>
+  <div id="canvas-holder" style="display: none;">
+    <canvas id="resize"></canvas>
+    <div id="button-holder">
+      <div id="plus" class="button"></div>
+      <div id="minus" class="button"></div>
+      <div id="left" class="button"></div>
+      <div id="right" class="button"></div>
+      <div id="up" class="button"></div>
+      <div id="down" class="button"></div>
+      <div id="crop" class="button"></div>
+    </div>
+  </div>
   <button id="next-button" style="position: absolute; bottom: 4vh; right: 5vh;">Save and next</button>
 </form>
 <script src="../js/upload-image.js"></script>
+<script src="../js/resize-listeners.js"></script>
 <script src="../js/form-submit-listener.js"></script>
