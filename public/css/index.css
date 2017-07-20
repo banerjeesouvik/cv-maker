@@ -188,5 +188,5 @@ button:hover{
   right: 4vw;
   height: 25vw;
   width: 25vw;
-  border: 1px solid #444;
+  border: 1px dashed #444;
 }

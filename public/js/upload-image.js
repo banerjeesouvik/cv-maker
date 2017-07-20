@@ -1,14 +1,17 @@
 
 if(window.File && window.FileReader){
   $('#picture').change(function (e) {
+    $('#resize').css('display','block');
     var file = e.target.files[0];
-    console.log(e.target.files);
     if(file.type.indexOf('image') == 0){
       var reader = new FileReader();
-      console.log(file.type);
       reader.onload = function (e) {
-          $('#picture-box').css('background-image', 'url(' + e.target.result + ')');
-          drawToCanvas(e.target.result);
+        drawToCanvas(e.target.result);
+        $('#resize').ready(function () {
+          var canvas = document.getElementById('resize');
+          var url = canvas.toDataURL('image/png');
+          $('#picture-box').css('background-image', `url(${url})`);
+        });
       }
       reader.readAsDataURL(file);
     }
@@ -22,10 +25,19 @@ function drawToCanvas(url){
 
   var image = new Image;
   image.onload = function () {
-    canvas.height = image.width;
+    canvas.height = image.height;
     canvas.width = image.width;
-    console.log(image.width + '' + image.height);
-    ctx.drawImage(image, 0, 0, 1000,1000);
+    var x = 0, y = 0, clipwidth, clipheight;
+    if(image.height <= image.width){
+      clipheight = image.height;
+      clipwidth = image.height;
+      x = (image.width - image.height) / 2;
+    }else{
+      clipheight = image.width;
+      clipwidth = image.width;
+        y = (image.height - image.width) / 2;
+    }
+    ctx.drawImage(image, x, y, clipwidth, clipheight, 0, 0, canvas.width, canvas.height);
   };
   image.src = url;
 }
