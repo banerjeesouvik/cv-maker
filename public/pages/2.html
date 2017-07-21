@@ -1,10 +1,17 @@
 <form id="form-1" class="forms">
   <h2 id="headline">Choose your picture</h2>
-  <div id="picture-box">
-    <div id="loading" style="display: none"></div>
-    <input type="file" accept="image/*" id="picture" name='picture' style="display: none;"/>
-    <div id="upload" onclick="$('#picture').click();"></div>
+  <div id="picture-holder">
+    <div id="picture-box">
+      <div id="loading" style="display: none"></div>
+      <input type="file" accept="image/*" id="picture" name='picture' style="display: none;"/>
+      <div id="upload" onclick="$('#picture').click();"></div>
+    </div>
+    <div id="messageBox" style="display: none;">
+      <span id="errorIcon"></span>
+      <span id="message"></span>
+    </div>
   </div>
+
   <div id="canvas-holder" style="display: none;">
     <canvas id="resize"></canvas>
     <div id="button-holder">
@@ -16,6 +23,7 @@
       <div id="down" class="button"></div>
       <div id="crop" class="button"></div>
     </div>
+    <p id="infor" style="color: #299; text-align: center;">Use the buttons to resize and set your picture</p>
   </div>
   <button id="next-button" style="position: absolute; bottom: 4vh; right: 5vh;">Save and next</button>
 </form>

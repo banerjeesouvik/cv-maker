@@ -12,8 +12,11 @@ $('.button').click(function () {
     goUp();
   if(id == "down")
     goDown();
-  if(id == "crop")
+  if(id == "crop"){
+    $('#loading').show();
     setImage();
+  }
+
 });
 function zoomPlus(){
   if(clipwidth >= min * .3){
@@ -66,4 +69,5 @@ function setImage(){
   var canvas = document.getElementById('resize');
   var url = canvas.toDataURL('image/png');
   $('#picture-box').css('background-image', `url(${url})`);
+  $('#loading').hide();
 }

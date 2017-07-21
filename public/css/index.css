@@ -62,6 +62,18 @@ body, html{
 .progress-bar-completed{
   background-color: cornflowerblue;
 }
+.completed-step{
+  position: absolute;
+  padding: 1%;
+  top: 15%;
+  left: 5%;
+  height: 3vh;
+  width: 3vh;
+  background-image: url('../images/icons/check1.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: none;
+}
 input[type=text],input[type=email]{
   margin-left: 5vw;
   margin-top: 6vh;
@@ -116,6 +128,12 @@ input::-webkit-input-placeholder{
 input:focus::-webkit-input-placeholder{
   color: #fff;
 }
+.small_field{
+  width: 30%;
+}
+.big_field{
+  width: 70%;
+}
 label{
   position: absolute;
   margin-left: 5vw;
@@ -157,9 +175,14 @@ button:hover{
   margin-left: 1vw;
   color: #299;
 }
-#picture-box{
+#picture-holder{
   position: relative;
   margin-left: 2vw;
+  height: 16vw;
+  width: 14vw;
+}
+#picture-box{
+  position: relative;
   height: 16vw;
   width: 14vw;
   background-image: url('../images/user_profile_male.jpg');
@@ -173,7 +196,7 @@ button:hover{
   left: 40%;
   height: 20%;
   width: 20%;
-  background-image: url('../images/loading.gif');
+  background-image: url('../images/icons/loading.gif');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -184,13 +207,33 @@ button:hover{
   bottom: 0%;
   height: 15%;
   width: 15%;
-  background-image: url('../images/camera2.png');
+  background-image: url('../images/icons/camera2.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 #upload:hover{
-  background-image: url('../images/camera1.png');
+  background-image: url('../images/icons/camera1.png');
   cursor: pointer;
+}
+#messageBox{
+  position: relative;
+  height: 10px;
+  width: max-content;
+  margin-top: 2%;;
+  font-size: 12px;
+  color: red;
+}
+#errorIcon{
+  position: relative;
+  float: left;
+  height: 15px;
+  width: 15px;
+  background-image: url('../images/icons/error.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#message{
+  margin: 3px;
 }
 #canvas-holder{
   position: absolute;
@@ -224,25 +267,26 @@ button:hover{
   border-radius: 50%;
 }
 #plus{
-  background-image: url('../images/plus.png');
+  background-image: url('../images/icons/plus.png');
 }
 #minus{
-  background-image: url('../images/minus.png');
+  background-image: url('../images/icons/minus.png');
 }
 #up{
-  background-image: url('../images/up.png');
+  background-image: url('../images/icons/up.png');
 }
 #down{
-  background-image: url('../images/down.png');
+  background-image: url('../images/icons/down.png');
 }
 #left{
-  background-image: url('../images/left.ico');
+  background-image: url('../images/icons/left.ico');
 }
 #right{
-  background-image: url('../images/right.png');
+  background-image: url('../images/icons/right.png');
 }
 #crop{
-  background-image: url('../images/crop.png');
+  background-image: url('../images/icons/checked.png');
+  background-color: #ccc;
 }
 .button:hover{
   cursor: pointer;
@@ -250,7 +294,6 @@ button:hover{
   box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
 }
 #crop:hover{
-  border-radius: 15%;
   background-color: #299;
 }
 #crop:active{
@@ -260,4 +303,8 @@ button:hover{
 .button:active{
   background-color: white;
   box-shadow: none;
+}
+#pin_status{
+  margin-left: 1vw;
+  display: inline;
 }
