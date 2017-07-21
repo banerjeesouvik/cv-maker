@@ -12,12 +12,13 @@ app.use(bodyParser.json());
 
 app.post('/pincode', function (req, res) {
   var pin=req.body.pincode;
+  //console.log(pin);
   request(`http://postalpincode.in/api/pincode/${pin}`,function(error,response,body){
 	if(error){
-		res.status(500).send(error.toString());
+		res.status(500).send(error);
 	}
 	if(response){
-		res.status(response.statusCode).send(body.toString());
+		res.status(response.statusCode).send(body);
 	}
   })
 

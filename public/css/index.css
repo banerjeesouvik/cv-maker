@@ -62,10 +62,15 @@ body, html{
 .progress-bar-completed{
   background-color: cornflowerblue;
 }
+.small_field{
+  width: 30%;
+}
+.big_field{
+  width: 70%;
+}
 input[type=text],input[type=email]{
   margin-left: 5vw;
   margin-top: 6vh;
-  width: 80%;
   height: 5vh;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -74,6 +79,7 @@ input[type=text],input[type=email]{
   padding-left: 20px;
   border: 1px solid transparent;
   border-radius: 10px;
+  display: inline-block;
 }
 input:hover{
   box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);o
@@ -88,24 +94,11 @@ input[type=date]{
   padding:5px;
   padding-left: 30px;
   font-size: 15px;
+  display: inline-block;
 }
 input[type=date]::-webkit-inner-spin-button{
     display:none;
 }
-input[type=date]{
-   margin-left: 5vw;
-   margin-top: 6vh;
-   height: 5vh;
-   background-color: #fff;
-   border: 1px solid transparent;
-   border-radius: 10px;
-   padding:5px;
-   padding-left: 30px;
-   font-size: 15px;
- }
- input[type=date]::-webkit-inner-spin-button{
-     display:none;
-  }
 input[type=text]:focus,input[type=email]:focus,,input[type=date]:focus{
   background-color: #444;
   color: #fff;
@@ -179,4 +172,8 @@ button:hover{
 }
 #upload:hover{
   background-image: url('../images/camera1.png');
+}
+#pin_status{
+  margin-left: 1vw;
+  display: inline;
 }

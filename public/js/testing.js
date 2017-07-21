@@ -1,39 +1,39 @@
-var pin=document.getElementById('zip');
-
-function fill_address(data){
-    var city=document.getElementById('city');
-    var dist=document.getElementById('dist');
-    var state=document.getElementById('state');
-    var country=document.getElementById('country');
-
-    if(data.Circle!='NA')
-      city.value=data.Circle;
-    if(data.District!='NA')
-      dist.value=data.District;
-    if(data.State!='NA')
-      state.value=data.State;
-    if(data.Country!='NA')
-      country.value=data.Country;
-}
-
-pin.onchange=function(){
-  var xhr=new XMLHttpRequest();
-  xhr.onreadystatechange= function(){
-    if(xhr.readyState===XMLHttpRequest.DONE){
-      if(xhr.status===200){
-        var responseText=JSON.parse(xhr.responseText);
-        if(responseText.Status=='Success'){
-          //alert('Data Fetched Succesfully');
-          fill_address(responseText.PostOffice[0]);
-        }
-        else
-          alert('Invalid Pincode');
-      }
-      else
-        alert('Some error occurred during data fetch');
-    }
+$(document).ready(function(){
+  function fill_address(data){
+      if(data.Circle != 'NA')
+        $('#city').val(data.Circle);
+      if(data.District != 'NA')
+        $('#dist').val(data.District);
   }
-  xhr.open('POST','/pincode',true);
-  xhr.setRequestHeader('Content-Type','application/json');
-  xhr.send(JSON.stringify({pincode: pin.value}));
-}
+
+  $('#zip').on('keyup',function(){
+    if(this.value.length==6){
+      $('#pin_status').css('color','green').text('Validating...');
+      //console.log($('#zip').val());
+      $.ajax({
+        url: '/pincode',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({pincode: $('#zip').val()})
+      }).done(function(data){
+          //console.log(JSON.parse(data));
+          var data_json = JSON.parse(data);
+          if(data_json.Status == 'Success'){
+            fill_address(data_json.PostOffice[0]);
+            $('#pin_status').css('color','green').text('Valid Pincode. Address autofilled.');
+            $('input:disabled').prop('disabled',false);
+          }
+          else {
+            $('#pin_status').css('color','red').text('Invalid Pincode');
+            $('input:disabled').prop('disabled',true);
+          }
+        })
+        .fail(function(){
+          //console.log('Some error occurred during data fetch');
+          $('#pin_status').css('color','red').text('Error in address fetch');
+        })
+    }
+
+
+  });
+});

@@ -1,16 +1,17 @@
 <form id="form-1" class="forms">
   <label>Address</label><br>
-  <input type="text" id="address" name="address" placeholder="Your address.."autofocus/><br>
+  <input type="text" id="address" name="address" placeholder="Locality or Street Name" class='big_field' autofocus/><br>
   <label>PIN Code</label><br>
-  <input type="text" id="zip" name="pin" placeholder="PIN" required/><br>
+  <input type="text" id="zip" name="pin" placeholder="PIN" class='small_field' required/>
+  <div id='pin_status'></div><br>
   <label>City</label><br>
-  <input type="text" id="city" name="city" placeholder="City" required/><br>
+  <input class='small_field' type="text" id="city" name="city" placeholder="City" class='small_field' disabled required/><br>
   <label>District</label><br>
-  <input type="text" id="dist" name="dist" placeholder="District" required/><br>
+  <input class='small_field' type="text" id="dist" name="dist" placeholder="District" class='small_field' disabled required/><br>
   <label>State</label><br>
-  <input type="text" id="state" name="state" placeholder="State" required/><br>
+  <input class='small_field' type="text" id="state" name="state" placeholder="State" class='small_field' disabled required/><br>
   <label>Country</label><br>
-  <input type="text" id="country" name="country" placeholder="Country" required/><br>
+  <input class='small_field' type="text" id="country" name="country" placeholder="Country" class='small_field' disabled required/><br>
   <button id="next-button">Save and next</button>
 </form>
 <script src="../js/testing.js"></script>
