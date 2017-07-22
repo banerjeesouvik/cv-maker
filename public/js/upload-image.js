@@ -3,11 +3,11 @@ if(window.File && window.FileReader){
     $('#loading').css('visibility', 'visible');
     var file = e.target.files[0];
     if(file.size >= 1024 * 1024 * 2){
-      $('#messageBox').show();
+      $('#messageBox').css('visibility', 'visible');;
       $('#loading').css('visibility', 'hidden');
       return $('#message').text("Choose a lower quality image.");
     }
-    $('#messageBox').hide();
+    $('#messageBox').css('visibility', 'hidden');
     if(file.type.indexOf('image') == 0){
       var reader = new FileReader();
       reader.onload = function (e) {
