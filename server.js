@@ -11,19 +11,18 @@ app.use(express.static(publicPath));
 app.use(bodyParser.json());
 
 app.post('/pincode', function (req, res) {
-  var pin=req.body.pincode;
-  //console.log(pin);
-  request(`http://postalpincode.in/api/pincode/${pin}`,function(error,response,body){
-	if(error){
+  var pin = req.body.pincode;
+  request(`http://postalpincode.in/api/pincode/${pin}`, function(error, response, body) {
+	if(error) {
 		res.status(500).send(error);
 	}
-	if(response){
+	if(response) {
 		res.status(response.statusCode).send(body);
 	}
-  })
+});
 
 });
 
 app.listen(port, () =>{
   console.log(`Server deployed on port ${port}`);
-})
+});
