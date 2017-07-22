@@ -4,10 +4,11 @@ $(document).ready(function(){
       var value= $(this).val().replace(/[^\d\.]/g, '');
       $(this).val(value);
       if(value.length == 6){
-        $('#pin_status').css('color','green').text('Validating...');
+        $('#pin_status').css('background-image', 'url("../images/icons/loading.gif")');
         ajax_call(value);
       }
-      else {
+      else
+        if(value.length != 0){
         disable_field();
       }
     },
@@ -15,7 +16,10 @@ $(document).ready(function(){
       var value= $(this).val().replace(/[^\d\.]/g, '');
       $(this).val(value);
       if(value.length == 6){
-        $('#pin_status').css('color','green').text('Validating...');
+        $('#pin_status').css({
+          'visibility': 'visible',
+          'background-image': 'url("../images/icons/loading.gif")'
+        });
         ajax_call(value);
       }
       else if (value.length > 6) {
@@ -31,13 +35,11 @@ function ajax_call(value) {
     method: 'POST',
     contentType: 'application/json',
     data: JSON.stringify({pincode: value})
-  }).done(function(data){
-      //console.log(JSON.parse(data));
-      var data_json = JSON.parse(data);
-      if(data_json.Status == 'Success'){
-        fill_address(data_json.PostOffice[0]);
-        $('#pin_status').css('color','green').text('Valid Pincode. Address autofilled.');
-        $('input:disabled').prop('disabled',false);
+  }).done(function(data_json){
+      if(data_json.status == 'Success'){
+        $('#pin_status').css('background-image', 'url("../images/icons/check1.png")');
+        fill_address(data_json);
+        $('input:disabled').prop('disabled', false);
         $('#city').focus();
       }
       else {
@@ -45,13 +47,12 @@ function ajax_call(value) {
       }
     })
     .fail(function(){
-      //console.log('Some error occurred during data fetch');
-      $('#pin_status').css('color','red').text('Error in address fetch');
-    })
+      $('#pin_status').css('background-image', 'url("../images/icons/error.png")');
+    });
 }
 
 function disable_field(){
-  $('#pin_status').css('color','red').text('Invalid Pincode');
+  $('#pin_status').css('background-image', 'url("../images/icons/error.png")');
   $('#zip').focus();
   $('#city').val('');
   $('#dist').val('');
@@ -59,10 +60,10 @@ function disable_field(){
   $('#country').val('');
 }
 function fill_address(data){
-    if(data.Circle != 'NA')
-      $('#city').val(data.Circle);
-    if(data.District != 'NA')
-      $('#dist').val(data.District);
-    $('#state').val(data.State);
-    $('#country').val(data.Country);
+    if(data.city != 'NA')
+      $('#city').val(data.city);
+    if(data.dist != 'NA')
+      $('#dist').val(data.dist);
+    $('#state').val(data.state);
+    $('#country').val(data.country);
 }

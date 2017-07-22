@@ -86,10 +86,15 @@ body, html{
   background-repeat: no-repeat;
   display: none;
 }
+.small_field{
+  width: 30%;
+}
+.big_field{
+  width: 70%;
+}
 input[type=text],input[type=email]{
   margin-left: 5vw;
   margin-top: 6vh;
-  width: 80%;
   height: 5vh;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -116,20 +121,6 @@ input[type=date]{
 input[type=date]::-webkit-inner-spin-button{
     display:none;
 }
-input[type=date]{
-   margin-left: 5vw;
-   margin-top: 6vh;
-   height: 5vh;
-   background-color: #fff;
-   border: 1px solid transparent;
-   border-radius: 10px;
-   padding:5px;
-   padding-left: 30px;
-   font-size: 15px;
- }
- input[type=date]::-webkit-inner-spin-button{
-     display:none;
-  }
 input[type=text]:focus,input[type=email]:focus,,input[type=date]:focus{
   background-color: #444;
   color: #fff;
@@ -140,12 +131,7 @@ input::-webkit-input-placeholder{
 input:focus::-webkit-input-placeholder{
   color: #fff;
 }
-.small_field{
-  width: 30%;
-}
-.big_field{
-  width: 70%;
-}
+
 label{
   position: absolute;
   margin-left: 5vw;
@@ -315,6 +301,11 @@ button:hover{
   box-shadow: none;
 }
 #pin_status{
-  margin-left: 1vw;
-  display: inline;
+  position: absolute;
+  margin-top: 7.5vh;
+  height: 4vh;
+  width: 4vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  visibility: hidden;
 }
