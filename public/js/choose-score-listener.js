@@ -1,8 +1,5 @@
 $('div #cgpa').addClass('score-active');
-$('span').click(function () {
-  alert('clicked');
-});
-$('span .span-score').click( function () {
+$(document.body).on('click', 'span .span-score', function () {
   var id = this.id;
   var parent = $(this).closest('div').attr('id');
   $(`#${parent} .span-score`).removeClass('score-active');
