@@ -173,7 +173,30 @@ button:hover{
 #upload:hover{
   background-image: url('../images/camera1.png');
 }
-#pin_status{
+.loading{
   margin-left: 1vw;
-  display: inline;
+  margin-top: 7vw;
+  height: 3vh;
+  width: 3vh;
+  background: url(../images/icons/ajax-loader.gif);
+  background-size: 100% 100%;
+  position: absolute;
+}
+.success{
+  margin-left: 1vw;
+  margin-top: 7vw;
+  height: 3vh;
+  width: 3vh;
+  background: url(../images/icons/check1.png);
+  background-size: 100% 100%;
+  position: absolute;
+}
+.fail{
+  margin-left: 1vw;
+  margin-top: 7vw;
+  height: 3vh;
+  width: 3vh;
+  background: url(../images/icons/error.png);
+  background-size: 100% 100%;
+  position: absolute;
 }

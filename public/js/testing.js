@@ -4,7 +4,7 @@ $(document).ready(function(){
       var value= $(this).val().replace(/[^\d\.]/g, '');
       $(this).val(value);
       if(value.length == 6){
-        $('#pin_status').css('color','green').text('Validating...');
+        $('#pin_status').removeClass('success fail').addClass('loading');
         ajax_call(value);
       }
       else {
@@ -15,7 +15,7 @@ $(document).ready(function(){
       var value= $(this).val().replace(/[^\d\.]/g, '');
       $(this).val(value);
       if(value.length == 6){
-        $('#pin_status').css('color','green').text('Validating...');
+        $('#pin_status').removeClass('success fail').addClass('loading');
         ajax_call(value);
       }
       else if (value.length > 6) {
@@ -36,7 +36,7 @@ function ajax_call(value) {
       var data_json = JSON.parse(data);
       if(data_json.Status == 'Success'){
         fill_address(data_json.PostOffice[0]);
-        $('#pin_status').css('color','green').text('Valid Pincode. Address autofilled.');
+        $('#pin_status').removeClass('loading').addClass('success');
         $('input:disabled').prop('disabled',false);
         $('#city').focus();
       }
@@ -46,12 +46,12 @@ function ajax_call(value) {
     })
     .fail(function(){
       //console.log('Some error occurred during data fetch');
-      $('#pin_status').css('color','red').text('Error in address fetch');
+      $('#pin_status').css('color','red').text('Error during fetching address');
     })
 }
 
 function disable_field(){
-  $('#pin_status').css('color','red').text('Invalid Pincode');
+  $('#pin_status').removeClass('loading success').addClass('fail');
   $('#zip').focus();
   $('#city').val('');
   $('#dist').val('');
