@@ -16,13 +16,15 @@ if(window.File && window.FileReader){
         drawToCanvas(e.target.result);
         $('#canvas-holder').ready(function () {
           $('#canvas-holder').css('visibility', 'visible');
-          $('#loading').css('visibility', 'hidden');
           var canvas = document.getElementById('resize');
           var url = canvas.toDataURL('image/png');
           $('#picture-box').css('background-image', `url(${url})`);
-          //$('#loading').css('visibility', 'hidden');
           $('#infor').fadeOut(8000);
+          $('#resize').ready(function () {
+            $('#loading').css('visibility', 'hidden');
+          });
         });
+
       }
       reader.readAsDataURL(file);
     }
