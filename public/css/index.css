@@ -87,12 +87,12 @@ body, html{
   display: none;
 }
 .small_field{
-  width: 30%;
+  width: 20vw;
 }
 .big_field{
-  width: 70%;
+  width: 45vw;
 }
-input[type=text],input[type=email]{
+input[type=text],input[type=email],textarea,input[type=number]{
   margin-left: 5vw;
   margin-top: 6vh;
   height: 5vh;
@@ -104,8 +104,14 @@ input[type=text],input[type=email]{
   border: 1px solid transparent;
   border-radius: 10px;
 }
+
+
 input:hover{
-  box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);o
+  box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
+}
+textarea{
+  height: 12vh;
+  resize: none;
 }
 input[type=date]{
   margin-left: 5vw;
@@ -118,17 +124,17 @@ input[type=date]{
   padding-left: 30px;
   font-size: 15px;
 }
-input[type=date]::-webkit-inner-spin-button{
+::-webkit-inner-spin-button{
     display:none;
 }
-input[type=text]:focus,input[type=email]:focus,,input[type=date]:focus{
+input[type=text]:focus, input[type=email]:focus, input[type=date]:focus, textarea:focus{
   background-color: #444;
   color: #fff;
 }
-input::-webkit-input-placeholder{
+::-webkit-input-placeholder{
   padding: 10px;
 }
-input:focus::-webkit-input-placeholder{
+:focus::-webkit-input-placeholder{
   color: #fff;
 }
 
@@ -308,4 +314,42 @@ button:hover{
   background-size: 100% 100%;
   background-repeat: no-repeat;
   visibility: hidden;
+}
+#score-holder{
+  position: relative;
+  margin-left: 5vw;
+}
+.span-score{
+  position: relative;
+  width: max-content;
+  height: 2vw;
+  padding: 1%;
+  border: 1px solid #999;
+  border-radius: 10px;
+}
+.span-score:hover{
+  cursor: pointer;
+  box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
+}
+.score-active{
+  background-color: #299;
+  color: #fff;
+  border: 1px solid transparent;
+}
+legend{
+  color: #f44;
+  font-weight: bold;
+}
+.education{
+  position: relative;
+  margin: .5%;
+  margin-top: 2%;
+  padding: 2%;
+  height: auto;
+  width: 94.5%;
+  border: 2px solid #299;
+  border-radius: 10px;
+}
+.education .big_field{
+  width: 42vw;
 }

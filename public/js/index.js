@@ -24,6 +24,10 @@ function loadNextPage() {
 }
 $(document).ready(function () {
   $('#progress-bar').load('./pages/progress-bar.html');
-  $('#main-tab').load('./pages/1.html');
+  $('#main-tab').load('./pages/3.html');
   $('.steps-element:first ').addClass('active-element');
+});
+
+$('div .span-score').click(function(){
+  alert(this.id + " "+ $(this).parent().parent().attr('id'));
 });

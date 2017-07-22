@@ -8,9 +8,7 @@ $(document).ready(function(){
         ajax_call(value);
       }
       else
-        if(value.length != 0){
         disable_field();
-      }
     },
     'keyup':function () {
       var value= $(this).val().replace(/[^\d\.]/g, '');
@@ -53,7 +51,6 @@ function ajax_call(value) {
 
 function disable_field(){
   $('#pin_status').css('background-image', 'url("../images/icons/error.png")');
-  $('#zip').focus();
   $('#city').val('');
   $('#dist').val('');
   $('#state').val('');

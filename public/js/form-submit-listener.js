@@ -1,4 +1,4 @@
-$('.forms').submit(function (e) {
+$('#next-button').click(function (e) {
   e.preventDefault();
   saveData();
   $('#page-loading').show();
