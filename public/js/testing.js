@@ -1,13 +1,14 @@
+var pin_valid=false;
 $(document).ready(function(){
   $('#zip').on({
     'focusout':function(){
       var value= $(this).val().replace(/[^\d\.]/g, '');
       $(this).val(value);
-      if(value.length == 6){
+      if((value.length == 6) && !pin_valid){
         $('#pin_status').removeClass('success fail').addClass('loading');
         ajax_call(value);
       }
-      else {
+      else if (value.length < 6) {
         disable_field();
       }
     },
@@ -32,10 +33,10 @@ function ajax_call(value) {
     contentType: 'application/json',
     data: JSON.stringify({pincode: value})
   }).done(function(data){
-      //console.log(JSON.parse(data));
       var data_json = JSON.parse(data);
       if(data_json.Status == 'Success'){
         fill_address(data_json.PostOffice[0]);
+        pin_valid=true;
         $('#pin_status').removeClass('loading').addClass('success');
         $('input:disabled').prop('disabled',false);
         $('#city').focus();
@@ -45,14 +46,13 @@ function ajax_call(value) {
       }
     })
     .fail(function(){
-      //console.log('Some error occurred during data fetch');
       $('#pin_status').css('color','red').text('Error during fetching address');
     })
 }
 
 function disable_field(){
   $('#pin_status').removeClass('loading success').addClass('fail');
-  $('#zip').focus();
+  pin_valid=false;
   $('#city').val('');
   $('#dist').val('');
   $('#state').val('');
