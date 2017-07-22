@@ -1,8 +1,10 @@
 if(window.File && window.FileReader){
   $('#picture').change(function (e) {
+    $('#loading').css('visibility', 'visible');
     var file = e.target.files[0];
     if(file.size >= 1024 * 1024 * 2){
       $('#messageBox').show();
+      $('#loading').css('visibility', 'hidden');
       return $('#message').text("Choose a lower quality image.");
     }
     $('#messageBox').hide();
@@ -10,14 +12,15 @@ if(window.File && window.FileReader){
       var reader = new FileReader();
       reader.onload = function (e) {
         x = 0, y =0;
-        $('#canvas-holder').show();
+
         drawToCanvas(e.target.result);
-        $('#resize').ready(function () {
-            $('#loading').hide();
+        $('#canvas-holder').ready(function () {
+          $('#canvas-holder').css('visibility', 'visible');
+          $('#loading').css('visibility', 'hidden');
           var canvas = document.getElementById('resize');
           var url = canvas.toDataURL('image/png');
           $('#picture-box').css('background-image', `url(${url})`);
-          $('#canvas-holder').show();
+          //$('#loading').css('visibility', 'hidden');
           $('#infor').fadeOut(8000);
         });
       }

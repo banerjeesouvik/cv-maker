@@ -24,6 +24,6 @@ function loadNextPage() {
 }
 $(document).ready(function () {
   $('#progress-bar').load('./pages/progress-bar.html');
-  $('#main-tab').load('./pages/0.html');
+  $('#main-tab').load('./pages/2.html');
   $('.steps-element:first ').addClass('active-element');
 });

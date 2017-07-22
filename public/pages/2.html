@@ -2,7 +2,7 @@
   <h2 id="headline">Choose your picture</h2>
   <div id="picture-holder">
     <div id="picture-box">
-      <div id="loading" style="display: none"></div>
+      <div id="loading" style="visibility: hidden"></div>
       <input type="file" accept="image/*" id="picture" name='picture' style="display: none;"/>
       <div id="upload" onclick="$('#picture').click();"></div>
     </div>
@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div id="canvas-holder" style="display: none;">
+  <div id="canvas-holder" style="visibility: hidden;">
     <canvas id="resize"></canvas>
     <div id="button-holder">
       <div id="plus" class="button"></div>

@@ -290,13 +290,13 @@ button:hover{
   background-image: url('../images/icons/down.png');
 }
 #left{
-  background-image: url('../images/icons/left.ico');
+  background-image: url('../images/icons/left.png');
 }
 #right{
   background-image: url('../images/icons/right.png');
 }
 #crop{
-  background-image: url('../images/icons/check2.png');
+  background-image: url('../images/icons/check3.png');
 }
 .button:hover{
   cursor: pointer;
@@ -307,7 +307,7 @@ button:hover{
   background-color: transparent;
 }
 #crop:active{
-  background-image: url('../images/icons/check3.png');
+  background-image: url('../images/icons/loading.gif');
   box-shadow: none;
 }
 .button:active{
