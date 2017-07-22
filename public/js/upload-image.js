@@ -10,7 +10,7 @@ if(window.File && window.FileReader){
       var reader = new FileReader();
       reader.onload = function (e) {
         x = 0, y =0;
-        $('#loading').show();
+        $('#canvas-holder').show();
         drawToCanvas(e.target.result);
         $('#resize').ready(function () {
             $('#loading').hide();

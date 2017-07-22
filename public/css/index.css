@@ -58,6 +58,7 @@ body, html{
   color: #999;
   font-family: Arial, verdana;
   border: 1px solid transparent;
+  visibility: hidden;
 }
 .steps-element:hover{
   background-color: #eeeeee;
@@ -68,6 +69,7 @@ body, html{
 .active-element{
   background-color: #eee;
   color: black;
+  visibility: visible;
 }
 .progress-bar-completed{
   background-color: cornflowerblue;

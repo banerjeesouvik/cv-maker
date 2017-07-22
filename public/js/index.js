@@ -3,6 +3,7 @@ function saveData() {
 }
 function changeStep() {
   $(`#steps .steps-element:eq(${currentPage})`).removeClass('active-element');
+  $(`#steps .steps-element:eq(${currentPage})`).css('visibility', 'visible');
   $(`#steps .steps-element:eq(${currentPage + 1})`).addClass('active-element');
   var span = $('<span class="completed-step"></span>');
   $(`#steps .steps-element:eq(${currentPage})`).append(span);
