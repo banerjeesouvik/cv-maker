@@ -1,3 +1,4 @@
+$('#page-loading').show();
 var currentPage = 0;
 function saveData() {
 }
@@ -23,13 +24,14 @@ function loadNextPage() {
   });
 }
 
-$('#page-loading').show();
+
 $(document).ready(function () {
   $('#progress-bar').load('./pages/progress-bar.html');
   $('#main-tab').load('./pages/3.html');
   $('.steps-element:first ').addClass('active-element');
-  $('#page-loading').hide();
+
   $('#container').css('visibility', 'visible');
+    $('#page-loading').hide();
 });
 
 $('div .span-score').click(function(){
