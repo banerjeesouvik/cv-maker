@@ -92,7 +92,7 @@ body, html{
 .big_field{
   width: 70%;
 }
-input[type=text],input[type=email]{
+input[type=text],input[type=email],textarea{
   margin-left: 5vw;
   margin-top: 6vh;
   height: 5vh;
@@ -133,6 +133,10 @@ input::-webkit-input-placeholder{
 input:focus::-webkit-input-placeholder{
   color: #fff;
 }
+textarea{
+  height: 12vh;
+  resize: none;
+ }
 .small_field{
   width: 30%;
 }
