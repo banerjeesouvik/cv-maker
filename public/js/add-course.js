@@ -7,3 +7,6 @@ $('#add-education').click(function (e) {
   lastCourse.after(newCourse);
   $('.education:last').load('../pages/new-course.html');
 });
+$(document.body).on('click', '.delete-course', function () {
+  $(this).parent().fadeOut(2000);
+});
