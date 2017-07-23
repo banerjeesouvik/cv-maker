@@ -23,15 +23,18 @@ function loadNextPage() {
     updateProgressBar();
   });
 }
-
+$(window).on( 'load', function () {
+  console.log('window loaded');
+  $('#container').css('visibility', 'visible');
+  $('#page-loading').hide();
+});
 
 $(document).ready(function () {
+  console.log('dom loaded');
   $('#progress-bar').load('./pages/progress-bar.html');
   $('#main-tab').load('./pages/3.html');
   $('.steps-element:first ').addClass('active-element');
 
-  $('#container').css('visibility', 'visible');
-    $('#page-loading').hide();
 });
 
 $('div .span-score').click(function(){
