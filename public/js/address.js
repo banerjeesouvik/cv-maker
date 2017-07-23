@@ -1,12 +1,15 @@
-var pin_valid=false;
+var pin_valid = false;
 $(document).ready(function(){
   $('#zip').on({
     'focusout':function(){
       var value= $(this).val().replace(/[^\d\.]/g, '');
       $(this).val(value);
       if(value.length == 6){
-        $('#pin_status').css('background-image', 'url("../images/icons/loading.gif")');
-        ajax_call(value);
+
+        if(!pin_valid){
+          $('#pin_status').css('background-image', 'url("../images/icons/loading.gif")');
+          ajax_call(value);
+        }
       }
       else if (value.length < 6) {
         disable_field();
@@ -37,6 +40,7 @@ function ajax_call(value) {
     data: JSON.stringify({pincode: value})
   }).done(function(data_json){
       if(data_json.status == 'Success'){
+        pin_valid = true;
         $('#pin_status').css('background-image', 'url("../images/icons/check1.png")');
         fill_address(data_json);
         $('input:disabled').prop('disabled', false);
