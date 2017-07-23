@@ -394,6 +394,13 @@ legend{
   height: 4vw;
   width: 98%;
   display: none;
+  border-radius: 10px;
+}
+.skillset:hover{
+  box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
+}
+.skillset:hover > #skill-remove{
+  visibility: visible;
 }
 .skill-elem{
   position: relative;
@@ -417,4 +424,22 @@ legend{
 #skill-prof{
   float: right;
   width: 50%;
+}
+#skill-remove{
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  height: 3vh;
+  width: 3vh;
+  background-image: url('../images/icons/delete2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  visibility: hidden;
+}
+#skill-remove:hover{
+  background-image: url('../images/icons/delete.png');
+  cursor: pointer;
+}
+#skill-remove:active{
+  background-image: url('../images/icons/delete1.png');
 }
