@@ -16,3 +16,8 @@
 </span>
 <input class="score-input"  type="number" id="cgpa-score" placeholder="CGPA" class="small_field" name="cgpa-score"/>
 <input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage-score"/><br>
+<script>
+  $(document.body).ready( function () {
+    $('.education:last #cgpa').addClass('score-active');
+  });
+</script>
