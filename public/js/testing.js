@@ -1,3 +1,4 @@
+var pin_valid=false;
 $(document).ready(function(){
   $('#zip').on({
     'focusout':function(){
@@ -7,8 +8,9 @@ $(document).ready(function(){
         $('#pin_status').css('background-image', 'url("../images/icons/loading.gif")');
         ajax_call(value);
       }
-      else
+      else if (value.length < 6) {
         disable_field();
+      }
     },
     'keyup':function () {
       var value= $(this).val().replace(/[^\d\.]/g, '');
