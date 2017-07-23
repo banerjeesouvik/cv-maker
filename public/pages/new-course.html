@@ -1,0 +1,32 @@
+<legend>Fill details of the Course</legend>
+<span class="delete-course"></span>
+<label>Name of the Degree</label><br>
+<input type="text" id="degree" placeholder="e.g. Post Graduation, Doctorate" class="big_field" name="degree"/><br>
+<label>Course</label><br>
+<input type="text" id="course" placeholder="e.g. M.Tech, M.A, M.Sc, MBA" class="small_field" name="course"/><br>
+<label>Name of the Institution</label><br>
+<input type="text" id="sch" placeholder="Institution" class="big_field" name="college"/><br>
+<label>University</label><br>
+<input type="text" id="univ" placeholder="University" class="big_field" name="board"/><br>
+<label>Year of Completion</label><br>
+<input type="number" id="passyear" placeholder="yyyy" class="small_field" name="passyear"/><br>
+<label>Department</label><br>
+<input type="text" id="dept" placeholder="Department" class="Big_field" name="dept"/><br>
+<label>Score</label><br>
+<span id="score-holder">
+  <span id="cgpa" class="span-score">CGPA</span>
+  <span id="percentage" class="span-score">Percentage</span>
+</span>
+<input class="score-input"  type="number" id="cgpa-score" placeholder="CGPA" class="small_field" name="cgpa-score"/>
+<input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage-score"/><br>
+<script>
+  $(document.body).ready( function () {
+    $('.education:last #cgpa').addClass('score-active');
+    $('#page-loading').hide();
+    $('.education:last').fadeIn(2000);
+    var totalHeight = $('#edu-form').innerHeight();
+    var lastTabHeight = $('.education:last').innerHeight();
+    var scrollHeight = totalHeight - lastTabHeight;
+    $("#main-tab").animate({ scrollTop: scrollHeight }, 1000);
+  });
+</script>

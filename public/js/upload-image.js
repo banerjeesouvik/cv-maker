@@ -1,7 +1,7 @@
 if(window.File && window.FileReader){
   $('#picture').change(function (e) {
-    $('#loading').css('visibility', 'visible');
     var file = e.target.files[0];
+    $('#loading').css('visibility', 'visible');
     if(file.size >= 1024 * 1024 * 2){
       $('#messageBox').css('visibility', 'visible');;
       $('#loading').css('visibility', 'hidden');

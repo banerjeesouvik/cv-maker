@@ -1,6 +1,6 @@
 $('.forms').submit(function (e) {
   e.preventDefault();
-  saveData();
-  $('#page-loading').show();
-  loadNextPage();
+    saveData();
+    $('#page-loading').show();
+    loadNextPage();
 });

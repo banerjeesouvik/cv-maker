@@ -4,8 +4,8 @@ $(document).ready(function(){
     'focusout':function(){
       var value= $(this).val().replace(/[^\d\.]/g, '');
       $(this).val(value);
-      if((value.length == 6) && !pin_valid){
-        $('#pin_status').removeClass('success fail').addClass('loading');
+      if(value.length == 6){
+        $('#pin_status').css('background-image', 'url("../images/icons/loading.gif")');
         ajax_call(value);
       }
       else if (value.length < 6) {
@@ -16,7 +16,10 @@ $(document).ready(function(){
       var value= $(this).val().replace(/[^\d\.]/g, '');
       $(this).val(value);
       if(value.length == 6){
-        $('#pin_status').removeClass('success fail').addClass('loading');
+        $('#pin_status').css({
+          'visibility': 'visible',
+          'background-image': 'url("../images/icons/loading.gif")'
+        });
         ajax_call(value);
       }
       else if (value.length > 6) {
@@ -32,13 +35,11 @@ function ajax_call(value) {
     method: 'POST',
     contentType: 'application/json',
     data: JSON.stringify({pincode: value})
-  }).done(function(data){
-      var data_json = JSON.parse(data);
-      if(data_json.Status == 'Success'){
-        fill_address(data_json.PostOffice[0]);
-        pin_valid=true;
-        $('#pin_status').removeClass('loading').addClass('success');
-        $('input:disabled').prop('disabled',false);
+  }).done(function(data_json){
+      if(data_json.status == 'Success'){
+        $('#pin_status').css('background-image', 'url("../images/icons/check1.png")');
+        fill_address(data_json);
+        $('input:disabled').prop('disabled', false);
         $('#city').focus();
       }
       else {
@@ -46,23 +47,22 @@ function ajax_call(value) {
       }
     })
     .fail(function(){
-      $('#pin_status').css('color','red').text('Error during fetching address');
-    })
+      $('#pin_status').css('background-image', 'url("../images/icons/error.png")');
+    });
 }
 
 function disable_field(){
-  $('#pin_status').removeClass('loading success').addClass('fail');
-  pin_valid=false;
+  $('#pin_status').css('background-image', 'url("../images/icons/error.png")');
   $('#city').val('');
   $('#dist').val('');
   $('#state').val('');
   $('#country').val('');
 }
 function fill_address(data){
-    if(data.Circle != 'NA')
-      $('#city').val(data.Circle);
-    if(data.District != 'NA')
-      $('#dist').val(data.District);
-    $('#state').val(data.State);
-    $('#country').val(data.Country);
+    if(data.city != 'NA')
+      $('#city').val(data.city);
+    if(data.dist != 'NA')
+      $('#dist').val(data.dist);
+    $('#state').val(data.state);
+    $('#country').val(data.country);
 }

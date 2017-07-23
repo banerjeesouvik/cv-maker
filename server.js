@@ -14,10 +14,23 @@ app.post('/pincode', function (req, res) {
   var pin = req.body.pincode;
   request(`http://postalpincode.in/api/pincode/${pin}`, function(error, response, body) {
 	if(error) {
-		res.status(500).send(error);
+		return res.status(500).send(error);
 	}
 	if(response) {
-		res.status(response.statusCode).send(body);
+    //console.log(JSON.stringify(body, undefined, 4));
+    var data = JSON.parse(body);
+    if(data.Status == 'Success'){
+      res.status(response.statusCode).send({
+        "status": data.Status,
+        "city": data.PostOffice[0].Circle,
+        "dist": data.PostOffice[0].District,
+        "state": data.PostOffice[0].State,
+        "country": data.PostOffice[0].Country
+        });
+    }else{
+      res.send({'status' : 'failed'});
+    }
+
 	}
 });
 
