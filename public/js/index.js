@@ -22,6 +22,11 @@ function loadNextPage() {
     updateProgressBar();
   });
 }
+$('#page-loading').show();
+$(document.body).ready( function (){
+  $('#page-loading').hide();
+  $('#container').css('visibility', 'visible');
+});
 $(document).ready(function () {
   $('#progress-bar').load('./pages/progress-bar.html');
   $('#main-tab').load('./pages/3.html');

@@ -5,6 +5,9 @@ body, html{
   margin: 0px;
   font-family: arial,verdana;
 }
+#container{
+  visibility: hidden;
+}
 #page-loading{
   position: absolute;
   top: 46%;
