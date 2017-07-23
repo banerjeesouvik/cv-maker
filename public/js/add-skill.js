@@ -8,7 +8,7 @@ $('#add-skill-form').submit( function (e) {
     var newSkill = $('<div class="skillset"></div>');
     newSkill.load('../pages/skill.html');
     skillTab.append(newSkill);
-    $('.skillset:last').slideDown(800);
+    $('.skillset:last').fadeIn();
   }
 });
 $(document.body).on('click', '#skill-remove', function() {
