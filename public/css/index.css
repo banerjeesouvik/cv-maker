@@ -380,3 +380,41 @@ legend{
   background-image: url('../images/icons/delete2.png');
   box-shadow: none;
 }
+#showskills{
+  position: relative;
+  padding: 1vw;
+  margin: 2vw;
+  height: max-content;
+  width: 54vw;
+}
+.skillset{
+  padding: .5vh;
+  position: relative;
+  margin-top: .5vw;
+  height: 4vw;
+  width: 98%;
+  display: none;
+}
+.skill-elem{
+  position: relative;
+  float: left;
+  margin-left: 1%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+#skill-icon{
+  height: 4vw;
+  width: 4vw;
+}
+#skill-name{
+  font-size: 20px;
+  height: 70%;
+  width: 35%;
+  padding-top: 2.2%;
+  padding-left: 4%;
+}
+#skill-prof{
+  float: right;
+  width: 50%;
+}
