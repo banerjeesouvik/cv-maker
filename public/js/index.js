@@ -23,12 +23,8 @@ function loadNextPage() {
     updateProgressBar();
   });
 }
-
-
 $(document).ready(function () {
-  $('#progress-bar').load('./pages/progress-bar.html');
-  $('#main-tab').load('./pages/3.html');
-  $('.steps-element:first ').addClass('active-element');
+  $('#main-tab').load('./pages/0.html');
 });
 
 
