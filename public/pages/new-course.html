@@ -20,6 +20,7 @@
   $(document.body).ready( function () {
     $('.education:last #cgpa').addClass('score-active');
     $('#page-loading').hide();
-    $('.education:last').show();
+    $('.education:last').fadeIn(2000);
+    //$('#main-tab').animate({ scrollTop: $(".education:last").offset().top }, 1000);
   });
 </script>
