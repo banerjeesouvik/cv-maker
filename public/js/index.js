@@ -24,7 +24,12 @@ function loadNextPage() {
   });
 }
 $(document).ready(function () {
-  $('#main-tab').load('./pages/0.html');
+  //use these when using any other page than 0.html as first page
+  $('.steps-element:first ').addClass('active-element');
+  $('#container').css('visibility', 'visible');
+  $('#page-loading').hide();
+
+  $('#main-tab').load('./pages/3.html');
   $('#progress-bar').load('./pages/progress-bar.html');
 });
 

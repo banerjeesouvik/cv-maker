@@ -161,7 +161,7 @@ select:focus{
   background-color: #444;
   color: #fff;
 }
-button{
+button, #add-education{
   position: relative;
   margin-right: 5vw;
   margin-top: 4vh;
@@ -175,8 +175,13 @@ button{
   color: white;
   border-radius: 5px;
 }
-button:hover{
+#add-education{
+  height: 3vh;
+  font-size: 15px;
+}
+button:hover, #add-education:hover{
   box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
+  cursor: pointer;
 }
 #headline{
   margin-left: 1vw;
