@@ -1,6 +1,4 @@
 var skillName;
-
-
 $('#add-skill-form').submit( function (e) {
   e.preventDefault();
   skillName = $('#skill').val();
@@ -9,10 +7,10 @@ $('#add-skill-form').submit( function (e) {
   $('#skill').val('');
   if( skillName.length != 0){
     skillTab.append(newSkill);
-    $('.skillset:last').fadeIn();
+    $('.skillset:last').fadeIn(500);
     $('.skillset:last').load('../pages/skill.html');
   }
 });
 $(document.body).on('click', '#skill-remove', function() {
-  $(this).parent().slideUp(1000);
+  $(this).parent().slideUp(500);
 });
