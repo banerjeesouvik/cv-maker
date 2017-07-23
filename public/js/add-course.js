@@ -8,5 +8,5 @@ $('#add-education').click(function (e) {
   $('.education:last').load('../pages/new-course.html');
 });
 $(document.body).on('click', '.delete-course', function () {
-  $(this).parent().fadeOut(2000);
+  $(this).parent().fadeOut(1000);
 });
