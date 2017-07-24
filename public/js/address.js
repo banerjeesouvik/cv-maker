@@ -1,4 +1,4 @@
-var pin_valid=false;
+var pin_valid = false;
 $(document).ready(function(){
   $('#zip').on({
     'focusout':function(){
@@ -37,6 +37,7 @@ function ajax_call(value) {
     data: JSON.stringify({pincode: value})
   }).done(function(data_json){
       if(data_json.status == 'Success'){
+        pin_valid = true;
         $('#pin_status').css('background-image', 'url("../images/icons/check1.png")');
         fill_address(data_json);
         pin_valid=true;

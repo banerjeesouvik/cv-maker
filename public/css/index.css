@@ -380,3 +380,66 @@ legend{
   background-image: url('../images/icons/delete2.png');
   box-shadow: none;
 }
+#showskills{
+  position: relative;
+  padding: 1vw;
+  margin: 2vw;
+  height: max-content;
+  width: 54vw;
+}
+.skillset{
+  padding: .5vh;
+  position: relative;
+  margin-top: .5vw;
+  height: 4vw;
+  width: 98%;
+  display: none;
+  border-radius: 10px;
+}
+.skillset:hover{
+  box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
+}
+.skillset:hover > #skill-remove{
+  visibility: visible;
+}
+.skill-elem{
+  position: relative;
+  float: left;
+  margin-left: 1%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+#skill-icon{
+  height: 4vw;
+  width: 4vw;
+}
+#skill-name{
+  font-size: 20px;
+  height: 70%;
+  width: 35%;
+  padding-top: 2.2%;
+  padding-left: 4%;
+}
+#skill-prof{
+  float: right;
+  width: 50%;
+}
+#skill-remove{
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  height: 4vh;
+  width: 4vh;
+  background-image: url('../images/icons/delete2.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  visibility: hidden;
+}
+#skill-remove:hover{
+  background-image: url('../images/icons/delete.png');
+  cursor: pointer;
+}
+#skill-remove:active{
+  background-image: url('../images/icons/delete2.png');
+}
