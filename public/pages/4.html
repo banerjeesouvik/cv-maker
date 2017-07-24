@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<head>
-</head>
 <form class="form">
-  <label for="">Add your skills</label><br>
-  <textarea id="skills" name="skills" placeholder="Enter your skills here" class="big_field"required/><br>
+  <label>Add your skills</label><br>
+  <input id="skills" type="text" name="skills" placeholder="Enter your skills here" class="big_field" list="skill_list" required/><br>
+  <div id="skill_list"></div>
   <button id="next-button">Save and next</button>
   <script src="../js/skill.js"></script>
   <script src="../js/form-submit-listener.js"></script>
