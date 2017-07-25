@@ -5,6 +5,7 @@ $('#add-skill-form').submit( function (e) {
   var skillTab = $('#showskills');
   var newSkill = $('<div class="skillset"></div>');
   $('#skills').val('');
+  $(".suggestions").remove();
   if( skillName.length != 0){
     skillTab.append(newSkill);
     $('.skillset:last').fadeIn(500);

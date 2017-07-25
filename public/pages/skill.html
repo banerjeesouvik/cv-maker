@@ -5,5 +5,9 @@
 <script>
 $(document.body).ready(function () {
   $('.skillset:last #skill-name').text(skillName);
+  var ic_nm=skillName[0].toLowerCase();
+  $('.skillset:last #skill-icon').css({
+    'background-image' : `url('../images/Alphabets Icons/${ic_nm}.jpeg')`
+  })
 });
 </script>
