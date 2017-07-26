@@ -12,6 +12,8 @@ $(document.body).ready(function () {
   var ic_nm = skillName[0].toLowerCase();
   $('.skillset:last #skill-icon').css({
     'background-image' : `url('../images/Alphabets Icons/${ic_nm}.jpeg')`
-  })
+  });
+  $('#page-loading').hide();
+  $('.skillset:last').fadeIn(500);
 });
 </script>

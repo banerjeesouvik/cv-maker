@@ -43,7 +43,7 @@ $(document).ready(function () {
     }
   });
 });
-$(document).on('click', '.suggestions', function () {
+$(document.body).on('click', '.suggestions', function () {
   var skillName=$(this).text();
   $('#skills').val(skillName);
   $(".suggestions").remove();
