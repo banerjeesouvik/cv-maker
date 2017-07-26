@@ -413,6 +413,8 @@ legend{
 #skill-icon{
   height: 4vw;
   width: 4vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 #skill-name{
   font-size: 20px;
@@ -445,6 +447,23 @@ legend{
 }
 #skill-remove:active{
   background-image: url('../images/icons/delete2.png');
+}
+#skill_list{
+  margin-left: 5vw;
+  position: absolute;
+  z-index: 1;
+}
+.suggestions{
+  width: 30vw;
+  padding: 8px;
+  padding-left: 20px;
+  background-color: #808080;
+  color: #fff;
+  border: 1px solid  #4EB1BA;
+}
+.suggestions:hover{
+  cursor: pointer;
+  background-color: rgb(255, 68, 68);
 }
 .vert-bar{
   position: relative;

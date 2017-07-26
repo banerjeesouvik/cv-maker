@@ -15,7 +15,9 @@ $(document).ready(function () {
       value=this.value.trim();
       $(this).val(value);
       if(status){
-        if(value.length == 1){
+        if(value.length == 0)
+          $(".suggestions").remove();
+        else if(value.length == 1){
           count=0;
           $(".suggestions").remove();
           var pattern = new RegExp(`^${value}`,'i');
@@ -38,9 +40,13 @@ $(document).ready(function () {
           })
         }
       }
-    },
-    "focusout": function () {
-      $(".suggestions").remove();
     }
   });
+});
+$(document).on('click', '.suggestions', function () {
+  var skillName=$(this).text();
+  $('#skills').val(skillName);
+  $(".suggestions").remove();
+  $('#skills').focus();
+  $('#add-skill-form').submit();
 });
