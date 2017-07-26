@@ -422,8 +422,7 @@ legend{
   padding-top: 2.2%;
   padding-left: 4%;
   color: #fff;
-  background-color: rgb(255, 68, 68);
-  //background-color: #005776;
+  background-color: #005776;
 }
 #skill-prof{
   float: right;
@@ -465,7 +464,7 @@ legend{
 }
 .suggestions:hover{
   cursor: pointer;
-  background-color: rgb(255, 68, 68);
+  background-color: #4EB1BA;
 }
 .vert-bar{
   position: relative;
