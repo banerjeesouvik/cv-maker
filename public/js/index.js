@@ -1,4 +1,8 @@
+class UserData{
+  constructor () {
 
+  }
+}
 var currentPage = 0;
 function saveData() {
 }
@@ -31,9 +35,4 @@ $(document).ready(function () {
 
   $('#main-tab').load('./pages/4.html');
   $('#progress-bar').load('./pages/progress-bar.html');
-});
-
-
-$('div .span-score').click(function(){
-  alert(this.id + " "+ $(this).parent().parent().attr('id'));
 });
