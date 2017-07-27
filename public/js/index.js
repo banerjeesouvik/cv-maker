@@ -1,10 +1,21 @@
-class UserData{
-  constructor () {
-
-  }
-}
+var newUser = new UserData();
 var currentPage = 0;
-function saveData() {
+function preProcessData (form_name) {
+  var count = 0;
+  $(`#${form_name} *`).filter('div').each(function (i, val) {
+    var obj = {};
+    console.log($(`.${$(val).attr('class')} input`).val());
+    $(`#${$(this).attr('id')} *`).filter(':input').each(function (j, value) {
+      console.log($(value).val());
+    });
+    //console.log(obj);
+  });
+}
+function saveData(form_name) {
+  var target = form_name.substr(0, form_name.length - 5);
+  var dataObject = {};
+
+  newUser['add' + target] ({});
 }
 function changeStep() {
   $(`#steps .steps-element:eq(${currentPage})`).removeClass('active-element');
@@ -33,6 +44,6 @@ $(document).ready(function () {
   $('#container').css('visibility', 'visible');
   $('#page-loading').hide();
 
-  $('#main-tab').load('./pages/4.html');
+  $('#main-tab').load('./pages/0.html');
   $('#progress-bar').load('./pages/progress-bar.html');
 });
