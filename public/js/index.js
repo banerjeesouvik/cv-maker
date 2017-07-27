@@ -32,7 +32,7 @@ $(document).ready(function () {
   $('.steps-element:first ').addClass('active-element');
   $('#container').css('visibility', 'visible');
   $('#page-loading').hide();
-  
+
   $('#main-tab').load('./pages/0.html');
   $('#progress-bar').load('./pages/progress-bar.html');
 });

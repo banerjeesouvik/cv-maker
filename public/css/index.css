@@ -349,7 +349,7 @@ legend{
   color: #f44;
   font-weight: bold;
 }
-.education, .project, .certification, .publication, .experience, .training, .internship{
+.education, .project, .certification, .publication, .experience, .training, .internship, .achievement{
   position: relative;
   margin: .5%;
   margin-top: 2%;
@@ -359,7 +359,7 @@ legend{
   border: 2px solid #299;
   border-radius: 10px;
 }
-.education .big_field, .project .big_field, .certification .big_field, .publication .big_field, .experience .big_field, .training .big_field, .internship .big_field{
+.education .big_field, .project .big_field, .certification .big_field, .publication .big_field, .experience .big_field, .training .big_field, .internship .big_field, .achievement .big_field{
   width: 42vw;
 }
 .delete-course, .delete-project, .delete-certification, .delete-publication, .delete-experience, .delete-training, .delete-internship{
