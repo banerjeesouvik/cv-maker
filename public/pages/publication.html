@@ -1,0 +1,17 @@
+<span class="delete-publication"></span>
+<label>Title of the Publication</label><br>
+<input type="text" name="publication-name" placeholder="Publication" class="big_field"/><br>
+<label>Publication Authority</label><br>
+<input type="text" name="publication-authority" placeholder="Authority Name" class="big_field"/><br>
+<label>Description</label><br>
+<textarea name="publication-desc" placeholder="Briefly describe your published article" class="big_field"></textarea>
+<script>
+  $(document.body).ready( function () {
+    $('#page-loading').hide();
+    $('.publication:last').fadeIn(2000);
+    var totalHeight = $('#publication-form').innerHeight();
+    var lastTabHeight = $('.publication:last').innerHeight();
+    var scrollHeight = totalHeight - lastTabHeight;
+    $("#main-tab").animate({ scrollTop: scrollHeight }, 1000);
+  });
+</script>

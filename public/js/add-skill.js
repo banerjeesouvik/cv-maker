@@ -1,11 +1,12 @@
 var skillName;
 $('#add-skill-form').submit( function (e) {
   e.preventDefault();
+  $('#page-loading').show();
   skillName = $('#skills').val();
   skillName = skillName.trim();
   img_nm = skillName.toLowerCase();
   var skillTab = $('#showskills');
-  var newSkill = $('<div class="skillset"></div>');
+  var newSkill = $('<div class="skillset" style="display: none"></div>');
   $('#skills').val('');
   $(".suggestions").remove();
   if( skillName.length != 0){
@@ -26,10 +27,8 @@ $('#add-skill-form').submit( function (e) {
 });
 $(document.body).on('click', '#skill-remove', function() {
   var sk = $(this).siblings('#skill-name').text();
-  //console.log(sk);
   $(this).parent().slideUp(500);
   sk = sk.toLowerCase();
   var idx = added_skill.indexOf(sk);
   added_skill.splice(idx, 1);
-  //console.log(added_skill);
 });

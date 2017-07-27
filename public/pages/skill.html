@@ -11,6 +11,8 @@ $(document.body).ready(function () {
   $('.skillset:last #skill-name').text(skillName);
   $('.skillset:last #skill-icon').css({
     'background-image' : `url('${url}')`
-  })
+  });
+  $('#page-loading').hide();
+  $('.skillset:last').fadeIn(500);
 });
 </script>
