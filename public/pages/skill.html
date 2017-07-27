@@ -14,5 +14,9 @@ $(document.body).ready(function () {
   });
   $('#page-loading').hide();
   $('.skillset:last').fadeIn(500);
+  var totalHeight = $('#add-skill-form').innerHeight();
+  var lastTabHeight = $('.skillset:last').innerHeight();
+  var scrollHeight = totalHeight - lastTabHeight * 2;
+  $("#main-tab").animate({ scrollTop: scrollHeight }, 1000);
 });
 </script>

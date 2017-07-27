@@ -1,12 +1,11 @@
 var skillName;
 $('#add-skill-form').submit( function (e) {
   e.preventDefault();
-  $('#page-loading').show();
   skillName = $('#skills').val();
   skillName = skillName.trim();
   img_nm = skillName.toLowerCase();
   var skillTab = $('#showskills');
-  var newSkill = $('<div class="skillset" style="display: none"></div>');
+  var newSkill = $('<div class="skillset"></div>');
   $('#skills').val('');
   $(".suggestions").remove();
   if( skillName.length != 0){
