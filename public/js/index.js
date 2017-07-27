@@ -29,7 +29,7 @@ $(document).ready(function () {
   $('#container').css('visibility', 'visible');
   $('#page-loading').hide();
 
-  $('#main-tab').load('./pages/6.html');
+  $('#main-tab').load('./pages/7.html');
   $('#progress-bar').load('./pages/progress-bar.html');
 });
 
