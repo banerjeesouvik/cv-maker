@@ -1,6 +1,10 @@
 var skills=[];
 var status=false;
 var count=0;
+var img_nm='';
+var url='';
+var skillName='';
+var added_skill=[];
 $(document).ready(function () {
   $.getJSON("skills.json")
     .done(function (data_json) {
@@ -13,7 +17,6 @@ $(document).ready(function () {
   $("#skills").on({
     "keyup": function () {
       value=this.value.trim();
-      $(this).val(value);
       if(status){
         if(value.length == 0)
           $(".suggestions").remove();
@@ -22,7 +25,7 @@ $(document).ready(function () {
           $(".suggestions").remove();
           var pattern = new RegExp(`^${value}`,'i');
           $.each(skills, function (i, val) {
-            if(pattern.test(val) && count < 5){
+            if(pattern.test(val) && count < 5 && check_added_skills(val.toLowerCase())){
               $('#skill_list').append("<div class='suggestions'>"+val+"</div>");
               count++;
             }
@@ -33,7 +36,7 @@ $(document).ready(function () {
           $(".suggestions").remove();
           var pattern = new RegExp(value,'i');
           $.each(skills, function (i, val) {
-            if(pattern.test(val) && count < 5){
+            if(pattern.test(val) && count < 5 && check_added_skills(val.toLowerCase())){
               $('#skill_list').append("<div class='suggestions'>"+val+"</div>");
               count++;
             }
@@ -43,10 +46,35 @@ $(document).ready(function () {
     }
   });
 });
-$(document.body).on('click', '.suggestions', function () {
-  var skillName=$(this).text();
-  $('#skills').val(skillName);
+$(document).on('click', '.suggestions', function () {
+  skillName = $(this).text();
+  url = `../images/Skill Icons/${skillName}.png`;
   $(".suggestions").remove();
-  $('#skills').focus();
-  $('#add-skill-form').submit();
+  if(check_added_skills(skillName.toLowerCase())){
+    added_skill.push(skillName.toLowerCase());
+    var skillTab = $('#showskills');
+    var newSkill = $('<div class="skillset"></div>');
+    skillTab.append(newSkill);
+    $('.skillset:last').fadeIn(500);
+    $('.skillset:last').load('../pages/skill.html');
+  }
+  $('#skills').val('').focus();
 });
+
+function check_added_skills(skl){
+  if(added_skill.indexOf(skl) > -1)
+    return false;
+  else
+    return true;
+}
+
+function check_skill(skl){
+  var pattern= new RegExp(`^${skl}$`, 'i');
+  for(var i=0; i < skills.length; i++){
+    if(pattern.test(skills[i])){
+      skillName = skills[i];
+      return true;
+    }
+  }
+  return false;
+}
