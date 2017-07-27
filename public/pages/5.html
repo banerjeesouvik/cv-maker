@@ -1,14 +1,19 @@
-<form id="project-form" class="forms">
-  <div class="project">
-    <label>Name of the Project</label><br>
-    <input type="text" name="project-name" placeholder="Project Name" class="big_field"/><br>
-    <label>Language/Technology used</label><br>
-    <input type="text" name="project-tech" placeholder="e.g. Java, MATLAB, Autodesk" class="small_field"/><br>
-    <label>Description</label><br>
-    <textarea name="project-desc" placeholder="Briefly describe your project" class="big_field"></textarea><br>
+<!DOCTYPE html>
+<form id="experience-form" class="forms">
+  <div class="experience">
+    <label>Company Name</label><br>
+    <input type="text" name="company-name" placeholder="Name of the company" class="big_field"/><br>
+    <label>Designation</label><br>
+    <input type="text" name="company-designation" placeholder="Your role/position at the company" class="big_field"/><br>
+    <label>Start Date</label><br>
+    <input type="text" placeholder="e.g. April 2005" class="small_field"><br>
+    <label>End Date</label><br>
+    <input type="text" name="end_date"placeholder="e.g. December 2008" class="small_field">
+    <input type="checkbox">Present
   </div>
   <button id="next-button">Save and Next</button>
-  <span id="add-project">Add another Project</span>
+  <span id="add-experience">Add another Experience</span>
 </form>
+
 <script src="../js/form-submit-listener.js"></script>
-<script src="../js/add-project.js"></script>
+<script src="../js/add-experience.js"></script>

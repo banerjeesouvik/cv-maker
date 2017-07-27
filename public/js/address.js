@@ -50,6 +50,7 @@ function ajax_call(value) {
     })
     .fail(function(){
       $('#pin_status').css('background-image', 'url("../images/icons/error.png")');
+      $('input:disabled').prop('disabled', false);
     });
 }
 
