@@ -2,23 +2,32 @@ var newUser = new UserData();
 var currentPage = 0;
 function preProcessData (form_name) {
   var count = 0;
+  var data = [];
   $(`#${form_name} *`).filter('div').each(function (i, val) {
     var obj = {};
+    var flag = false;
     //console.log($(this));
     $(this).children('input, select').each( function (i, value) {
       var name = $(this).attr('name');
       var inputValue = $(this).val();
-      console.log(name, inputValue);
+      //console.log(name, inputValue);
       obj[name] = inputValue;
+      flag = true;
     });
-    console.log(obj);
+    if( flag == true){
+      data.push(obj);
+    }
+
   });
+  //console.log(data);
+  saveData(form_name, data);
+  console.log(newUser);
 }
-function saveData(form_name) {
+function saveData(form_name, data) {
   var target = form_name.substr(0, form_name.length - 5);
   var dataObject = {};
 
-  newUser['add' + target] ({});
+  newUser['add' + target] (data);
 }
 function changeStep() {
   $(`#steps .steps-element:eq(${currentPage})`).removeClass('active-element');

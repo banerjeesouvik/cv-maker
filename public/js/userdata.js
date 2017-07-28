@@ -17,11 +17,11 @@ class UserData{
   }
   addBasicInfo (obj) {
     this.basicinfo = {
-      'name': obj.data_1,
-      'dob': obj.data_2,
-      'gender': obj.data_3,
-      'email': obj.data_4,
-      'mobile': obj.data_5
+      'name': obj[0].name,
+      'dob': obj[0].dob,
+      'gender': obj[0].gender,
+      'email': obj[0].email,
+      'mobile': obj[0].mobile
     };
   }
   addAddress (street, zip, city, dist, state, country) {
@@ -36,7 +36,7 @@ class UserData{
   addEducation(degree, course, institute, univ, year, dept, score) {
 
   }
-  addSkills (skill) {
+  addSkill (skill) {
 
   }
   addProject (name, tech, desc) {
