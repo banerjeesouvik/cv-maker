@@ -19,13 +19,15 @@ function preProcessData (form_name) {
     }
 
   });
-  console.log(data);
+  //console.log(data);
+  saveData(form_name, data);
+  console.log(newUser);
 }
 function saveData(form_name, data) {
   var target = form_name.substr(0, form_name.length - 5);
   var dataObject = {};
 
-  newUser['add' + target] ({});
+  newUser['add' + target] (data);
 }
 function changeStep() {
   $(`#steps .steps-element:eq(${currentPage})`).removeClass('active-element');
