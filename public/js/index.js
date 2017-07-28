@@ -25,7 +25,7 @@ function preProcessData (form_name) {
 }
 function saveData(form_name, data) {
   var target = form_name.substr(0, form_name.length - 5);
-  var dataObject = {};
+  //var dataObject = {};
 
   newUser['add' + target] (data);
 }

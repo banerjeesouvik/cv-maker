@@ -12,6 +12,7 @@ $(document.body).on('click', '.delete-course', function () {
   var totalHeight = $('#edu-form').innerHeight();
   var lastTabHeight = $('.education:last').innerHeight();
   var scrollHeight = totalHeight - lastTabHeight * 2;
+  $(this).parent().remove();
   setTimeout( function () {
     $("#main-tab").animate({ scrollTop: scrollHeight * 0.98 }, 1000);
   }, 1000);
