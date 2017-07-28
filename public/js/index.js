@@ -4,11 +4,12 @@ function preProcessData (form_name) {
   var count = 0;
   $(`#${form_name} *`).filter('div').each(function (i, val) {
     var obj = {};
-    console.log($(`.${$(val).attr('class')} input`).val());
-    $(`#${$(this).attr('id')} *`).filter(':input').each(function (j, value) {
-      console.log($(value).val());
+    //console.log($(this));
+    $(this).children('input, select').each( function (i, value) {
+      var name = $(this).attr('name');
+      var inputValue = $(this).val();
+      console.log(name, inputValue);
     });
-    //console.log(obj);
   });
 }
 function saveData(form_name) {
