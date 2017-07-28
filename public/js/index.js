@@ -9,7 +9,9 @@ function preProcessData (form_name) {
       var name = $(this).attr('name');
       var inputValue = $(this).val();
       console.log(name, inputValue);
+      obj[name] = inputValue;
     });
+    console.log(obj);
   });
 }
 function saveData(form_name) {
