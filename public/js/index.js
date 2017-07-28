@@ -33,6 +33,6 @@ $(document).ready(function () {
   $('#container').css('visibility', 'visible');
   $('#page-loading').hide();
 
-  $('#main-tab').load('./pages/0.html');
+  $('#main-tab').load('./pages/11.html');
   $('#progress-bar').load('./pages/progress-bar.html');
 });

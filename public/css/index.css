@@ -135,7 +135,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=date]:focus, textare
   background-color: #444;
   color: #fff;
 }
-::-webkit-input-placeholder{
+::-webkit-input-placeholder,, ::-webkit-textarea-placeholder{
   padding: 10px;
 }
 :focus::-webkit-input-placeholder{
