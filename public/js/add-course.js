@@ -9,6 +9,7 @@ $('#add-education').click(function (e) {
 });
 $(document.body).on('click', '.delete-course', function () {
   $(this).parent().fadeOut(1000);
+  $(this).parent().remove();
   var totalHeight = $('#edu-form').innerHeight();
   var lastTabHeight = $('.education:last').innerHeight();
   var scrollHeight = totalHeight - lastTabHeight * 2;
