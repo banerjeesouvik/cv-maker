@@ -11,9 +11,8 @@ $('#add-skill-form').submit( function (e) {
   if( skillName.length != 0){
     if(check_added_skills(img_nm)){
       added_skill.push(img_nm);
-      var hiddenInput = $(`<input type="hidden" name="skill${skillcount++}" value="${skillName}"/>`);
       skillTab.append(newSkill);
-      skillTab.append(hiddenInput);
+
       if(check_skill(img_nm)){
         url = `../images/Skill Icons/${skillName}.png`;
       }
