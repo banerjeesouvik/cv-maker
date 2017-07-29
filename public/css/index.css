@@ -52,12 +52,13 @@ body, html{
 }
 .steps-element{
   position: relative;
-  height: 4vh;
+  height: max-content;
   width: 100%;
   background-color: transparent;
   text-align: center;
   padding-top: 1.5vh;
-  font-size: 16px;
+  padding-bottom: 1.5vh;
+  font-size: 2.5vh;
   color: #999;
   font-family: Arial, verdana;
   border: 1px solid transparent;
@@ -97,11 +98,11 @@ body, html{
 }
 input[type=text],input[type=email],textarea,input[type=number]{
   margin-left: 5vw;
-  margin-top: 6vh;
+  margin-top: 5vh;
   height: 5vh;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 2.5vh;
   padding: 5px;
   padding-left: 20px;
   border: 1px solid transparent;
@@ -119,14 +120,14 @@ textarea:hover{
 }
 input[type=date]{
   margin-left: 5vw;
-  margin-top: 6vh;
+  margin-top: 5vh;
   height: 5vh;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 10px;
   padding:5px;
   padding-left: 30px;
-  font-size: 15px;
+  font-size: 2.5vh;
 }
 ::-webkit-inner-spin-button{
     display:none;
@@ -145,18 +146,19 @@ input[type=text]:focus, input[type=email]:focus, input[type=date]:focus, textare
 label{
   position: absolute;
   margin-left: 5vw;
-  margin-top: 5vh;
+  margin-top: 4vh;
   padding: 5px;
+  font-size: 2.5vh;
 }
 select{
   margin-left: 5vw;
-  margin-top: 8vh;
+  margin-top: 6vh;
   height: 5vh;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 10px;
   padding: 5px;
-  font-size: 15px;
+  font-size: 2.5vh;
 }
 select:focus{
   background-color: #444;
@@ -175,10 +177,11 @@ button, #add-education, #add-project, #add-certification, #add-publication, #add
   background-color: #299;
   color: white;
   border-radius: 5px;
+  font-size: 2.5vh;
 }
 #add-education, #add-project, #add-certification, #add-publication, #add-experience, #add-training, #add-internship, #add-extra{
   height: 3vh;
-  font-size: 15px;
+  font-size: 2.5vh;
 }
 button:hover, #add-education:hover, #add-project:hover, #add-certification:hover, #add-publication:hover, #add-experience, #add-training, #add-internship, #add-extra{
   box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
@@ -239,8 +242,8 @@ button:hover, #add-education:hover, #add-project:hover, #add-certification:hover
 #errorIcon{
   position: relative;
   float: left;
-  height: 15px;
-  width: 15px;
+  height: 2.5vh;
+  width: 2.5vh;
   background-image: url('../images/icons/error.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -317,7 +320,7 @@ button:hover, #add-education:hover, #add-project:hover, #add-certification:hover
 }
 #pin_status{
   position: absolute;
-  margin-top: 7.5vh;
+  margin-top: 6.5vh;
   height: 4vh;
   width: 4vh;
   background-size: 100% 100%;
@@ -346,8 +349,7 @@ button:hover, #add-education:hover, #add-project:hover, #add-certification:hover
   border: 1px solid transparent;
 }
 legend{
-  color: #f44;
-  font-weight: bold;
+  color: #777;
 }
 .education, .project, .certification, .publication, .experience, .training, .internship, .achievement{
   position: relative;
@@ -356,7 +358,7 @@ legend{
   padding: 2%;
   height: auto;
   width: 94.5%;
-  border: 2px solid #299;
+  border: 1px solid #999;
   border-radius: 10px;
 }
 .education .big_field, .project .big_field, .certification .big_field, .publication .big_field, .experience .big_field, .training .big_field, .internship .big_field, .achievement .big_field{
@@ -466,8 +468,8 @@ legend{
 }
 .suggestions:hover{
   cursor: pointer;
-  background-color: #299;
-  color: #fff;
+  background-color: #fff;
+  color: #299;
   font-weight: bold;
 }
 .vert-bar{
@@ -491,5 +493,5 @@ legend{
   width: 0%;
   height: 100%;
   border-radius: 5px;
-  background-color: #f44;
+  background-color: #f55;
 }

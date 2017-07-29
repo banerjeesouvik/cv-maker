@@ -1,3 +1,7 @@
+if(newUser.basicinfo[0].gender != "male") {
+  $('#picture-box').css('background-image', 'url("../images/user_profile_female.jpg")');
+}
+
 if(window.File && window.FileReader){
   $('#picture').change(function (e) {
     var file = e.target.files[0];

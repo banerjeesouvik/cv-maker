@@ -1,14 +1,14 @@
 <form id="Education-form" class="forms">
-  <!--<label>Objective</label><br>
-  <textarea id="objective" name="objective" placeholder="Describe yourself.." class='big_field' autocomplete="off" /><br> -->
+  <!-- -->
   <div id="secondary" class="education">
     <legend>Secondary</legend>
+    <input type="hidden" id="course" name="degree" value="secondary"/>
     <label>Name of the Institution</label><br>
     <input type="text" id="sch" placeholder="Institution" class="big_field" name="school"/><br>
     <label>Board of Education</label><br>
     <input type="text" id="board" placeholder="Board of Education" class="big_field" name="board"/><br>
     <label>Year of Passing</label><br>
-    <input type="number" id="passyear" placeholder="yyyy" class="small_field" name="passyear"/><br>
+    <input type="number" id="passyear" placeholder="year" class="small_field" name="passyear"/><br>
     <label>Score</label><br>
     <span id="score-holder">
       <span id="cgpa" class="span-score">CGPA</span>
@@ -19,12 +19,13 @@
   </div>
   <div id="higher-secondary" class="education">
     <legend>Higher Secondary</legend>
+    <input type="hidden" id="hcourse" name="degree" value="higher-secondary"/>
     <label>Name of the Institution</label><br>
     <input type="text" id="sch" placeholder="Institution" class="big_field" name="school"/><br>
     <label>Board of Education</label><br>
     <input type="text" id="board" placeholder="Board of Education" class="big_field" name="board"/><br>
     <label>Year of Passing</label><br>
-    <input type="number" id="passyear" placeholder="yyyy" class="small_field" name="passyear"/><br>
+    <input type="number" id="passyear" placeholder="Year" class="small_field" name="passyear"/><br>
     <label>Department</label><br>
     <input type="text" id="dept" placeholder="Department" class="small_field" name="dept"/><br>
     <label>Score</label><br>
@@ -37,6 +38,7 @@
   </div>
   <div id="under-graduation" class="education">
     <legend>Under Graduation</legend>
+    <input type="hidden" id="ugcourse" name="degree" value="under-graduation"/>
     <label>Course</label><br>
     <input type="text" id="course" placeholder="e.g. B.Tech, B.A, B.Sc, LLB" class="small_field" name="course"/><br>
     <label>Name of the Institution</label><br>
@@ -44,7 +46,7 @@
     <label>University</label><br>
     <input type="text" id="univ" placeholder="University" class="big_field" name="board"/><br>
     <label>Year of Graduation</label><br>
-    <input type="number" id="passyear" placeholder="yyyy" class="small_field" name="passyear"/><br>
+    <input type="number" id="passyear" placeholder="Year" class="small_field" name="passyear"/><br>
     <label>Department</label><br>
     <input type="text" id="dept" placeholder="Department" class="small_field" name="dept"/><br>
     <label>Score</label><br>
