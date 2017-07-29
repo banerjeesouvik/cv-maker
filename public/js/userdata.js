@@ -43,8 +43,8 @@ class UserData{
   addEducation(obj) {
     this.education = obj;
   }
-  addSkill (skill) {
-
+  addSkill (obj) {
+    this.skills = obj;
   }
   addProject (name, tech, desc) {
 

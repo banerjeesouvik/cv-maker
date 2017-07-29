@@ -54,9 +54,15 @@ $(document).on('click', '.suggestions', function () {
   if(check_added_skills(skillName.toLowerCase())){
     added_skill.push(skillName.toLowerCase());
     var skillTab = $('#showskills');
-    var newSkill = $('<div class="skillset"></div>');
+    var newSkill = $(`<div class="skillset" id="skilldiv-${skillcount}"></div>`);
     skillTab.append(newSkill);
 
+    var newHiddenInputDiv = $(`<div id="hiddendiv-${skillcount}"></div>`);
+    var input1 = $(`<input type="hidden" id="skill-${skillcount}" name="skill-${skillcount}" value="${skillName}" />`);
+    var input2 = $(`<input type="hidden" id="skillprof${skillcount}" name="skillprof${skillcount++}" />`);
+    $(newHiddenInputDiv).append(input1);
+    $(newHiddenInputDiv).append(input2);
+    $('#Skill-form').append(newHiddenInputDiv);
 
     $('.skillset:last').fadeIn(500);
     $('.skillset:last').load('../pages/skill.html');
