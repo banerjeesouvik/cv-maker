@@ -49,6 +49,9 @@ class UserData{
   addProject (name, tech, desc) {
 
   }
+  addTraining (obj) {
+
+  }
   addCertification (name, auth) {
 
   }
