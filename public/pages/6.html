@@ -1,13 +1,18 @@
-<form id="Certification-form" class="forms">
-  <div class="certification">
-    <label>Name of the Certification</label><br>
-    <input type="text" name="certification-name" placeholder="Certification" class="big_field"/><br>
-    <label>Certification Authority</label><br>
-    <input type="text" name="certification-authority" placeholder="Authority Name" class="big_field"/><br>
+<!DOCTYPE html>
+<form id="internship-form" class="forms">
+  <div class="internship">
+    <label>Organisation Name</label><br>
+    <input type="text" name="organisation-name" placeholder="Name of the organisation" class="big_field"/><br>
+    <label>Your Position</label><br>
+    <input type="text" name="intern-role" placeholder="Your role/position during internship" class="big_field"/><br>
+    <label>Start Date</label><br>
+    <input type="text" placeholder="e.g. July 2010" class="small_field"><br>
+    <label>End Date</label><br>
+    <input type="text" name="end_date"placeholder="e.g. August 2010" class="small_field">
+    <input type="checkbox" id='present_internship'>Present
   </div>
   <button id="next-button">Save and Next</button>
-  <span id="add-certification">Add another Certification</span>
+  <span id="add-internship">Add another Internship</span>
 </form>
 
-
-<script src="../js/add-certification.js"></script>
+<script src="../js/add-internship.js"></script>

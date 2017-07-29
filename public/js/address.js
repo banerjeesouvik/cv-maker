@@ -4,12 +4,9 @@ $(document).ready(function(){
     'focusout':function(){
       var value= $(this).val().replace(/[^\d\.]/g, '');
       $(this).val(value);
-      if(value.length == 6){
-
-        if(!pin_valid){
-          $('#pin_status').css('background-image', 'url("../images/icons/loading.gif")');
-          ajax_call(value);
-        }
+      if(value.length == 6 && !pin_valid){
+        $('#pin_status').css('background-image', 'url("../images/icons/loading.gif")');
+        ajax_call(value);
       }
       else if (value.length < 6) {
         disable_field();
@@ -43,6 +40,7 @@ function ajax_call(value) {
         pin_valid = true;
         $('#pin_status').css('background-image', 'url("../images/icons/check1.png")');
         fill_address(data_json);
+        pin_valid=true;
         $('input:disabled').prop('disabled', false);
         $('#city').focus();
       }
@@ -52,11 +50,13 @@ function ajax_call(value) {
     })
     .fail(function(){
       $('#pin_status').css('background-image', 'url("../images/icons/error.png")');
+      $('input:disabled').prop('disabled', false);
     });
 }
 
 function disable_field(){
   $('#pin_status').css('background-image', 'url("../images/icons/error.png")');
+  pin_valid=false;
   $('#city').val('');
   $('#dist').val('');
   $('#state').val('');

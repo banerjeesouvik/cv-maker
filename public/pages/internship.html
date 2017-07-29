@@ -1,0 +1,19 @@
+<span class="delete-internship"></span>
+<label>Organisation Name</label><br>
+<input type="text" name="organisation-name" placeholder="Name of the organisation" class="big_field"/><br>
+<label>Your Position</label><br>
+<input type="text" name="company-designation" placeholder="Your role/position at the company" class="big_field"/><br>
+<label>Start Date</label><br>
+<input type="text" placeholder="e.g. July 2010" class="small_field"><br>
+<label>End Date</label><br>
+<input type="text" name="end_date"placeholder="e.g. August 2010" class="small_field">
+<script>
+  $(document.body).ready( function () {
+    $('#page-loading').hide();
+    $('.internship:last').fadeIn(2000);
+    var totalHeight = $('#internship-form').innerHeight();
+    var lastTabHeight = $('.internship:last').innerHeight();
+    var scrollHeight = totalHeight - lastTabHeight;
+    $("#main-tab").animate({ scrollTop: scrollHeight }, 1000);
+  });
+</script>

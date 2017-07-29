@@ -26,10 +26,8 @@ $('#add-skill-form').submit( function (e) {
 });
 $(document.body).on('click', '#skill-remove', function() {
   var sk = $(this).siblings('#skill-name').text();
-  //console.log(sk);
   $(this).parent().slideUp(500);
   sk = sk.toLowerCase();
   var idx = added_skill.indexOf(sk);
   added_skill.splice(idx, 1);
-  //console.log(added_skill);
 });
