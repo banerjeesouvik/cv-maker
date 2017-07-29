@@ -7,7 +7,8 @@ function preProcessData (form_name) {
   $(`#${form_name} *`).filter('div').each(function (i, val) {
     var obj = {};
     var flag = false;
-    $(this).children('input, select').each( function (i, value) {
+    //console.log($(this));
+    $(this).children('input, select, textarea').each( function (i, value) {
       var name = $(this).attr('name');
       var inputValue = $(this).val();
       obj[name] = inputValue;

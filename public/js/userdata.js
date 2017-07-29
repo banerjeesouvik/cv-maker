@@ -7,10 +7,11 @@ class UserData{
     this.education = [];
     this.skills = [];
     this.projects = [];
+    this.trainings = [];
     this.certifications = [];
     this.publications = [];
     this.internships = [];
-    this.achievements = [];
+    this.achievements = "";
     this.experiences = [];
     this.personaldetails = {};
     this.strengths = [];
@@ -46,29 +47,29 @@ class UserData{
   addSkill (obj) {
     this.skills = obj;
   }
-  addProject (name, tech, desc) {
-
+  addProject (obj) {
+    this.projects = obj;
   }
   addTraining (obj) {
-
+    this.trainings = obj;
   }
-  addCertification (name, auth) {
-
+  addCertification (obj) {
+    this.certifications = obj;
   }
-  addPublication (name, auth, desc) {
-
+  addPublication (obj) {
+    this.publications = obj;
   }
-  addInternship (inst, period) {
-
+  addInternship (obj) {
+    this.internships = obj;
   }
-  addAchievement (name) {
-
+  addAchievement (obj) {
+    this.achievements = obj;
   }
-  addExperience (postname, company, period) {
-
+  addExperience (obj) {
+    this.experiences = obj;
   }
-  addPersonaldetails () {
-
+  addPersonal_details (obj) {
+    this.personaldetails = obj;
   }
   addStrength (strength) {
 
