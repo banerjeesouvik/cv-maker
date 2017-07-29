@@ -5,7 +5,7 @@ $('#add-skill-form').submit( function (e) {
   skillName = skillName.trim();
   img_nm = skillName.toLowerCase();
   var skillTab = $('#showskills');
-  var newSkill = $('<div class="skillset"></div>');
+  var newSkill = $(`<div class="skillset" id="skilldiv-${skillcount}"></div>`);
   $('#skills').val('');
   $(".suggestions").remove();
   if( skillName.length != 0){
@@ -13,8 +13,8 @@ $('#add-skill-form').submit( function (e) {
       added_skill.push(img_nm);
       skillTab.append(newSkill);
 
-      var newHiddenInputDiv = $('<div></div>');
-      var input1 = $(`<input type="hidden" id="skill-${skillcount}" name="skill-${skillcount++}" value="${skillName}" />`);
+      var newHiddenInputDiv = $(`<div id="hiddendiv-${skillcount}"></div>`);
+      var input1 = $(`<input type="hidden" id="skill-${skillcount}" name="skill-${skillcount}" value="${skillName}" />`);
       var input2 = $(`<input type="hidden" id="skillprof${skillcount}" name="skillprof${skillcount++}" />`);
       $(newHiddenInputDiv).append(input1);
       $(newHiddenInputDiv).append(input2);
