@@ -8,15 +8,12 @@ $('#add-education').click(function (e) {
   $('.education:last').load('../pages/new-course.html');
 });
 $(document.body).on('click', '.delete-course', function () {
-  $(this).parent().fadeOut(1000, function () {
-    $(this).remove();
-  });
 
-  var totalHeight = $('#edu-form').innerHeight();
+  var totalHeight = $('#Education-form').innerHeight();
   var lastTabHeight = $('.education:last').innerHeight();
   var scrollHeight = totalHeight - lastTabHeight * 2;
-  $(this).parent().remove();
-  setTimeout( function () {
+  $(this).parent().fadeOut(500, function () {
+    $(this).remove();
     $("#main-tab").animate({ scrollTop: scrollHeight * 0.98 }, 1000);
-  }, 1000);
+  });
 });
