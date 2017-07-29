@@ -4,6 +4,7 @@ var count=0;
 var img_nm='';
 var url='';
 var skillName='';
+var skillcount = 1;
 var added_skill=[];
 $(document).ready(function () {
   $.getJSON("skills.json")
@@ -54,7 +55,11 @@ $(document).on('click', '.suggestions', function () {
     added_skill.push(skillName.toLowerCase());
     var skillTab = $('#showskills');
     var newSkill = $('<div class="skillset"></div>');
+    var hiddenInput = $(`<input type="hidden" name="skill${skillcount++}" value="${skillName}"/>`);
+
     skillTab.append(newSkill);
+    skillTab.append(hiddenInput);
+
     $('.skillset:last').fadeIn(500);
     $('.skillset:last').load('../pages/skill.html');
   }
