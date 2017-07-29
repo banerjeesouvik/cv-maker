@@ -32,6 +32,7 @@ class UserData{
      'dist': obj[0].dist,
      'state': obj[0].state,
      'country': obj[0].country
+   }
   }
   addPhoto (obj) {
     this.photoURL = obj[1].locopoco;
