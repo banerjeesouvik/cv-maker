@@ -24,17 +24,23 @@ class UserData{
       'mobile': obj[0].mobile
     };
   }
-  addAddress (street, zip, city, dist, state, country) {
-
+  addAddress (obj) {
+    this.address = {
+     'street': obj[0].street,
+     'pin': obj[0].pin,
+     'city': obj[0].city,
+     'dist': obj[0].dist,
+     'state': obj[0].state,
+     'country': obj[0].country
   }
-  addPhoto (url) {
-
+  addPhoto (obj) {
+    this.photoURL = obj[1].locopoco;
   }
   addObjective (obj) {
 
   }
-  addEducation(degree, course, institute, univ, year, dept, score) {
-
+  addEducation(obj) {
+    this.education = obj;
   }
   addSkill (skill) {
 

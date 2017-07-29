@@ -69,4 +69,5 @@ function setImage(){
   var canvas = document.getElementById('resize');
   var url = canvas.toDataURL('image/png');
   $('#picture-box').css('background-image', `url(${url})`);
+  $("#locopoco").val(url);
 }
