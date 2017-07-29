@@ -1,5 +1,5 @@
 var count = 1;
-$('#add-experience').click(function (e) {
+$('#add-extra').click(function (e) {
   e.preventDefault();
   $('#page-loading').show();
   var newExperience = $(`<div class="experience" id="new-experience-${count++}" style="display:none"></div>`);
