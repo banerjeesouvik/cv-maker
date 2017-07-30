@@ -29,8 +29,10 @@ class UserData{
   }
   addAddress (obj) {
     this.address = obj;
-    var address = obj[0].street + ' ' + obj[0].pin + ' ' + obj[0].city + ' ' + obj[0].dist + ' ' + obj[0].state
-    + ' ' + obj[0].country;
+    var address = obj[0].street + ', '
+    + obj[0].pin + ', ' + obj[0].city + ', '
+    + obj[0].dist + ', ' + obj[0].state
+    + ', ' + obj[0].country;
     $('#preview #p-address-value').text(address);
 
   }

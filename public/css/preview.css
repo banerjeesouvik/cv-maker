@@ -29,55 +29,43 @@
   left: 2%;
   top: 4vw;
   height: auto;
-  width: 60%;
+  width:35%;
   font-size: 1vw;
   color: #888;
   font-family: "century gothic";
 }
-#p-address{
+#p-links{
   position: absolute;
-  left: 1%;
-  bottom: 1.5%;
+  top: 8vh;
+  right: 10vw;
   height: auto;
-  width: 50%;
-  font-size: 1vw;
-  color: #222;
-  font-family: "century gothic";
-  text-align: left;
+  width: 40%;
+  text-align: right;
 }
-#head-elem{
-  position: absolute;
-  right: 1%;
-  bottom: 1.5%;
+.p-links-elem{
+  position: relative;
+  float: right;
+  height: auto;
   width: 100%;
+  margin: .2%;
+  font-size: 1vw;
+  color: #333;
+  font-family: "century gothic";
 }
 .p-icon{
-  position:relative;
-  float: left;
+  position: relative;
+  float: right;
   height: 1.5vw;
   width: 1.5vw;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-#email-icon{
+#p-email-icon{
   background-image: url('../images/email.png');
 }
-#mobile-icon{
+#p-mobile-icon{
   background-image: url('../images/mobile.png');
 }
-#address-icon{
+#p-address-icon{
   background-image: url('../images/address.png');
-}
-#p-email,#p-mobile{
-  position: relative;
-  float: right;
-  margin-right: 4%;
-  height: auto;
-  width: auto;
-  font-size: 1vw;
-  color: #222;
-  font-family: "century gothic";
-}
-#p-email{
-  margin-right: 1%;
 }
