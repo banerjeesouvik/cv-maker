@@ -30,21 +30,21 @@ function saveData(form_name, data) {
   newUser['add' + target] (data);
 }
 function changeStep() {
-  $(`#steps .steps-element:eq(${currentPage})`).removeClass('active-element');
-  $(`#steps .steps-element:eq(${currentPage})`).css('visibility', 'visible');
-  $(`#steps .steps-element:eq(${currentPage + 1})`).addClass('active-element');
+  $(`#steps .steps-element:eq(${currentPage - 1})`).removeClass('active-element');
+  $(`#steps .steps-element:eq(${currentPage - 1})`).css('visibility', 'visible');
+  $(`#steps .steps-element:eq(${currentPage})`).addClass('active-element');
   var span = $('<span class="completed-step"></span>');
-  $(`#steps .steps-element:eq(${currentPage})`).append(span);
+  $(`#steps .steps-element:eq(${currentPage - 1})`).append(span);
   $('.completed-step:last').fadeIn(2000);
 }
 function updateProgressBar() {
-  var index = currentPage++;
+  var index = currentPage - 1;
   $(`.line .progressline:eq(${index})`).animate({width: '100%'},function () {
     $(`.point .progresspoint:eq(${index})`).animate({width: '100%'});
   });
 }
 function loadNextPage() {
-  $('#main-tab').load(`./pages/${currentPage + 1}.html`, function() {
+  $('#main-tab').load(`./pages/${++currentPage}.html`, function() {
     $('#page-loading').hide();
     changeStep();
     updateProgressBar();
@@ -56,6 +56,6 @@ $(document).ready(function () {
   $('#container').css('visibility', 'visible');
   $('#page-loading').hide();
 
-  $('#main-tab').load('./pages/0.html');
+  $('#main-tab').load(`./pages/${currentPage}.html`);
   $('#progress-bar').load('./pages/progress-bar.html');
 });

@@ -1,4 +1,4 @@
-<span class="delete-publication"></span>
+<span class="delete-section"></span>
 <label>Title of the Publication</label><br>
 <input type="text" name="publication-name" placeholder="Publication" class="big_field"/><br>
 <label>Publication Authority</label><br>
@@ -8,9 +8,9 @@
 <script>
   $(document.body).ready( function () {
     $('#page-loading').hide();
-    $('.publication:last').fadeIn(2000);
-    var totalHeight = $('#publication-form').innerHeight();
-    var lastTabHeight = $('.publication:last').innerHeight();
+    $('.Section:last').fadeIn(2000);
+    var totalHeight = $('#Publication-form').innerHeight();
+    var lastTabHeight = $('.Section:last').innerHeight();
     var scrollHeight = totalHeight - lastTabHeight;
     $("#main-tab").animate({ scrollTop: scrollHeight }, 1000);
   });

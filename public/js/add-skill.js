@@ -27,6 +27,7 @@ $('#add-skill-form').submit( function (e) {
 $(document.body).on('click', '#skill-remove', function() {
   var sk = $(this).siblings('#skill-name').text();
   $(this).parent().slideUp(500);
+  $(this).parent().remove();
   sk = sk.toLowerCase();
   var idx = added_skill.indexOf(sk);
   added_skill.splice(idx, 1);

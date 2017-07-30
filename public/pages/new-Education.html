@@ -1,5 +1,5 @@
 <legend>Fill details of the Course</legend>
-<span class="delete-course"></span>
+<span class="delete-section"></span>
 <label>Name of the Degree</label><br>
 <input type="text" id="degree" placeholder="e.g. Post Graduation, Doctorate" class="big_field" name="degree"/><br>
 <label>Course</label><br>
@@ -21,11 +21,11 @@
 <input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage-score"/><br>
 <script>
   $(document.body).ready( function () {
-    $('.education:last #cgpa').addClass('score-active');
+    $('.Section:last #cgpa').addClass('score-active');
     $('#page-loading').hide();
-    $('.education:last').fadeIn(2000);
-    var totalHeight = $('#edu-form').innerHeight();
-    var lastTabHeight = $('.education:last').innerHeight();
+    $('.Section:last').fadeIn(2000);
+    var totalHeight = $('#Education-form').innerHeight();
+    var lastTabHeight = $('.Section:last').innerHeight();
     var scrollHeight = totalHeight - lastTabHeight;
     $("#main-tab").animate({ scrollTop: scrollHeight }, 1000);
   });

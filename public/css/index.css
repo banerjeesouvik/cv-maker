@@ -162,7 +162,7 @@ select:focus{
   background-color: #444;
   color: #fff;
 }
-button, #add-education, #add-project, #add-certification, #add-publication, #add-experience, #add-training, #add-internship, #add-extra{
+button, #add-extra{
   position: relative;
   margin-right: 5vw;
   margin-top: 4vh;
@@ -176,11 +176,11 @@ button, #add-education, #add-project, #add-certification, #add-publication, #add
   color: white;
   border-radius: 5px;
 }
-#add-education, #add-project, #add-certification, #add-publication, #add-experience, #add-training, #add-internship, #add-extra{
+#add-extra{
   height: 3vh;
   font-size: 15px;
 }
-button:hover, #add-education:hover, #add-project:hover, #add-certification:hover, #add-publication:hover, #add-experience, #add-training, #add-internship, #add-extra{
+button:hover, #add-extra:hover{
   box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
   cursor: pointer;
 }
@@ -349,7 +349,7 @@ legend{
   color: #f44;
   font-weight: bold;
 }
-.education, .project, .certification, .publication, .experience, .training, .internship, .achievement{
+.Section{
   position: relative;
   margin: .5%;
   margin-top: 2%;
@@ -359,10 +359,10 @@ legend{
   border: 2px solid #299;
   border-radius: 10px;
 }
-.education .big_field, .project .big_field, .certification .big_field, .publication .big_field, .experience .big_field, .training .big_field, .internship .big_field, .achievement .big_field{
+.Section .big_field{
   width: 42vw;
 }
-.delete-course, .delete-project, .delete-certification, .delete-publication, .delete-experience, .delete-training, .delete-internship{
+.delete-section{
   position: absolute;
   top: 2vw;
   right: 2vw;
@@ -373,11 +373,11 @@ legend{
   background-repeat: no-repeat;
   border-radius: 50%;
 }
-.delete-course:hover, .delete-project:hover, .delete-certification:hover, .delete-publication:hover, .delete-experience:hover, .delete-training:hover, .delete-internship:hover{
+.delete-section:hover{
   cursor: pointer;
   box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
 }
-.delete-course:active, .delete-project:active, .delete-certification:active, .delete-publication:active, .delete-experience:active, .delete-training:active, .delete-internship:active{
+.delete-section:active{
   background-image: url('../images/icons/delete2.png');
   box-shadow: none;
 }

@@ -1,4 +1,4 @@
-<span class="delete-certification"></span>
+<span class="delete-section"></span>
 <label>Name of the Certification</label><br>
 <input type="text" name="certification-name" placeholder="Certification" class="big_field"/><br>
 <label>Certification Authority</label><br>
@@ -6,9 +6,9 @@
 <script>
   $(document.body).ready( function () {
     $('#page-loading').hide();
-    $('.certification:last').fadeIn(2000);
-    var totalHeight = $('#certification-form').innerHeight();
-    var lastTabHeight = $('.certification:last').innerHeight();
+    $('.Section:last').fadeIn(2000);
+    var totalHeight = $('#Certification-form').innerHeight();
+    var lastTabHeight = $('.Section:last').innerHeight();
     var scrollHeight = totalHeight - lastTabHeight;
     $("#main-tab").animate({ scrollTop: scrollHeight }, 1000);
   });
