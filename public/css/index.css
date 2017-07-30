@@ -5,13 +5,14 @@ body, html{
   margin: 0px;
   font-family: arial,verdana;
 }
-#hidden-preview{
+#preview-div{
   position: absolute;
-  top: 101vh;
-  left: 20vw;
-  height: 1009px;
-  width: 715px;
-  border: 1px solid black;
+  left: 18vw;
+  bottom: 0%;
+  height: 94vh;
+  width: 57vw;
+  background-color: #299;
+  display: none;
 }
 #container{
   visibility: hidden;
