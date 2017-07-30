@@ -52,7 +52,7 @@ class UserData{
   addExperience (obj) {
     this.experiences = obj;
   }
-  addPersonal_details (obj) {
+  addPersonaldetails (obj) {
     this.personaldetails = obj;
   }
   addStrength (strength) {

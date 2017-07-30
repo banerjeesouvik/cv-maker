@@ -1,6 +1,5 @@
 <form id="Education-form" class="forms">
-  <!-- -->
-  <div id="secondary" class="education">
+  <div id="secondary" class="Section">
     <legend>Secondary</legend>
     <input type="hidden" id="course" name="degree" value="secondary"/>
     <label>Name of the Institution</label><br>
@@ -8,7 +7,7 @@
     <label>Board of Education</label><br>
     <input type="text" id="board" placeholder="Board of Education" class="big_field" name="board"/><br>
     <label>Year of Passing</label><br>
-    <input type="number" id="passyear" placeholder="year" class="small_field" name="passyear"/><br>
+    <input type="number" id="passyear" placeholder="Year" class="small_field" name="passyear"/><br>
     <label>Score</label><br>
     <span id="score-holder">
       <span id="cgpa" class="span-score">CGPA</span>
@@ -17,7 +16,7 @@
     <input class="score-input"  type="number" id="cgpa-score" placeholder="CGPA" class="small_field" name="cgpa-score"/>
     <input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage-score"/><br>
   </div>
-  <div id="higher-secondary" class="education">
+  <div id="higher-secondary" class="Section">
     <legend>Higher Secondary</legend>
     <input type="hidden" id="hcourse" name="degree" value="higher-secondary"/>
     <label>Name of the Institution</label><br>
@@ -36,7 +35,7 @@
     <input class="score-input"  type="number" id="cgpa-score" placeholder="CGPA" class="small_field" name="cgpa-score"/>
     <input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage-score"/><br>
   </div>
-  <div id="under-graduation" class="education">
+  <div id="under-graduation" class="Section">
     <legend>Under Graduation</legend>
     <input type="hidden" id="ugcourse" name="degree" value="under-graduation"/>
     <label>Course</label><br>
@@ -59,10 +58,10 @@
   </div>
 
   <button id="next-button">Save and Next</button>
-  <span id="add-education">Add Course</span>
+  <span id="add-extra">Add Course</span>
 
   </div>
 </form>
 
 <script src="../js/choose-score-listener.js"></script>
-<script src="../js/add-course.js"></script>
+<script src="../js/add-extra.js"></script>

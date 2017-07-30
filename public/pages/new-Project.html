@@ -1,4 +1,4 @@
-<span class="delete-project"></span>
+<span class="delete-section"></span>
 <label>Name of the Project</label><br>
 <input type="text" name="project-name" placeholder="Project Name" class="big_field"/><br>
 <label>Language/Technology used</label><br>
@@ -8,9 +8,9 @@
 <script>
   $(document.body).ready( function () {
     $('#page-loading').hide();
-    $('.project:last').fadeIn(2000);
-    var totalHeight = $('#project-form').innerHeight();
-    var lastTabHeight = $('.project:last').innerHeight();
+    $('.Section:last').fadeIn(2000);
+    var totalHeight = $('#Project-form').innerHeight();
+    var lastTabHeight = $('.Section:last').innerHeight();
     var scrollHeight = totalHeight - lastTabHeight;
     $("#main-tab").animate({ scrollTop: scrollHeight }, 1000);
   });

@@ -1,4 +1,4 @@
-<span class="delete-experience"></span>
+<span class="delete-section"></span>
 <label>Company Name</label><br>
 <input type="text" name="company-name" placeholder="Name of the company" class="big_field"/><br>
 <label>Designation</label><br>
@@ -10,9 +10,9 @@
 <script>
   $(document.body).ready( function () {
     $('#page-loading').hide();
-    $('.experience:last').fadeIn(2000);
-    var totalHeight = $('#experience-form').innerHeight();
-    var lastTabHeight = $('.experience:last').innerHeight();
+    $('.Section:last').fadeIn(2000);
+    var totalHeight = $('#Experience-form').innerHeight();
+    var lastTabHeight = $('.Section:last').innerHeight();
     var scrollHeight = totalHeight - lastTabHeight;
     $("#main-tab").animate({ scrollTop: scrollHeight }, 1000);
   });
