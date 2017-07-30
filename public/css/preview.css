@@ -1,0 +1,88 @@
+#preview-head{
+  position: absolute;
+  height: 14vw;
+  width: 100%;
+  background-color: #eee;
+}
+#p-name{
+  position: relative;
+  margin: 1.5%;
+  float: left;
+  height: auto;
+  width: max-content;
+  font-size: 2.5vw;
+  color: #299;
+  font-family: "century gothic";
+}
+#p-photo{
+  position: relative;
+  float: right;
+  margin: 1.5%;
+  height: 10.6vw;
+  width: 8.75vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 2px solid #f44;
+}
+#p-objective{
+  position: absolute;
+  left: 2%;
+  top: 4vw;
+  height: auto;
+  width:35%;
+  font-size: 1vw;
+  color: #888;
+  font-family: "century gothic";
+}
+#p-links{
+  position: absolute;
+  top: 8vh;
+  right: 10vw;
+  height: auto;
+  width: 40%;
+  text-align: right;
+}
+.p-links-elem{
+  position: relative;
+  float: right;
+  height: auto;
+  width: 100%;
+  margin: .2%;
+  font-size: 1vw;
+  color: #666;
+  font-family: "century gothic";
+  font-weight: bold;
+}
+.p-icon{
+  position: relative;
+  float: right;
+  height: 1.6vw;
+  width: 1.6vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#p-address{
+  position: absolute;
+  bottom: .2vh;
+  left: .5vh;
+  width: 98%;
+  height: auto;
+  font-size: 1vw;
+  color: #333;
+  font-family: "century gothic";
+}
+#p-email-icon{
+  background-image: url('../images/email.png');
+}
+#p-mobile-icon{
+  background-image: url('../images/mobile.png');
+}
+#p-address-icon{
+  background-image: url('../images/address.png');
+}
+#p-linkedin-icon{
+  background-image: url('../images/linkedin.png');
+}
+#p-github-icon{
+  background-image: url('../images/github.png');
+}

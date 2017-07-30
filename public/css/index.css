@@ -5,6 +5,24 @@ body, html{
   margin: 0px;
   font-family: arial,verdana;
 }
+#preview-div{
+  position: absolute;
+  left: 18vw;
+  bottom: 0%;
+  height: 45vw;
+  width: 57vw;
+  background-color: #666;
+  display: none;
+  overflow-y: auto;
+  box-shadow: 0px 15px 15px 0px rgba(50,50,50,0.6), 0px 15px 15px 0px rgba(50,50,50,0.6);
+}
+#preview{
+  position: absolute;
+  margin: 1.5%;
+  width: 97%;
+  height: 78vw;
+  background-color: white;
+}
 #container{
   visibility: hidden;
 }
@@ -37,16 +55,16 @@ body, html{
   left: 18vw;
   float: none;
   height: 94vh;
-  width: 59vw;
+  width: 57vw;
   background-color: #eeeeee;
   overflow-y: auto;
 }
 #view-pane{
   position: absolute;
   top: 6vh;
-  left: 77vw;
+  left: 75vw;
   height: 94vh;
-  width: 22.5vw;
+  width: 24.5vw;
   background-color: #eeeeee;
   border-left: 1px solid gray;
 }
