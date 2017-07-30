@@ -52,12 +52,13 @@ body, html{
 }
 .steps-element{
   position: relative;
-  height: 5vh;
+  height: max-content;
   width: 100%;
   background-color: transparent;
   text-align: center;
   padding-top: 1.5vh;
-  font-size: 16px;
+  padding-bottom: 1.5vh;
+  font-size: 2.5vh;
   color: #999;
   font-family: Arial, verdana;
   border: 1px solid transparent;
@@ -82,8 +83,8 @@ body, html{
   padding: 1%;
   top: 15%;
   left: 5%;
-  height: 3vh;
-  width: 3vh;
+  height: 2.5vh;
+  width: 2.5vh;
   background-image: url('../images/icons/check1.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -97,11 +98,11 @@ body, html{
 }
 input[type=text],input[type=email],textarea,input[type=number]{
   margin-left: 5vw;
-  margin-top: 6vh;
+  margin-top: 5vh;
   height: 5vh;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 2.5vh;
   padding: 5px;
   padding-left: 20px;
   border: 1px solid transparent;
@@ -119,14 +120,14 @@ textarea:hover{
 }
 input[type=date]{
   margin-left: 5vw;
-  margin-top: 6vh;
+  margin-top: 5vh;
   height: 5vh;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 10px;
   padding:5px;
   padding-left: 30px;
-  font-size: 15px;
+  font-size: 2.5vh;
 }
 ::-webkit-inner-spin-button{
     display:none;
@@ -145,18 +146,19 @@ input[type=text]:focus, input[type=email]:focus, input[type=date]:focus, textare
 label{
   position: absolute;
   margin-left: 5vw;
-  margin-top: 5vh;
+  margin-top: 4vh;
   padding: 5px;
+  font-size: 2.5vh;
 }
 select{
   margin-left: 5vw;
-  margin-top: 8vh;
+  margin-top: 6vh;
   height: 5vh;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 10px;
   padding: 5px;
-  font-size: 15px;
+  font-size: 2.5vh;
 }
 select:focus{
   background-color: #444;
@@ -175,10 +177,11 @@ button, #add-extra{
   background-color: #299;
   color: white;
   border-radius: 5px;
+  font-size: 2.5vh;
 }
 #add-extra{
   height: 3vh;
-  font-size: 15px;
+  font-size: 2.5vh;
 }
 button:hover, #add-extra:hover{
   box-shadow: 0px 5px 5px 0px rgba(175,190,200,0.6), 0px 5px 5px 0px rgba(175,190,200,0.6);
@@ -239,8 +242,8 @@ button:hover, #add-extra:hover{
 #errorIcon{
   position: relative;
   float: left;
-  height: 15px;
-  width: 15px;
+  height: 2.5vh;
+  width: 2.5vh;
   background-image: url('../images/icons/error.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -317,7 +320,7 @@ button:hover, #add-extra:hover{
 }
 #pin_status{
   position: absolute;
-  margin-top: 7.5vh;
+  margin-top: 6.5vh;
   height: 4vh;
   width: 4vh;
   background-size: 100% 100%;
@@ -346,8 +349,7 @@ button:hover, #add-extra:hover{
   border: 1px solid transparent;
 }
 legend{
-  color: #f44;
-  font-weight: bold;
+  color: #777;
 }
 .Section{
   position: relative;
@@ -356,7 +358,7 @@ legend{
   padding: 2%;
   height: auto;
   width: 94.5%;
-  border: 2px solid #299;
+  border: 1px solid #999;
   border-radius: 10px;
 }
 .Section .big_field{
@@ -409,6 +411,7 @@ legend{
   margin-left: 1%;
   height: 100%;
   background-color: #fff;
+  border: 1px solid #999;
   border-radius: 10px;
 }
 #skill-icon{
@@ -416,7 +419,6 @@ legend{
   width: 4vw;
   background-size: 4vw;
   visibility: visible;
-  border-radius: 50%;
 }
 #skill-name{
   font-size: 18px;
@@ -424,8 +426,7 @@ legend{
   width: 35%;
   padding-top: 2.2%;
   padding-left: 4%;
-  color: #fff;
-  background-color: #005776;
+  color: #666;
 }
 #skill-prof{
   float: right;
@@ -461,13 +462,15 @@ legend{
   width: 30vw;
   padding: 8px;
   padding-left: 20px;
-  background-color: #808080;
+  background-color: #888;
   color: #fff;
-  border: 1px solid  #4EB1BA;
+  border-top: 1px solid  #eee;
 }
 .suggestions:hover{
   cursor: pointer;
-  background-color: #4EB1BA;
+  background-color: #fff;
+  color: #299;
+  font-weight: bold;
 }
 .vert-bar{
   position: relative;
@@ -490,5 +493,5 @@ legend{
   width: 0%;
   height: 100%;
   border-radius: 5px;
-  background-color: #f44;
+  background-color: #f55;
 }

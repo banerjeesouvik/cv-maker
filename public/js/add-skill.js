@@ -5,13 +5,22 @@ $('#add-skill-form').submit( function (e) {
   skillName = skillName.trim();
   img_nm = skillName.toLowerCase();
   var skillTab = $('#showskills');
-  var newSkill = $('<div class="skillset"></div>');
+  var newSkill = $(`<div class="skillset" id="skilldiv-${skillcount}"></div>`);
   $('#skills').val('');
   $(".suggestions").remove();
   if( skillName.length != 0){
     if(check_added_skills(img_nm)){
       added_skill.push(img_nm);
       skillTab.append(newSkill);
+
+      var newHiddenInputDiv = $(`<div id="hiddendiv-${skillcount}"></div>`);
+      var input1 = $(`<input type="hidden" id="skill-${skillcount}" name="skill-${skillcount}" value="${skillName}" />`);
+      var input2 = $(`<input type="hidden" id="skillprof${skillcount}" name="skillprof${skillcount++}" />`);
+      $(newHiddenInputDiv).append(input1);
+      $(newHiddenInputDiv).append(input2);
+      $('#Skill-form').append(newHiddenInputDiv);
+
+
       if(check_skill(img_nm)){
         url = `../images/Skill Icons/${skillName}.png`;
       }
@@ -26,8 +35,12 @@ $('#add-skill-form').submit( function (e) {
 });
 $(document.body).on('click', '#skill-remove', function() {
   var sk = $(this).siblings('#skill-name').text();
-  $(this).parent().slideUp(500);
-  $(this).parent().remove();
+  $(this).parent().slideUp(500, function () {
+    var count = $(this).attr('id').substr(9);
+    $(`#hiddendiv-${count}`).remove();
+    $(this).remove();
+  });
+
   sk = sk.toLowerCase();
   var idx = added_skill.indexOf(sk);
   added_skill.splice(idx, 1);

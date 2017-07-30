@@ -4,7 +4,8 @@ $(document.body).on('click', '.vert-bar', function (e) {
   var barLeft = $(this).offset().left;
   var clickX = e.pageX;
   var clickWidth = clickX - barLeft;
-  //console.log(barWidth, barLeft, clickX);
   var percent = clickWidth / barWidth * 100;
+  var count = $(this).parent().parent().attr('id').substr(9);
+  $(`#hiddendiv-${count} #skillprof${count}`).val(Math.ceil(percent));
   $(this).find('#fill-prof').animate({width: `${percent}%`},200);
 });

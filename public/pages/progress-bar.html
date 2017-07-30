@@ -3,9 +3,14 @@
 <script>
 var div = $('<div class="point"></div>');
 div.css('background-color', '#f44');
+var numberOfSteps = $('#steps').children('div').length;
+var width = 100 / (numberOfSteps + 6);
+console.log(width);
+
 $('#progress-bar-div').append(div);
-  for(var i=0; i<10; i++){
+  for(var i=0; i<numberOfSteps - 1; i++){
     $('#progress-bar-div').append('<div class="line"><div class="progressline"></div></div>');
     $('#progress-bar-div').append('<div class="point"><div class="progresspoint"></div></div>');
   }
+  $('.line').css('width', `${width}vw`);
 </script>
