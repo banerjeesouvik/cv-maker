@@ -20,7 +20,12 @@ function preProcessData (form_name) {
 
   });
   saveData(form_name, data);
+  updatePreview();
   console.log(newUser);
+}
+function updatePreview() {
+  console.log(currentPage);
+  //$('#preview ')
 }
 function saveData(form_name, data) {
   var target = form_name.substr(0, form_name.length - 5);
@@ -55,6 +60,7 @@ $(document).ready(function () {
 
   $('#main-tab').load(`./pages/${currentPage}.html`);
   $('#progress-bar').load('./pages/progress-bar.html');
+  $('#preview').load('./pages/preview.html');
 });
 $('#view').on('click', function(){
   $('#preview-div').slideToggle();

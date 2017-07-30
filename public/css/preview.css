@@ -1,0 +1,83 @@
+#preview-head{
+  position: absolute;
+  height: 14vw;
+  width: 100%;
+  background-color: #eee;
+}
+#p-name{
+  position: relative;
+  margin: 1.5%;
+  float: left;
+  height: auto;
+  width: max-content;
+  font-size: 2.5vw;
+  color: #299;
+  font-family: "century gothic";
+}
+#p-photo{
+  position: relative;
+  float: right;
+  margin: 1.5%;
+  height: 10.6vw;
+  width: 8.75vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 2px solid #f44;
+}
+#p-objective{
+  position: absolute;
+  left: 2%;
+  top: 4vw;
+  height: auto;
+  width: 60%;
+  font-size: 1vw;
+  color: #888;
+  font-family: "century gothic";
+}
+#p-address{
+  position: absolute;
+  left: 1%;
+  bottom: 1.5%;
+  height: auto;
+  width: 50%;
+  font-size: 1vw;
+  color: #222;
+  font-family: "century gothic";
+  text-align: left;
+}
+#head-elem{
+  position: absolute;
+  right: 1%;
+  bottom: 1.5%;
+  width: 100%;
+}
+.p-icon{
+  position:relative;
+  float: left;
+  height: 1.5vw;
+  width: 1.5vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#email-icon{
+  background-image: url('../images/email.png');
+}
+#mobile-icon{
+  background-image: url('../images/mobile.png');
+}
+#address-icon{
+  background-image: url('../images/address.png');
+}
+#p-email,#p-mobile{
+  position: relative;
+  float: right;
+  margin-right: 4%;
+  height: auto;
+  width: auto;
+  font-size: 1vw;
+  color: #222;
+  font-family: "century gothic";
+}
+#p-email{
+  margin-right: 1%;
+}
