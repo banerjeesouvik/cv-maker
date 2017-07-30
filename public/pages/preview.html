@@ -19,10 +19,27 @@
     <span id="p-linkedin" class="p-links-elem">
       <span id="p-linkedin-icon" class="p-icon"></span>
       <span id="p-linkedin-value" style="margin-right: 1vh"></span>
-    </span><br>
+    </span>
   </div>
   <span id="p-address">
     <span id="p-address-icon" class="p-icon" style="float:left"></span>
-    <span id="p-address-value" style="margin-left: 1vh;"></span>
+    <span id="p-address-value" style="margin-left: 1vh; margin-top: 1vh"></span>
   </span>
+</div>
+
+<div id="p-education">
+  <span id="edu" class="p-div-name">Education</span>
+  <script>
+    var eduDiv = $('<div class="p-edu-div"></div>');
+    var degree = $('<span class="p-edu-div-degree"></span>');
+    var score = $('<span class="p-edu-div-score"></span>');
+    var inst = $('<span class="p-edu-div-inst"></span>');
+    var board = $('<span class="p-edu-div-board"></span>');
+    var year = $('<span class="p-edu-div-year"></span>');
+    var edu-count = newUser.education.length;
+    var newDiv = eduDiv.append(score).after(degree).after(inst).after(board).after(year);
+    for(var i=0; i< edu-count; i++){
+      $('#p-education').append(newDiv);
+    }
+  </script>
 </div>
