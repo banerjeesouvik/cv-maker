@@ -17,14 +17,12 @@ class UserData{
   }
   addBasicInfo (obj) {
     this.basicinfo = obj;
-    var name = obj[0].name;
-    var email = obj[0].email;
-    var mobile = obj[0].mobile;
-    var objective = obj[0].objective;
-    $('#preview #p-name').text(name);
-    $('#preview #p-email-value').text(email);
-    $('#preview #p-mobile-value').text('+91-' + mobile);
-    $('#preview #p-objective').text(objective);
+    $('#preview #p-name').text(obj[0].name);
+    $('#preview #p-email-value').text(obj[0].email);
+    $('#preview #p-linkedin-value').text(obj[0].linkedin);
+    $('#preview #p-github-value').text(obj[0].github);
+    $('#preview #p-mobile-value').text('+91-' + obj[0].mobile);
+    $('#preview #p-objective').text(obj[0].objective);
 
   }
   addAddress (obj) {

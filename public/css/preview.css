@@ -49,16 +49,27 @@
   width: 100%;
   margin: .2%;
   font-size: 1vw;
-  color: #333;
+  color: #666;
   font-family: "century gothic";
+  font-weight: bold;
 }
 .p-icon{
   position: relative;
   float: right;
-  height: 1.5vw;
-  width: 1.5vw;
+  height: 1.6vw;
+  width: 1.6vw;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+#p-address{
+  position: absolute;
+  bottom: .2vh;
+  left: .5vh;
+  width: 98%;
+  height: auto;
+  font-size: 1vw;
+  color: #333;
+  font-family: "century gothic";
 }
 #p-email-icon{
   background-image: url('../images/email.png');
@@ -68,4 +79,10 @@
 }
 #p-address-icon{
   background-image: url('../images/address.png');
+}
+#p-linkedin-icon{
+  background-image: url('../images/linkedin.png');
+}
+#p-github-icon{
+  background-image: url('../images/github.png');
 }
