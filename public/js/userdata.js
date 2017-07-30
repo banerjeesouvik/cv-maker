@@ -3,7 +3,6 @@ class UserData{
     this.basicinfo = {};
     this.address = {};
     this.photoURL = "";
-    this.objective = "";
     this.education = [];
     this.skills = [];
     this.projects = [];
@@ -11,7 +10,7 @@ class UserData{
     this.certifications = [];
     this.publications = [];
     this.internships = [];
-    this.achievements = "";
+    this.achievements = {};
     this.experiences = [];
     this.personaldetails = {};
     this.strengths = [];

@@ -56,3 +56,17 @@ $(document).ready(function () {
   $('#main-tab').load(`./pages/${currentPage}.html`);
   $('#progress-bar').load('./pages/progress-bar.html');
 });
+
+$('#view').on('click', function(){
+  html2canvas($('#main-tab'), {
+    onrendered: function (canvas) {
+      //$(document.body).append(canvas);
+      var url = canvas.toDataURL('image/png');
+      //console.log(url);
+      $('#show').css({
+        'background-image': `url('${url}')`,
+        'visibility': 'visible'
+      });
+    }
+  });
+});

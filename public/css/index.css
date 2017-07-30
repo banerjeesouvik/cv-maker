@@ -5,6 +5,16 @@ body, html{
   margin: 0px;
   font-family: arial,verdana;
 }
+#show{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 70%;
+  width: 90%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  visibility: hidden;
+}
 #container{
   visibility: hidden;
 }
@@ -37,16 +47,16 @@ body, html{
   left: 18vw;
   float: none;
   height: 94vh;
-  width: 59vw;
+  width: 57vw;
   background-color: #eeeeee;
   overflow-y: auto;
 }
 #view-pane{
   position: absolute;
   top: 6vh;
-  left: 77vw;
+  left: 75vw;
   height: 94vh;
-  width: 22.5vw;
+  width: 24.5vw;
   background-color: #eeeeee;
   border-left: 1px solid gray;
 }
