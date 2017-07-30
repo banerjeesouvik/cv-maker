@@ -11,8 +11,16 @@ body, html{
   bottom: 0%;
   height: 94vh;
   width: 57vw;
-  background-color: #299;
+  background-color: #666;
   display: none;
+  overflow-y: auto;
+}
+#preview{
+  position: absolute;
+  margin: 2%;
+  width: 96%;
+  height: 80vw;
+  background-color: white;
 }
 #container{
   visibility: hidden;
