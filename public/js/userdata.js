@@ -72,4 +72,15 @@ class UserData{
   addStrength (strength) {
 
   }
+
+
+  getBasicInfo () {
+    return this.basicinfo;
+  }
+  getAddress () {
+    return this.address;
+  }
+  getPhoto () {
+    return this.photoURL;
+  }
 }
