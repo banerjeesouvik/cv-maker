@@ -1,6 +1,6 @@
 var newUser = new UserData();
 var currentPage = 0;
-
+var steps = ["basic-info", "address", "upload-photo", "education", "key-skills", "experience", "internship", "projects", "training"];
 function preProcessData (form_name) {
   var count = 0;
   var data = [];
@@ -65,3 +65,14 @@ $(document).ready(function () {
 $('#view').on('click', function(){
   $('#preview-div').slideToggle();
 });
+
+$('.steps-element').click(function () {
+  var id = $(this).attr('id');
+  $(`#steps .steps-element:eq(${currentPage})`).removeClass('active-element');
+  $(`#steps .steps-element:eq(${currentPage})`).css('visibility', 'visible');
+  currentPage = steps.indexOf(id);
+  $('#main-tab').load(`./pages/${currentPage}.html`, function() {
+    $('#page-loading').hide();
+  });
+  $(`#steps .steps-element:eq(${currentPage})`).addClass('active-element');
+})
