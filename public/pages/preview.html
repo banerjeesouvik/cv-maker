@@ -1,45 +1,4 @@
-<div id="preview-head">
-  <span id="p-name"></span>
-  <span id="p-photo"></span>
-  <span id="p-objective"></span>
-
-  <div id="p-links">
-    <span id="p-email" class="p-links-elem">
-      <span id="p-email-icon" class="p-icon"></span>
-      <span id="p-email-value" style="margin-right: 1vh"></span>
-    </span><br>
-    <span id="p-mobile" class="p-links-elem">
-      <span id="p-mobile-icon" class="p-icon"></span>
-      <span id="p-mobile-value" style="margin-right: 1vh"></span>
-    </span><br>
-    <span id="p-github" class="p-links-elem">
-      <span id="p-github-icon" class="p-icon"></span>
-      <span id="p-github-value" style="margin-right: 1vh"></span>
-    </span><br>
-    <span id="p-linkedin" class="p-links-elem">
-      <span id="p-linkedin-icon" class="p-icon"></span>
-      <span id="p-linkedin-value" style="margin-right: 1vh"></span>
-    </span>
-  </div>
-  <span id="p-address">
-    <span id="p-address-icon" class="p-icon" style="float:left"></span>
-    <span id="p-address-value" style="margin-left: 1vh; margin-top: 1vh"></span>
-  </span>
-</div>
-
-<div id="p-education">
+<div id="preview-head" style="visibility: hidden"></div>
+<div id="p-education" style="visibility: hidden">
   <span id="edu" class="p-div-name">Education</span>
-  <script>
-    var eduDiv = $('<div class="p-edu-div"></div>');
-    var degree = $('<span class="p-edu-div-degree"></span>');
-    var score = $('<span class="p-edu-div-score"></span>');
-    var inst = $('<span class="p-edu-div-inst"></span>');
-    var board = $('<span class="p-edu-div-board"></span>');
-    var year = $('<span class="p-edu-div-year"></span>');
-    var edu-count = newUser.education.length;
-    var newDiv = eduDiv.append(score).after(degree).after(inst).after(board).after(year);
-    for(var i=0; i< edu-count; i++){
-      $('#p-education').append(newDiv);
-    }
-  </script>
 </div>

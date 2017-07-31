@@ -1,9 +1,11 @@
 <form id="Education-form" class="forms">
   <div id="secondary" class="Section">
     <legend>Secondary</legend>
-    <input type="hidden" id="course" name="degree" value="secondary"/>
+    <input type="hidden" name="degree" value="Secondary"/>
+    <input type="hidden" name="course" value=""/><br>
     <label>Name of the Institution</label><br>
-    <input type="text" id="sch" placeholder="Institution" class="big_field" name="school"/><br>
+    <input type="text" id="sch" placeholder="Institution" class="big_field" name="inst"/><br>
+    <input type="hidden" name="dept" value=""/>
     <label>Board of Education</label><br>
     <input type="text" id="board" placeholder="Board of Education" class="big_field" name="board"/><br>
     <label>Year of Passing</label><br>
@@ -13,14 +15,15 @@
       <span id="cgpa" class="span-score">CGPA</span>
       <span id="percentage" class="span-score">Percentage</span>
     </span>
-    <input class="score-input"  type="number" id="cgpa-score" placeholder="CGPA" class="small_field" name="cgpa-score"/>
-    <input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage-score"/><br>
+    <input class="score-input"  type="number" id="cgpa-score" placeholder="CGPA" class="small_field" name="cgpa_score"/>
+    <input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage_score"/><br>
   </div>
   <div id="higher-secondary" class="Section">
     <legend>Higher Secondary</legend>
-    <input type="hidden" id="hcourse" name="degree" value="higher-secondary"/>
+    <input type="hidden" id="degree" name="degree" value="Higher-Secondary"/>
+    <input type="hidden" name="course" value=""/><br>
     <label>Name of the Institution</label><br>
-    <input type="text" id="sch" placeholder="Institution" class="big_field" name="school"/><br>
+    <input type="text" id="sch" placeholder="Institution" class="big_field" name="inst"/><br>
     <label>Board of Education</label><br>
     <input type="text" id="board" placeholder="Board of Education" class="big_field" name="board"/><br>
     <label>Year of Passing</label><br>
@@ -32,16 +35,16 @@
       <span id="cgpa" class="span-score">CGPA</span>
       <span id="percentage" class="span-score">Percentage</span>
     </span>
-    <input class="score-input"  type="number" id="cgpa-score" placeholder="CGPA" class="small_field" name="cgpa-score"/>
-    <input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage-score"/><br>
+    <input class="score-input"  type="number" id="cgpa-score" placeholder="CGPA" class="small_field" name="cgpa_score"/>
+    <input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage_score"/><br>
   </div>
   <div id="under-graduation" class="Section">
     <legend>Under Graduation</legend>
-    <input type="hidden" id="ugcourse" name="degree" value="under-graduation"/>
+    <input type="hidden" id="ugcourse" name="degree" value="Under-Graduation"/>
     <label>Course</label><br>
     <input type="text" id="course" placeholder="e.g. B.Tech, B.A, B.Sc, LLB" class="small_field" name="course"/><br>
     <label>Name of the Institution</label><br>
-    <input type="text" id="sch" placeholder="Institution" class="big_field" name="college"/><br>
+    <input type="text" id="sch" placeholder="Institution" class="big_field" name="inst"/><br>
     <label>University</label><br>
     <input type="text" id="univ" placeholder="University" class="big_field" name="board"/><br>
     <label>Year of Graduation</label><br>
@@ -53,8 +56,8 @@
       <span id="cgpa" class="span-score">CGPA</span>
       <span id="percentage" class="span-score">Percentage</span>
     </span>
-    <input class="score-input"  type="number" id="cgpa-score" placeholder="CGPA" class="small_field" name="cgpa-score"/>
-    <input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage-score"/><br>
+    <input class="score-input"  type="number" id="cgpa-score" placeholder="CGPA" class="small_field" name="cgpa_score"/>
+    <input class="score-input" style="display: none" type="number" id="percentage-score" placeholder="Percentage" class="small_field" name="percentage_score"/><br>
   </div>
 
   <button id="next-button">Save and Next</button>

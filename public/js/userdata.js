@@ -17,13 +17,15 @@ class UserData{
   }
   addBasicInfo (obj) {
     this.basicinfo = obj;
-    $('#preview #p-name').text(obj[0].name);
-    $('#preview #p-email-value').text(obj[0].email);
-    $('#preview #p-linkedin-value').text(obj[0].linkedin);
-    $('#preview #p-github-value').text(obj[0].github);
-    $('#preview #p-mobile-value').text('+91-' + obj[0].mobile);
-    $('#preview #p-objective').text(obj[0].objective);
-
+    $('#preview-head').load('../pages/preview-head.html', function (){
+      $('#preview #p-name').text(obj[0].name);
+      $('#preview #p-email-value').text(obj[0].email);
+      $('#preview #p-linkedin-value').text(obj[0].linkedin);
+      $('#preview #p-github-value').text(obj[0].github);
+      $('#preview #p-mobile-value').text('+91-' + obj[0].mobile);
+      $('#preview #p-objective').text(obj[0].objective);
+    });
+    $('#preview-head').css('visibility', 'visible');
   }
   addAddress (obj) {
     this.address = obj;
@@ -41,6 +43,35 @@ class UserData{
   }
   addEducation(obj) {
     this.education = obj;
+    var edu_count = newUser.education.length;
+    //console.log(edu_count);
+    for(var i=0; i< edu_count; i++){
+      var k = 0;
+      var eduDiv = $(`<div class="p-edu-div" id="edu-div-${i}"></div>`);
+      $('#p-education').append(eduDiv);
+      $(`#edu-div-${i}`).load('../pages/preview-education.html', function (){
+        var scoreType, score;
+        console.log(obj[k]);
+        if(obj[k].cgpa_score == ''){
+
+          scoreType = 'Percentage';
+          score = obj[k].percentage_score;
+        }else{
+          scoreType = 'CGPA';
+          score = obj[k].cgpa_score;
+        }
+        $(`#edu-div-${k} #p-score-type`).text(scoreType);
+        $(`#edu-div-${k} #p-score-value`).text(score);
+        $(`#edu-div-${k} .p-edu-div-degree`).text(obj[k].degree);
+        $(`#edu-div-${k} .p-edu-div-year`).text(obj[k].passyear);
+        $(`#edu-div-${k} #p-edu-div-inst-value`).text(obj[k].inst);
+        $(`#edu-div-${k} #p-edu-div-dept`).text(obj[k].course +' ' +obj[k].dept);
+        $(`#edu-div-${k} .p-edu-div-board`).text(obj[k].board);
+        k++;
+      });
+    }
+
+    $('#p-education').css('visibility', 'visible');
   }
   addSkill (obj) {
     this.skills = obj;
