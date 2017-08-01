@@ -1,5 +1,5 @@
 var newUser = new UserData();
-var currentPage = 0;
+var currentPage = 4;
 var steps = ["basic-info", "address", "upload-photo", "education", "key-skills", "experience", "internship", "projects", "training"];
 function preProcessData (form_name) {
   var count = 0;
