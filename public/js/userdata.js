@@ -43,8 +43,7 @@ class UserData{
   }
   addEducation(obj) {
     this.education = obj;
-    var edu_count = newUser.education.length;
-    //console.log(edu_count);
+    var edu_count = obj.length;
     for(var i=0; i< edu_count; i++){
       var k = 0;
       var eduDiv = $(`<div class="p-edu-div" id="edu-div-${i}"></div>`);
@@ -53,7 +52,6 @@ class UserData{
         var scoreType, score;
         console.log(obj[k]);
         if(obj[k].cgpa_score == ''){
-
           scoreType = 'Percentage';
           score = obj[k].percentage_score;
         }else{
@@ -70,11 +68,26 @@ class UserData{
         k++;
       });
     }
-
     $('#p-education').css('visibility', 'visible');
   }
   addSkill (obj) {
     this.skills = obj;
+    var skill_count = obj.length;
+    var k = 0;
+    console.log(obj);
+    for(var i=0; i<skill_count; i++){
+      var skillDiv = $(`<div class="p-skill-div" id="skill-div-${i}"></div>`);
+      $('#p-skills').append(skillDiv);
+      $(`#skill-div-${i}`).load('../pages/preview-skills.html', function () {
+        $(`#skill-div-${k} #p-skill-logo`)
+        .css('background-image', `url('../images/Skill Icons/${obj[k].skill}.png')`);
+        $(`#skill-div-${k} #p-skill-name`).text(obj[k].skill);
+        $(`#skill-div-${k} #p-skill-prof-value`).css('width', `${obj[k].skillprof}%`);
+        k++;
+      });
+    }
+
+    $('#p-skills').css('visibility', 'visible');
   }
   addProject (obj) {
     this.projects = obj;

@@ -14,8 +14,8 @@ $('#add-skill-form').submit( function (e) {
       skillTab.append(newSkill);
 
       var newHiddenInputDiv = $(`<div id="hiddendiv-${skillcount}"></div>`);
-      var input1 = $(`<input type="hidden" id="skill-${skillcount}" name="skill-${skillcount}" value="${skillName}" />`);
-      var input2 = $(`<input type="hidden" id="skillprof${skillcount}" name="skillprof${skillcount++}" />`);
+      var input1 = $(`<input type="hidden" id="skill-${skillcount}" name="skill" value="${skillName}" />`);
+      var input2 = $(`<input type="hidden" id="skillprof${skillcount++}" name="skillprof" />`);
       $(newHiddenInputDiv).append(input1);
       $(newHiddenInputDiv).append(input2);
       $('#Skill-form').append(newHiddenInputDiv);
