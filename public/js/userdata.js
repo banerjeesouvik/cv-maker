@@ -83,4 +83,10 @@ class UserData{
   getPhoto () {
     return this.photoURL;
   }
+  getEducation () {
+    return this.education;
+  }
+  getSkill () {
+    return this.skills;
+  }
 }
