@@ -1,6 +1,8 @@
 var newUser = new UserData();
 var currentPage = 3;
-var steps = ["basic-info", "address", "upload-photo", "education", "key-skills", "experience", "internship", "projects", "training"];
+var steps = ["basic-info", "address", "upload-photo", "education", "key-skills",
+            "experience", "internship", "projects", "training", "certification",
+            "publication", "achievement", "personal-details", "Strengths"];
 function preProcessData (form_name) {
   var count = 0;
   var data = [];
@@ -54,7 +56,7 @@ function loadNextPage() {
 }
 $(document).ready(function () {
   //use these when using any other page than 0.html as first page
-  $('.steps-element:first ').addClass('active-element');
+  $('.steps-element:first').addClass('active-element');
   $('#container').css('visibility', 'visible');
   $('#page-loading').hide();
 

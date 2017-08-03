@@ -162,4 +162,28 @@ class UserData{
   getSkill () {
     return this.skills;
   }
+  getExperience () {
+    return this.experiences;
+  }
+  getInternship () {
+    return this.internships;
+  }
+  getProject () {
+    return this.projects;
+  }
+  getTraining () {
+    return this.trainings;
+  }
+  getCertification () {
+    return this.certifications;
+  }
+  getPublication () {
+    return this.publications;
+  }
+  getAchievement () {
+    return this.achievements;
+  }
+  getPersonaldetails () {
+    return this.personaldetails;
+  }
 }
