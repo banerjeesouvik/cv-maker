@@ -1,5 +1,5 @@
 #preview-head{
-  position: absolute;
+  position: relative;
   height: 14vw;
   width: 100%;
   background-color: #eee;
@@ -88,15 +88,17 @@
   background-image: url('../images/github.png');
 }
 #p-education{
-  position: absolute;
-  left: 2vw;
-  top: 30vh;
+  position: relative;
+  float: left;
+  margin-left: 2vw;
   height: auto;
   width: 28vw;
   font-family: "century gothic";
 }
 .p-div-name{
   position: relative;
+  float: left;
+  margin-top: 2vh;
   margin-left: 1vw;
   float: left;
   font-size: 1.2vw;
@@ -170,9 +172,9 @@
   color: #000;
 }
 #p-skills{
-  position: absolute;
-  right: 2vw;
-  top: 30vh;
+  position: relative;
+  float: right;
+  margin-right: 2vw;
   height: auto;
   width: 20vw;
   font-family: "century gothic";
@@ -228,4 +230,61 @@
   height: 100%;
   background-color: #299;
   border-radius: 2vw;
+}
+#p-experience{
+  position: relative;
+  float: left;
+  margin-left: 2vw;
+  height: auto;
+  width: 28vw;
+  font-family: "century gothic";
+}
+.p-exp-div, .p-intern-div{
+  position: relative;
+  float: left;
+  margin-top: .6vh;
+  width: 100%;
+  height: 6.5vh;
+  float: left;
+  background-color: #eee;
+}
+#exp-border, #intern-border{
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 1vw;
+  background-color: #f44;
+}
+#intern-border{
+  background-color: #299;
+}
+#exp-pos, #intern-pos{
+  position: absolute;
+  top: 0%;
+  left: 1.2vw;
+  font-size: 1vw;
+  color: #000;
+  font-weight: bold;
+}
+#exp-company, #intern-company{
+  position: absolute;
+  top: 1.5vw;
+  left: 1.2vw;
+  font-size: .9vw;
+  color: #299;
+}
+#exp-period,#intern-period{
+  position: absolute;
+  right: .4vw;
+  top: 0%;
+  font-size: .8vw;
+  color: #666;
+}
+#p-internship{
+  position: relative;
+  float: right;
+  margin-right: 2vw;
+  height: auto;
+  width: 20vw;
+  font-family: "century gothic";
 }

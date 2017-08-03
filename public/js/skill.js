@@ -63,7 +63,6 @@ $(document).on('click', '.suggestions', function () {
     $(newHiddenInputDiv).append(input1);
     $(newHiddenInputDiv).append(input2);
     $('#Skill-form').append(newHiddenInputDiv);
-
     $('.skillset:last').fadeIn(500);
     $('.skillset:last').load('../pages/skill.html');
   }

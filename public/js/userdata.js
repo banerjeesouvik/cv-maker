@@ -42,7 +42,7 @@ class UserData{
     $('#p-photo').css('background-image', `url('${url}')`);
   }
   addEducation(obj) {
-    this.education = obj;
+
     var edu_count = obj.length;
     for(var i=0; i< edu_count; i++){
       var k = 0;
@@ -54,9 +54,11 @@ class UserData{
         if(obj[k].cgpa_score == ''){
           scoreType = 'Percentage';
           score = obj[k].percentage_score;
+          obj[k].cgpa_score = "";
         }else{
           scoreType = 'CGPA';
           score = obj[k].cgpa_score;
+          obj[k].percentage_score = "";
         }
         $(`#edu-div-${k} #p-score-type`).text(scoreType);
         $(`#edu-div-${k} #p-score-value`).text(score);
@@ -66,6 +68,7 @@ class UserData{
         $(`#edu-div-${k} #p-edu-div-dept`).text(obj[k].course +' ' +obj[k].dept);
         $(`#edu-div-${k} .p-edu-div-board`).text(obj[k].board);
         k++;
+        this.education = obj;
       });
     }
     $('#p-education').css('visibility', 'visible');
@@ -103,12 +106,38 @@ class UserData{
   }
   addInternship (obj) {
     this.internships = obj;
+    var intern_count = obj.length;
+    for(var i = 0; i<intern_count; i++){
+      var k = 0;
+      var internDiv = $(`<div class="p-intern-div" id="p-intern-div-${i}"></div>`);
+      $('#p-internship').append(internDiv);
+      $(`#p-intern-div-${i}`).load('../pages/preview-intern.html', function () {
+        $(`#p-intern-div-${k} #intern-pos`).text(obj[k].intern_role);
+        $(`#p-intern-div-${k} #intern-company`).text(obj[k].organisation_name);
+        $(`#p-intern-div-${k} #intern-period`).text(obj[k].start_date + ' - ' + obj[k].end_date);
+        k++;
+      });
+    }
+    $('#p-internship').css('visibility', 'visible');
   }
   addAchievement (obj) {
     this.achievements = obj;
   }
   addExperience (obj) {
     this.experiences = obj;
+    var exp_count = obj.length;
+    for(var i = 0; i<exp_count; i++){
+      var k = 0;
+      var expDiv = $(`<div class="p-exp-div" id="p-exp-div-${i}"></div>`);
+      $('#p-experience').append(expDiv);
+      $(`#p-exp-div-${i}`).load('../pages/preview-exp.html', function () {
+        $(`#p-exp-div-${k} #exp-pos`).text(obj[k].company_designation);
+        $(`#p-exp-div-${k} #exp-company`).text(obj[k].company_name);
+        $(`#p-exp-div-${k} #exp-period`).text(obj[k].start_date + ' - ' + obj[k].end_date);
+        k++;
+      });
+    }
+    $('#p-experience').css('visibility', 'visible');
   }
   addPersonaldetails (obj) {
     this.personaldetails = obj;
