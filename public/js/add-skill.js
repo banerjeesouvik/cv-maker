@@ -26,7 +26,7 @@ $('#add-skill-form').submit( function (e) {
       }
       else {
         img_nm = img_nm[0];
-        url = `../images/Alphabets Icons/${img_nm}.jpeg`
+        url = `../images/Alphabets Icons/${img_nm}.jpeg`;
       }
       $('.skillset:last').fadeIn(500);
       $('.skillset:last').load('../pages/skill.html');

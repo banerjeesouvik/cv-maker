@@ -1,4 +1,9 @@
-if(newUser.basicinfo[0].gender != "male") {
+var img = newUser['getPhoto'] ();
+if(! $.isEmptyObject(img)){
+  $('#locopoco').val(img);
+  $('#picture-box').css('background-image', `url(${img})`);
+}
+else if(newUser.basicinfo[0].gender != "male") {
   $('#picture-box').css('background-image', 'url("../images/user_profile_female.jpg")');
 }
 

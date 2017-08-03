@@ -25,20 +25,22 @@
   </div>
   <button id="next-button">Save and next</button>
 
-  <script>
-    $('.steps-element:first ').addClass('active-element');
-    $('#container').css('visibility', 'visible');
-    $('#page-loading').hide();
-
-    $('input[name=mobile]').on('keyup', function () {
-      if($(this).val().length != 10){
-        $(this).css('color', '#888');
-      }else{
-        $(this).css('color', '#fff');
-      }
-    });
-    $('input[name=mobile]').on('focusout', function () {
-      $(this).css('color', '#000');
-    });
-  </script>
 </form>
+<script src="../js/fetchdata1.js"></script>
+<script>
+  $('.steps-element:first ').addClass('active-element');
+  $('#container').css('visibility', 'visible');
+  getData('BasicInfo');
+  $('#page-loading').hide();
+
+  $('input[name=mobile]').on('keyup', function () {
+    if($(this).val().length != 10){
+      $(this).css('color', '#888');
+    }else{
+      $(this).css('color', '#fff');
+    }
+  });
+  $('input[name=mobile]').on('focusout', function () {
+    $(this).css('color', '#000');
+  });
+</script>
