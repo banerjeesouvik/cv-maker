@@ -94,6 +94,19 @@ class UserData{
   }
   addProject (obj) {
     this.projects = obj;
+    var project_count = obj.length;
+    for(var i = 0; i<project_count; i++){
+      var k = 0;
+      var projectDiv = $(`<div class="p-project-div" id="p-project-div-${i}"></div>`);
+      $('#p-project').append(projectDiv);
+      $(`#p-project-div-${i}`).load('../pages/preview-project.html', function () {
+        $(`#p-project-div-${k} #project-name`).text(obj[k].project_name);
+        $(`#p-project-div-${k} #project-tech`).text(obj[k].project_tech);
+        $(`#p-project-div-${k} #project-desc`).text(obj[k].project_desc);
+        k++;
+      });
+    }
+    $('#p-project').css('visibility', 'visible');
   }
   addTraining (obj) {
     this.trainings = obj;

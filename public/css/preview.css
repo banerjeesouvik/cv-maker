@@ -288,3 +288,44 @@
   width: 20vw;
   font-family: "century gothic";
 }
+#p-project{
+  position: relative;
+  float: left;
+  margin-left: 2vw;
+  width: 28vw;
+  height: 20vh;
+  font-family: "century gothic";
+}
+.p-project-div{
+  position: relative;
+  float: left;
+  margin-top: .6vh;
+  width: 27vw;
+  height: auto;
+  background-color: #eee;
+  border-left: 1vw solid #f44;
+}
+#project-name{
+  position: relative;
+  margin-top: 0%;
+  margin-left: .2vw;
+  font-size: 1.1vw;
+  font-weight: bold;
+}
+#project-tech{
+  position: relative;
+  margin-top: 1.5vw;
+  margin-left: .2vw;
+  font-size: .9vw;
+  color: #299;
+  font-weight: bold;
+}
+#project-desc{
+  position: relative;
+  float: left;
+  margin-bottom: .2vh;
+  margin-left: .2vw;
+  font-size: .8vw;
+  width: 26vw;
+  color: #444;
+}
