@@ -1,8 +1,9 @@
 #preview-head{
-  position: absolute;
+  position: relative;
   height: 14vw;
   width: 100%;
   background-color: #eee;
+  border-bottom: 2px solid #f44;
 }
 #p-name{
   position: relative;
@@ -22,14 +23,14 @@
   width: 8.75vw;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  border: 2px solid #f44;
+  border: 2px solid #299;
 }
 #p-objective{
   position: absolute;
   left: 2%;
   top: 4vw;
   height: auto;
-  width:35%;
+  width:40%;
   font-size: 1vw;
   color: #888;
   font-family: "century gothic";
@@ -47,7 +48,7 @@
   float: right;
   height: auto;
   width: 100%;
-  margin: .2%;
+  margin: .2vh;
   font-size: 1vw;
   color: #666;
   font-family: "century gothic";
@@ -85,4 +86,205 @@
 }
 #p-github-icon{
   background-image: url('../images/github.png');
+}
+#p-education{
+  position: relative;
+  float: left;
+  margin-left: 2vw;
+  height: auto;
+  width: 28vw;
+  font-family: "century gothic";
+}
+.p-div-name{
+  position: relative;
+  float: left;
+  margin-top: 2vh;
+  margin-left: 1vw;
+  float: left;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #888;
+}
+.p-edu-div{
+  position: relative;
+  float: left;
+  margin-top: .6vh;
+  height: auto;
+  width: 100%;
+  background-color: #eee;
+}
+.p-edu-div-score{
+  position: relative;
+  float: left;
+  height: 5.5vw;
+  width: 5vw;
+  background-color: #f44;
+}
+#p-score-type{
+  position: absolute;
+  width: 100%;
+  font-size: .8vw;
+  color: #fff;
+  text-align: center;
+}
+#p-score-value{
+  position: absolute;
+  top: 3.5vh;
+  width: 100%;
+  text-align: center;
+  height: 5vh;
+  font-size: 2.4vw;
+  color: #fff;
+}
+.p-edu-div-degree{
+  position: absolute;
+  top: 0%;
+  left: 5.2vw;
+  font-size: .8vw;
+  color: #666;
+}
+.p-edu-div-year{
+  position: absolute;
+  top: 0%;
+  right: .5vw;
+  font-size: .8vw;
+  color: #666;
+}
+.p-edu-div-inst{
+  position: absolute;
+  top: 1vw;
+  left: 5.2vw;
+  font-size: 1.2vw;
+  color: #288;
+}
+#p-edu-div-inst-value{
+  font-weight: bold;
+}
+#p-edu-div-dept{
+  font-size: .95vw;
+  color: #f44;
+}
+.p-edu-div-board{
+  position: absolute;
+  bottom: .2vh;
+  left: 5.2vw;
+  font-size: .8vw;
+  color: #000;
+}
+#p-skills{
+  position: relative;
+  float: right;
+  margin-right: 2vw;
+  height: auto;
+  width: 20vw;
+  font-family: "century gothic";
+}
+.p-skill-div{
+  position: relative;
+  float: left;
+  margin-top: .6vh;
+  height: auto;
+  width: 100%;
+  background-color: #eee;
+}
+#p-skill-logo{
+  position: relative;
+  float: left;
+  height: 3vw;
+  width: 3vw;
+  border: 1px solid #999;
+  background-color: #fff;
+  border-radius: 20%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#p-skill-name{
+  position: absolute;
+  top: 0%;
+  left: 3.5vw;
+  font-size: 1vw;
+  font-family: "century gothic";
+  font-weight: bold;
+  color: #444;
+}
+#p-skill-prof{
+  position: absolute;
+  bottom: .2vw;
+  left: 3.5vw;
+  height: .4vw;
+  width: 16vw;
+  border: 1px solid #299;
+  border-radius: 2vw;
+  background-color: #fff;
+}
+#p-skill-prof-header{
+  position: absolute;
+  right: .8vw;
+  bottom: .8vw;
+  font-size: .7vw;
+  font-family: "century gothic";
+  color: #299;
+}
+#p-skill-prof-value{
+  position: absolute;
+  height: 100%;
+  background-color: #299;
+  border-radius: 2vw;
+}
+#p-experience{
+  position: relative;
+  float: left;
+  margin-left: 2vw;
+  height: auto;
+  width: 28vw;
+  font-family: "century gothic";
+}
+.p-exp-div, .p-intern-div{
+  position: relative;
+  float: left;
+  margin-top: .6vh;
+  width: 100%;
+  height: 6.5vh;
+  float: left;
+  background-color: #eee;
+}
+#exp-border, #intern-border{
+  position: relative;
+  float: left;
+  height: 100%;
+  width: 1vw;
+  background-color: #f44;
+}
+#intern-border{
+  background-color: #299;
+}
+#exp-pos, #intern-pos{
+  position: absolute;
+  top: 0%;
+  left: 1.2vw;
+  font-size: 1vw;
+  color: #000;
+  font-weight: bold;
+}
+#exp-company, #intern-company{
+  position: absolute;
+  top: 1.5vw;
+  left: 1.2vw;
+  font-size: .9vw;
+  color: #299;
+}
+#exp-period,#intern-period{
+  position: absolute;
+  right: .4vw;
+  top: 0%;
+  font-size: .8vw;
+  color: #666;
+}
+#p-internship{
+  position: relative;
+  float: right;
+  margin-right: 2vw;
+  height: auto;
+  width: 20vw;
+  font-family: "century gothic";
 }

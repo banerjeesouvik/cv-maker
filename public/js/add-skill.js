@@ -23,14 +23,13 @@ $('#add-skill-form').submit( function (e) {
 
       var newHiddenInputDiv = $(`<div id="hiddendiv-${skillcount}"></div>`);
       var input1 = $(`<input type="hidden" id="skill-${skillcount}" name="skill" value="${skillName}" />`);
-      var input2 = $(`<input type="hidden" id="skillprof${skillcount}" name="skillprof" />`);
+      var input2 = $(`<input type="hidden" id="skillprof${skillcount++}" name="skillprof" />`);
       $(newHiddenInputDiv).append(input1);
       $(newHiddenInputDiv).append(input2);
       $('#Skill-form').append(newHiddenInputDiv);
 
       $('.skillset:last').fadeIn(500);
       $('.skillset:last').load('../pages/skill.html');
-      skillcount++;
     }
   }
 });

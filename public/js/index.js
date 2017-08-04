@@ -23,10 +23,10 @@ function preProcessData (form_name) {
   });
   saveData(form_name, data);
   updatePreview();
-  console.log(newUser);
+  //console.log(newUser);
 }
 function updatePreview() {
-  console.log(currentPage);
+  //console.log(currentPage);
   //$('#preview ')
 }
 function saveData(form_name, data) {
