@@ -4,7 +4,7 @@ var count=0;
 var img_nm='';
 var url='';
 var skillName='';
-var skillcount = 1;
+var skillcount = 0;
 var added_skill=[];
 var saved_skills = newUser ["getSkill"] ();
 $(document).ready(function () {
@@ -18,7 +18,7 @@ $(document).ready(function () {
     });
 
   if(! $.isEmptyObject(saved_skills)){
-
+    skillcount = saved_skills.length;
     (function recursive(i) {
       skillName = saved_skills[i]["skill"];
       added_skill.push(skillName.toLowerCase());

@@ -30,6 +30,7 @@ $('#add-skill-form').submit( function (e) {
 
       $('.skillset:last').fadeIn(500);
       $('.skillset:last').load('../pages/skill.html');
+      skillcount++;
     }
   }
 });
