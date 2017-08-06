@@ -67,6 +67,13 @@ $(document).ready(function () {
 $('#view').on('click', function(){
   $('#preview-div').slideToggle();
 });
+$('#print').on('click', function(){
+  html2canvas($('#preview'), {
+  onrendered: function(canvas) {
+    document.body.appendChild(canvas);
+  }
+});
+});
 
 $('.steps-element').click(function () {
   var id = $(this).attr('id');
