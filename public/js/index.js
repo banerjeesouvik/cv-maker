@@ -1,5 +1,5 @@
 var newUser = new UserData();
-var currentPage = 3;
+var currentPage = 0;
 var steps = ["basic-info", "address", "upload-photo", "education", "key-skills",
             "experience", "internship", "projects", "training", "certification",
             "publication", "achievement", "personal-details", "Strengths"];

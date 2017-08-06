@@ -17,15 +17,24 @@ class UserData{
   }
   addBasicInfo (obj) {
     this.basicinfo = obj;
-    $('#preview-head').load('../pages/preview-head.html', function (){
+    if(this.photoURL == "" || $.isEmptyObject(this.address)){
+      $('#preview-head').load('../pages/preview-head.html', function (){
+        $('#preview #p-name').text(obj[0].name);
+        $('#preview #p-email-value').text(obj[0].email);
+        $('#preview #p-linkedin-value').text(obj[0].linkedin);
+        $('#preview #p-github-value').text(obj[0].github);
+        $('#preview #p-mobile-value').text('+91-' + obj[0].mobile);
+        $('#preview #p-objective').text(obj[0].objective);
+      });
+      $('#preview-head').show();
+    }else{
       $('#preview #p-name').text(obj[0].name);
       $('#preview #p-email-value').text(obj[0].email);
       $('#preview #p-linkedin-value').text(obj[0].linkedin);
       $('#preview #p-github-value').text(obj[0].github);
       $('#preview #p-mobile-value').text('+91-' + obj[0].mobile);
       $('#preview #p-objective').text(obj[0].objective);
-    });
-    $('#preview-head').css('visibility', 'visible');
+    }
   }
   addAddress (obj) {
     this.address = obj;
@@ -34,7 +43,6 @@ class UserData{
     + obj[0].dist + ', ' + obj[0].state
     + ', ' + obj[0].country;
     $('#preview #p-address-value').text(address);
-
   }
   addPhoto (obj) {
     this.photoURL = obj[1].locopoco;
@@ -42,6 +50,9 @@ class UserData{
     $('#p-photo').css('background-image', `url('${url}')`);
   }
   addEducation(obj) {
+    if(this.education.length != 0){
+      $('#p-education').children('div').remove();
+    }
     this.education = obj;
     var edu_count = obj.length;
     for(var i=0; i< edu_count; i++){
@@ -70,9 +81,12 @@ class UserData{
         k++;
       });
     }
-    $('#p-education').css('visibility', 'visible');
+    $('#p-education').show();
   }
   addSkill (obj) {
+    if(this.skills.length != 0){
+      $('#p-skills').children('div').remove();
+    }
     this.skills = obj;
     var skill_count = obj.length;
     var k = 0;
@@ -89,9 +103,12 @@ class UserData{
       });
     }
 
-    $('#p-skills').css('visibility', 'visible');
+    $('#p-skills').show();
   }
   addProject (obj) {
+    if(this.projects.length != 0){
+      $('#p-project').children('div').remove();
+    }
     this.projects = obj;
     var project_count = obj.length;
     for(var i = 0; i<project_count; i++){
@@ -105,9 +122,12 @@ class UserData{
         k++;
       });
     }
-    $('#p-project').css('visibility', 'visible');
+    $('#p-project').show();
   }
   addTraining (obj) {
+    if(this.trainings.length != 0){
+      $('#p-training').children('div').remove();
+    }
     this.trainings = obj;
     var training_count = obj.length;
     for(var i = 0; i<training_count; i++){
@@ -121,9 +141,12 @@ class UserData{
         k++;
       });
     }
-    $('#p-training').css('visibility', 'visible');
+    $('#p-training').show();
   }
   addCertification (obj) {
+    if(this.certifications.length != 0){
+      $('#p-certification').children('div').remove();
+    }
     this.certifications = obj;
     var certification_count = obj.length;
     for(var i = 0; i<certification_count; i++){
@@ -136,9 +159,12 @@ class UserData{
         k++;
       });
     }
-    $('#p-certification').css('visibility', 'visible');
+    $('#p-certification').show();
   }
   addPublication (obj) {
+    if(this.publications.length != 0){
+      $('#p-publication').children('div').remove();
+    }
     this.publications = obj;
     var publication_count = obj.length;
     for(var i = 0; i<publication_count; i++){
@@ -152,9 +178,12 @@ class UserData{
         k++;
       });
     }
-    $('#p-publication').css('visibility', 'visible');
+    $('#p-publication').show();
   }
   addInternship (obj) {
+    if(this.internships.length != 0){
+      $('#p-internship').children('div').remove();
+    }
     this.internships = obj;
     var intern_count = obj.length;
     for(var i = 0; i<intern_count; i++){
@@ -168,12 +197,15 @@ class UserData{
         k++;
       });
     }
-    $('#p-internship').css('visibility', 'visible');
+    $('#p-internship').show();
   }
   addAchievement (obj) {
     this.achievements = obj;
   }
   addExperience (obj) {
+    if(this.experiences.length != 0){
+      $('#p-experience').children('div').remove();
+    }
     this.experiences = obj;
     var exp_count = obj.length;
     for(var i = 0; i<exp_count; i++){
@@ -187,7 +219,7 @@ class UserData{
         k++;
       });
     }
-    $('#p-experience').css('visibility', 'visible');
+    $('#p-experience').show();
   }
   addPersonaldetails (obj) {
     this.personaldetails = obj;
