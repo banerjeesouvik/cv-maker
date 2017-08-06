@@ -4,8 +4,9 @@ var count=0;
 var img_nm='';
 var url='';
 var skillName='';
-var skillcount = 1;
+var skillcount = 0;
 var added_skill=[];
+var saved_skills = newUser ["getSkill"] ();
 $(document).ready(function () {
   $.getJSON("skills.json")
     .done(function (data_json) {
@@ -15,6 +16,41 @@ $(document).ready(function () {
     .fail(function () {
       $("#skill_list").append("<option>Not able to load suggestions</option>");
     });
+
+  if(! $.isEmptyObject(saved_skills)){
+    skillcount = saved_skills.length;
+    (function recursive(i) {
+      skillName = saved_skills[i]["skill"];
+      added_skill.push(skillName.toLowerCase());
+      var skillTab = $('#showskills');
+      var newSkill = $(`<div class="skillset" id="skilldiv-${i}"></div>`);
+      skillTab.append(newSkill);
+      $('.skillset:last').show();
+      $('.skillset:last').load('../pages/skill.html', function () {
+        $('.skillset:last #skill-name').text(skillName);
+        if(check_skill(skillName)){
+          url = `../images/Skill Icons/${skillName}.png`;
+        }
+        else {
+          img_nm = img_nm[0];
+          url = `../images/Alphabets Icons/${img_nm}.jpeg`;
+        }
+        $('.skillset:last #skill-icon').css({
+          'background-image' : `url('${url}')`
+        });
+        var newHiddenInputDiv = $(`<div id="hiddendiv-${i}"></div>`);
+        var input1 = $(`<input type="hidden" id="skill-${i}" name="skill" value="${skillName}" />`);
+        var input2 = $(`<input type="hidden" id="skillprof${i}" name="skillprof" value="${saved_skills[i]['skillprof']}"/>`);
+        $(newHiddenInputDiv).append(input1);
+        $(newHiddenInputDiv).append(input2);
+        $('#Skill-form').append(newHiddenInputDiv);
+        $('.skillset:last').find('#fill-prof').animate({width: `${saved_skills[i]["skillprof"]}%`},200);
+        if(i < saved_skills.length -1)
+          recursive(++i);
+      })
+    }) (0);
+  }
+
   $("#skills").on({
     "keyup": function () {
       value=this.value.trim();
@@ -24,6 +60,7 @@ $(document).ready(function () {
         else if(value.length == 1){
           count=0;
           $(".suggestions").remove();
+          value = value.replace(/\+/g, "\\+");
           var pattern = new RegExp(`^${value}`,'i');
           $.each(skills, function (i, val) {
             if(pattern.test(val) && count < 5 && check_added_skills(val.toLowerCase())){
@@ -35,6 +72,7 @@ $(document).ready(function () {
         else if (value.length > 1) {
           count=0;
           $(".suggestions").remove();
+          value = value.replace(/\+/g, "\\+");
           var pattern = new RegExp(value,'i');
           $.each(skills, function (i, val) {
             if(pattern.test(val) && count < 5 && check_added_skills(val.toLowerCase())){
@@ -77,6 +115,7 @@ function check_added_skills(skl){
 }
 
 function check_skill(skl){
+  skl = skl.replace(/\+/g, "\\+");
   var pattern= new RegExp(`^${skl}$`, 'i');
   for(var i=0; i < skills.length; i++){
     if(pattern.test(skills[i])){

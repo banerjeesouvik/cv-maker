@@ -1,4 +1,4 @@
-var skillName;
+//var skillName;
 $('#add-skill-form').submit( function (e) {
   e.preventDefault();
   skillName = $('#skills').val();
@@ -13,14 +13,6 @@ $('#add-skill-form').submit( function (e) {
       added_skill.push(img_nm);
       skillTab.append(newSkill);
 
-      var newHiddenInputDiv = $(`<div id="hiddendiv-${skillcount}"></div>`);
-      var input1 = $(`<input type="hidden" id="skill-${skillcount}" name="skill" value="${skillName}" />`);
-      var input2 = $(`<input type="hidden" id="skillprof${skillcount++}" name="skillprof" />`);
-      $(newHiddenInputDiv).append(input1);
-      $(newHiddenInputDiv).append(input2);
-      $('#Skill-form').append(newHiddenInputDiv);
-
-
       if(check_skill(img_nm)){
         url = `../images/Skill Icons/${skillName}.png`;
       }
@@ -28,6 +20,14 @@ $('#add-skill-form').submit( function (e) {
         img_nm = img_nm[0];
         url = `../images/Alphabets Icons/${img_nm}.jpeg`;
       }
+
+      var newHiddenInputDiv = $(`<div id="hiddendiv-${skillcount}"></div>`);
+      var input1 = $(`<input type="hidden" id="skill-${skillcount}" name="skill" value="${skillName}" />`);
+      var input2 = $(`<input type="hidden" id="skillprof${skillcount++}" name="skillprof" />`);
+      $(newHiddenInputDiv).append(input1);
+      $(newHiddenInputDiv).append(input2);
+      $('#Skill-form').append(newHiddenInputDiv);
+
       $('.skillset:last').fadeIn(500);
       $('.skillset:last').load('../pages/skill.html');
     }

@@ -42,7 +42,7 @@ class UserData{
     $('#p-photo').css('background-image', `url('${url}')`);
   }
   addEducation(obj) {
-
+    this.education = obj;
     var edu_count = obj.length;
     for(var i=0; i< edu_count; i++){
       var k = 0;
@@ -68,7 +68,6 @@ class UserData{
         $(`#edu-div-${k} #p-edu-div-dept`).text(obj[k].course +' ' +obj[k].dept);
         $(`#edu-div-${k} .p-edu-div-board`).text(obj[k].board);
         k++;
-        this.education = obj;
       });
     }
     $('#p-education').css('visibility', 'visible');
