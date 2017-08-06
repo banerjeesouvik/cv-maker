@@ -239,7 +239,7 @@
   width: 28vw;
   font-family: "century gothic";
 }
-.p-exp-div, .p-intern-div{
+.p-exp-div{
   position: relative;
   float: left;
   margin-top: .6vh;
@@ -248,17 +248,15 @@
   float: left;
   background-color: #eee;
 }
-#exp-border, #intern-border{
+#exp-border{
   position: relative;
   float: left;
   height: 100%;
   width: 1vw;
   background-color: #f44;
 }
-#intern-border{
-  background-color: #299;
-}
-#exp-pos, #intern-pos{
+
+#exp-pos{
   position: absolute;
   top: 0%;
   left: 1.2vw;
@@ -266,37 +264,47 @@
   color: #000;
   font-weight: bold;
 }
-#exp-company, #intern-company{
+#exp-company{
   position: absolute;
   top: 1.5vw;
   left: 1.2vw;
   font-size: .9vw;
   color: #299;
 }
-#exp-period,#intern-period{
+#exp-period{
   position: absolute;
   right: .4vw;
   top: 0%;
   font-size: .8vw;
   color: #666;
 }
-#p-internship{
+#intern-period{
   position: relative;
   float: right;
-  margin-right: 2vw;
-  height: auto;
-  width: 20vw;
-  font-family: "century gothic";
+  margin-right: .4vw;
+  font-size: .8vw;
+  color: #666;
+  text-align: right;
 }
-#p-project{
+#training-period{
+  font-size: 0.8vw;
+  margin-left: .2vw;
+  color: #666;
+}
+#p-project,#p-internship,#p-training, #p-certification, #p-publication{
   position: relative;
   float: left;
   margin-left: 2vw;
   width: 28vw;
-  height: 20vh;
+  height: auto;
   font-family: "century gothic";
 }
-.p-project-div{
+#p-internship,#p-training, #p-certification{
+  float: right;
+  margin-right: 2vw;
+  width: 20vw;
+}
+.p-project-div, .p-intern-div, .p-training-div, .p-certification-div, .p-publication-div{
   position: relative;
   float: left;
   margin-top: .6vh;
@@ -305,14 +313,19 @@
   background-color: #eee;
   border-left: 1vw solid #f44;
 }
-#project-name{
+.p-intern-div, .p-training-div, .p-certification-div{
+  width: 19vw;
+  border-left: 1vw solid #299;
+}
+#project-name, #intern-pos, #training-name, #certification-name, #publication-name{
   position: relative;
-  margin-top: 0%;
+  margin-top: .2vw;
+  width: 15vw;
   margin-left: .2vw;
-  font-size: 1.1vw;
+  font-size: 1vw;
   font-weight: bold;
 }
-#project-tech{
+#project-tech, #intern-company, #training-org, #certification-auth, #publication-auth{
   position: relative;
   margin-top: 1.5vw;
   margin-left: .2vw;
@@ -320,7 +333,7 @@
   color: #299;
   font-weight: bold;
 }
-#project-desc{
+#project-desc, #publication-desc{
   position: relative;
   float: left;
   margin-bottom: .2vh;

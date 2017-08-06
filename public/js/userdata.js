@@ -109,12 +109,50 @@ class UserData{
   }
   addTraining (obj) {
     this.trainings = obj;
+    var training_count = obj.length;
+    for(var i = 0; i<training_count; i++){
+      var k = 0;
+      var trainingDiv = $(`<div class="p-training-div" id="p-training-div-${i}"></div>`);
+      $('#p-training').append(trainingDiv);
+      $(`#p-training-div-${i}`).load('../pages/preview-training.html', function () {
+        $(`#p-training-div-${k} #training-name`).text(obj[k].training_name);
+        $(`#p-training-div-${k} #training-org`).text(obj[k].organisation_name);
+        $(`#p-training-div-${k} #training-period`).text(obj[k].start_date + ' - ' + obj[k].end_date);
+        k++;
+      });
+    }
+    $('#p-training').css('visibility', 'visible');
   }
   addCertification (obj) {
     this.certifications = obj;
+    var certification_count = obj.length;
+    for(var i = 0; i<certification_count; i++){
+      var k = 0;
+      var certificationDiv = $(`<div class="p-certification-div" id="p-certification-div-${i}"></div>`);
+      $('#p-certification').append(certificationDiv);
+      $(`#p-certification-div-${i}`).load('../pages/preview-certification.html', function () {
+        $(`#p-certification-div-${k} #certification-name`).text(obj[k].certification_name);
+        $(`#p-certification-div-${k} #certification-auth`).text(obj[k].certification_authority);
+        k++;
+      });
+    }
+    $('#p-certification').css('visibility', 'visible');
   }
   addPublication (obj) {
     this.publications = obj;
+    var publication_count = obj.length;
+    for(var i = 0; i<publication_count; i++){
+      var k = 0;
+      var publicationDiv = $(`<div class="p-publication-div" id="p-publication-div-${i}"></div>`);
+      $('#p-publication').append(publicationDiv);
+      $(`#p-publication-div-${i}`).load('../pages/preview-publication.html', function () {
+        $(`#p-publication-div-${k} #publication-name`).text(obj[k].publication_title);
+        $(`#p-publication-div-${k} #publication-auth`).text(obj[k].publication_authority);
+        $(`#p-publication-div-${k} #publication-desc`).text(obj[k].publication_desc);
+        k++;
+      });
+    }
+    $('#p-publication').css('visibility', 'visible');
   }
   addInternship (obj) {
     this.internships = obj;
