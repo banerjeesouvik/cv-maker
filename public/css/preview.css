@@ -336,6 +336,7 @@
   margin-left: .2vw;
   font-size: 1vw;
   font-weight: bold;
+  color: #666;
 }
 #project-tech, #intern-company, #training-org, #certification-auth, #publication-auth{
   position: relative;
