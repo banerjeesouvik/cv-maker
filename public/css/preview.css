@@ -5,6 +5,18 @@
   background-color: #eee;
   border-bottom: 2px solid #f44;
 }
+#left-container{
+  position: relative;
+  float: left;
+  height: 64vw;
+  width: 30vw;
+}
+#right-container{
+  position: relative;
+  float: right;
+  height: 64vw;
+  width: 22vw;
+}
 #p-name{
   position: relative;
   margin: 1.5%;
