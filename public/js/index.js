@@ -67,6 +67,28 @@ $(document).ready(function () {
 $('#view').on('click', function(){
   $('#preview-div').slideToggle();
 });
+$('#print').on('click', function(){
+  $('#preview').show();
+
+  //createPDF();
+  var element = $('#preview');
+  $('#preview').scrollTop(0);
+  html2canvas(element, {
+    scale: 6,
+	  onrendered: myRenderFunction
+   });
+});
+function myRenderFunction(canvas) {
+  document.body.appendChild(canvas);
+  var doc;
+  var img = canvas.toDataURL("image/png"),
+     doc = new jsPDF({
+     unit: 'px',
+     format: 'a4'
+    });
+   doc.addImage(img, 'JPEG', 0, 0);
+   doc.save('cv.pdf');
+}
 
 $('.steps-element').click(function () {
   var id = $(this).attr('id');
