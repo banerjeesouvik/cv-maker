@@ -1,0 +1,348 @@
+#preview-head{
+  position: relative;
+  height: 14vw;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 2px solid #666;
+}
+#p-name{
+  position: relative;
+  margin: 2%;
+  float: left;
+  height: auto;
+  width: max-content;
+  font-size: 2vw;
+  color: #000;
+  font-family: "century gothic";
+  text-transform: uppercase;
+}
+#p-photo{
+  position: relative;
+  float: right;
+  margin: 1.5%;
+  height: 10.6vw;
+  width: 8.75vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 2px solid #4c4c4c;
+}
+#p-objective{
+  position: absolute;
+  left: 3.5%;
+  top: 4vw;
+  height: auto;
+  width:70%;
+  font-size: 1.2vw;
+  color: #4c4c4c;
+  font-family: "century gothic";
+  text-align: justify;
+}
+#p-links{
+  position: absolute;
+  margin-top: 22vh;
+  left: 1vw;
+  height: auto;
+  width: 80%;
+  //text-align: right;
+  display: inline-flex;
+}
+.p-links-elem{
+  position: relative;
+  //float: right;
+  //height: auto;
+  //width: 100%;
+  margin: .2vh;
+  font-size: 1vw;
+  color: #666;
+  font-family: "century gothic";
+  font-weight: bold;
+  display: inherit;
+}
+.p-icon{
+  position: relative;
+  //float: right;
+  height: 1.6vw;
+  width: 1.6vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#p-address{
+  position: absolute;
+  margin-top: 17vh;
+  left: 2.2%;
+  width: 69.7%;
+  height: auto;
+  font-size: 1.2vw;
+  color: #333;
+  font-family: "century gothic";
+}
+#p-email-icon{
+  background-image: url('../images/email.png');
+}
+#p-mobile-icon{
+  background-image: url('../images/mobile.png');
+}
+#p-address-icon{
+  background-image: url('../images/address.png');
+}
+#p-linkedin-icon{
+  background-image: url('../images/linkedin.png');
+}
+#p-github-icon{
+  background-image: url('../images/github.png');
+}
+#p-education{
+  position: relative;
+  float: left;
+  margin-left: 2vw;
+  height: auto;
+  width: 28vw;
+  font-family: "century gothic";
+}
+.p-div-name{
+  position: relative;
+  float: left;
+  margin-top: 2vh;
+  float: left;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #888;
+}
+.p-edu-div{
+  position: relative;
+  float: left;
+  margin-top: .6vh;
+  height: auto;
+  width: 100%;
+  background-color: #eee;
+}
+.p-edu-div-score{
+  position: relative;
+  float: left;
+  height: 5vw;
+  width: 5vw;
+  background-color: #eee;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+#p-score-type{
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  font-size: 1vw;
+  color: #4c4c4c;
+  text-align: center;
+}
+#p-score-value{
+  position: absolute;
+  top: 2.5vh;
+  width: 100%;
+  text-align: center;
+  height: 5vh;
+  font-size: 2.4vw;
+  color: #000;
+}
+.p-edu-div-degree{
+  position: absolute;
+  top: 2%;
+  left: 5.5vw;
+  font-size: 1vw;
+  color: #000;
+}
+.p-edu-div-year{
+  position: absolute;
+  top: 2%;
+  right: .5vw;
+  font-size: 1vw;
+  color: #666;
+}
+.p-edu-div-inst{
+  position: absolute;
+  top: 1.3vw;
+  left: 5.5vw;
+  font-size: 1vw;
+  color: #4c4c4c;
+}
+#p-edu-div-inst-value{
+  font-weight: bold;
+}
+#p-edu-div-dept{
+  font-size: 1vw;
+  color: #666;
+}
+.p-edu-div-board{
+  position: absolute;
+  bottom: 2%;
+  left: 5.5vw;
+  font-size: .9vw;
+  color: #4c4c4c;
+}
+#p-skills{
+  position: relative;
+  float: right;
+  margin-right: 2vw;
+  height: auto;
+  width: 20vw;
+  font-family: "century gothic";
+}
+.p-skill-div{
+  position: relative;
+  float: left;
+  margin-top: .6vh;
+  height: auto;
+  width: 100%;
+  background-color: #eee;
+}
+#p-skill-logo{
+  position: relative;
+  float: left;
+  visibility: hidden;
+  height: 3vw;
+  width: 3vw;
+  border: 1px solid #999;
+  background-color: #fff;
+  border-radius: 20%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+#p-skill-name{
+  position: absolute;
+  top: 8%;
+  left: 1vw;
+  width: 80%;
+  font-size: 1vw;
+  font-family: "century gothic";
+  font-weight: bold;
+  color: #444;
+}
+#p-skill-prof{
+  position: absolute;
+  bottom: .7vw;
+  left: 4.5vw;
+  height: .4vw;
+  width: 15vw;
+  border: 1px solid #666;
+  background-color: #fff;
+}
+#p-skill-prof-header{
+  position: absolute;
+  left: 1vw;
+  bottom: .7vw;
+  font-size: .7vw;
+  font-family: "century gothic";
+  color: #333;
+}
+#p-skill-prof-value{
+  position: absolute;
+  height: 100%;
+  background-color: #666;
+  //border-radius: 2vw;
+}
+#p-experience{
+  position: relative;
+  float: left;
+  margin-left: 2vw;
+  height: auto;
+  width: 28vw;
+  font-family: "century gothic";
+}
+.p-exp-div, .p-intern-div{
+  position: relative;
+  float: left;
+  margin-top: .6vh;
+  width: 100%;
+  height: 6.5vh;
+  float: left;
+  background-color: #eee;
+  border-radius: 0 2% 2% 0;
+}
+#exp-border, #intern-border{
+  position: relative;
+  float: left;
+  visibility: hidden;
+  height: 100%;
+  width: 1vw;
+  background-color: #f44;
+}
+#intern-border{
+  background-color: #299;
+}
+#exp-pos, #intern-pos{
+  position: absolute;
+  top: 50%;
+  left: 1vw;
+  font-size: 1.2vw;
+  color: #4c4c4c;
+}
+#exp-company, #intern-company{
+  position: absolute;
+  top: 8%;
+  left: 1vw;
+  font-size: 1.4vw;
+  color: #000;
+  font-weight: bold;
+}
+#exp-period{
+  position: absolute;
+  right: .4vw;
+  top: 2%;
+  font-size: .9vw;
+  color: #666;
+}
+#intern-period{
+  position: absolute;
+  right: .4vw;
+  bottom: 2%;
+  font-size: .9vw;
+  color: #666;
+}
+#p-internship{
+  position: relative;
+  float: right;
+  margin-right: 2vw;
+  height: auto;
+  width: 20vw;
+  font-family: "century gothic";
+}
+#p-project{
+  position: relative;
+  float: left;
+  margin-left: 2vw;
+  width: 28vw;
+  height: 20vh;
+  font-family: "century gothic";
+}
+.p-project-div{
+  position: relative;
+  float: left;
+  margin-top: .6vh;
+  width: 27vw;
+  height: auto;
+  background-color: #eee;
+  padding-left: .5vw;
+  border-radius: 0 2% 2% 0;
+}
+#project-name{
+  position: relative;
+  margin-top: 0%;
+  margin-left: .2vw;
+  font-size: 1.1vw;
+  font-weight: bold;
+}
+#project-tech{
+  position: relative;
+  margin-top: 1.5vw;
+  margin-left: .2vw;
+  font-size: .9vw;
+  color: #333;
+  font-weight: bold;
+}
+#project-desc{
+  position: relative;
+  float: left;
+  margin-bottom: .2vh;
+  margin-left: .2vw;
+  font-size: .8vw;
+  width: 26vw;
+  color: #444;
+}
