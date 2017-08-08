@@ -12,6 +12,8 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "request": "^2.81.0"
+    "node-wkhtmltopdf": "^2.0.0",
+    "request": "^2.81.0",
+    "wkhtmltopdf": "^0.3.4"
   }
 }

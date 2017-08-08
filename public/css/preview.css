@@ -5,6 +5,18 @@
   background-color: #eee;
   border-bottom: 2px solid #f44;
 }
+#left-container{
+  position: relative;
+  float: left;
+  height: 64vw;
+  width: 30vw;
+}
+#right-container{
+  position: relative;
+  float: right;
+  height: 64vw;
+  width: 24vw;
+}
 #p-name{
   position: relative;
   margin: 1.5%;
@@ -194,7 +206,7 @@
   width: 3vw;
   border: 1px solid #999;
   background-color: #fff;
-  border-radius: 20%;
+  border-radius: 5px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -214,7 +226,7 @@
   height: .4vw;
   width: 16vw;
   border: 1px solid #299;
-  border-radius: 2vw;
+  border-radius: 2px;
   background-color: #fff;
 }
 #p-skill-prof-header{
@@ -229,7 +241,7 @@
   position: absolute;
   height: 100%;
   background-color: #299;
-  border-radius: 2vw;
+  border-radius: 2px;
 }
 #p-experience{
   position: relative;
@@ -239,7 +251,7 @@
   width: 28vw;
   font-family: "century gothic";
 }
-.p-exp-div, .p-intern-div{
+.p-exp-div{
   position: relative;
   float: left;
   margin-top: .6vh;
@@ -248,17 +260,15 @@
   float: left;
   background-color: #eee;
 }
-#exp-border, #intern-border{
+#exp-border{
   position: relative;
   float: left;
   height: 100%;
   width: 1vw;
   background-color: #f44;
 }
-#intern-border{
-  background-color: #299;
-}
-#exp-pos, #intern-pos{
+
+#exp-pos{
   position: absolute;
   top: 0%;
   left: 1.2vw;
@@ -266,53 +276,69 @@
   color: #000;
   font-weight: bold;
 }
-#exp-company, #intern-company{
+#exp-company{
   position: absolute;
   top: 1.5vw;
   left: 1.2vw;
   font-size: .9vw;
   color: #299;
 }
-#exp-period,#intern-period{
+#exp-period{
   position: absolute;
   right: .4vw;
   top: 0%;
   font-size: .8vw;
   color: #666;
 }
-#p-internship{
+#intern-period{
   position: relative;
   float: right;
-  margin-right: 2vw;
-  height: auto;
-  width: 20vw;
-  font-family: "century gothic";
+  margin-right: .4vw;
+  font-size: .8vw;
+  color: #666;
+  text-align: right;
 }
-#p-project{
+#training-period{
+  font-size: 0.8vw;
+  margin-left: .2vw;
+  color: #666;
+}
+#p-project,#p-internship,#p-training, #p-certification, #p-publication{
   position: relative;
   float: left;
   margin-left: 2vw;
   width: 28vw;
-  height: 20vh;
+  height: auto;
   font-family: "century gothic";
 }
-.p-project-div{
+#p-internship,#p-training, #p-certification{
+  float: right;
+  margin-right: 2vw;
+  width: 22vw;
+}
+.p-project-div, .p-intern-div, .p-training-div, .p-certification-div, .p-publication-div{
   position: relative;
   float: left;
   margin-top: .6vh;
-  width: 27vw;
+  width: 28vw;
   height: auto;
   background-color: #eee;
   border-left: 1vw solid #f44;
 }
-#project-name{
-  position: relative;
-  margin-top: 0%;
-  margin-left: .2vw;
-  font-size: 1.1vw;
-  font-weight: bold;
+.p-intern-div, .p-training-div, .p-certification-div{
+  width: 19vw;
+  border-left: 1vw solid #299;
 }
-#project-tech{
+#project-name, #intern-pos, #training-name, #certification-name, #publication-name{
+  position: relative;
+  margin-top: .2vw;
+  width: 15vw;
+  margin-left: .2vw;
+  font-size: 1vw;
+  font-weight: bold;
+  color: #666;
+}
+#project-tech, #intern-company, #training-org, #certification-auth, #publication-auth{
   position: relative;
   margin-top: 1.5vw;
   margin-left: .2vw;
@@ -320,7 +346,7 @@
   color: #299;
   font-weight: bold;
 }
-#project-desc{
+#project-desc, #publication-desc{
   position: relative;
   float: left;
   margin-bottom: .2vh;
