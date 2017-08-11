@@ -227,8 +227,6 @@ class UserData{
   addStrength (strength) {
 
   }
-
-
   getBasicInfo () {
     return this.basicinfo;
   }
