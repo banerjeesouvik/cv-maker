@@ -78,6 +78,10 @@ $('#print').on('click', function(){
 	  onrendered: myRenderFunction
    });
 });
+$('.template_btn').click(function () {
+  $('#preview_css').attr('href', `./css/preview${this.value}.css`);
+})
+
 function myRenderFunction(canvas) {
   document.body.appendChild(canvas);
   var doc;

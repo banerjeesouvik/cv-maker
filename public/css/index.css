@@ -513,3 +513,22 @@ legend{
   border-radius: 5px;
   background-color: #f55;
 }
+
+.template_btn{
+  position: relative;
+  margin: 2vw;
+  float: left;
+  width: max-content;
+  height: 4vh;
+  border: 1px solid transparent;
+  padding: 5px;
+  background-color: #565b92;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.5vh;
+}
+.preview_templates{
+  position: absolute;
+  top: 15vh;
+  left: 5vh;
+}
