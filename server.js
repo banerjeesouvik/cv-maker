@@ -2,10 +2,9 @@ const express = require('express');
 const request=require('request');
 const path = require('path');
 const bodyParser = require('body-parser');
-const wkhtmltopdf = require('wkhtmltopdf');
 
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8000;
 
 const publicPath = path.join(__dirname, './public');
 app.use(express.static(publicPath));
@@ -34,10 +33,6 @@ app.post('/pincode', function (req, res) {
 
 	}
 });
-
-});
-
-app.post('/pdf', function (req, res) {
 
 });
 
