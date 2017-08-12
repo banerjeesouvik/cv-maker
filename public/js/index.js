@@ -68,18 +68,22 @@ $('#view').on('click', function(){
   $('#preview-div').slideToggle();
 });
 $('#print').on('click', function(){
-  $('#preview').show();
+  /*$('#preview').show();
 
   //createPDF();
   var element = $('#preview');
   $('#preview').scrollTop(0);
   html2canvas(element, {
-    scale: 6,
+    scale: 2.5,
 	  onrendered: myRenderFunction
-   });
+  });*/
+  var pw = window.open();
+  var html = $('#preview').html();
+  $(pw.document.body).html(html);
+  //pw.print();
 });
 $('.template_btn').click(function () {
-  $('#preview_css').attr('href', `./css/preview${this.value}.css`);
+  $('#preview_css').attr('href', `http://localhost:3000/css/preview${this.value}.css`);
 })
 
 function myRenderFunction(canvas) {
