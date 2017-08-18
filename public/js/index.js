@@ -71,6 +71,7 @@ $('#view').on('click', function(){
   $(this).text(txt);
   $('#print').toggle();
 });
+
 $('#print').on('click', function(){
   //$('#preview-div').show();
 
@@ -81,25 +82,32 @@ $('#print').on('click', function(){
     scale: 3,
 	  onrendered: myRenderFunction
   });*/
-  /*pw = window.open('/printpreview', '_blank');
-  console.log(pw);
-  pw.obj.dataFromParent = html;
-  pw.focus();
-  pw.obj.render();*/
-  var txt = $(this).text();
-  txt = 'Proceed To Download' == txt ? 'Back':'Proceed To Download';
-  $(this).text(txt);
+
+  //var txt = $(this).text();
+  //txt = 'Proceed To Download' == txt ? 'Back':'Proceed To Download';
+  //$(this).text(txt);
   $('#progress-bar,#container > #steps,#main-tab').toggle();
-  var css_nm = $('#index_css').attr('href');
-  css_nm = './css/index.css' == css_nm ? './css/printpreview.css': './css/index.css';
-  $('#index_css').attr('href', css_nm);
-  css_nm = $('#preview_css').attr('href');
-  css_nm = './css/preview1.css' == css_nm ? './css/style1.css': './css/preview1.css';
-  $('#preview_css').attr('href', css_nm);
-  $('#preview-div').toggle();
+  //var css_nm = $('#index_css').attr('href');
+  //css_nm = './css/index.css' == css_nm ? './css/printpreview.css': './css/index.css';
+  $('#index_css').attr('href', './css/printpreview.css');
+  //css_nm = $('#preview_css').attr('href');
+  //css_nm = './css/preview1.css' == css_nm ? './css/style1.css': './css/preview1.css';
+  $('#preview_css').attr('href', './css/style1.css');
+  $(this).hide();
+  $('#print-close,#preview-div').show();
   $('#view, .preview_templates, #download').toggle();
 
 });
+$('#print-close').on('click', function () {
+  $('#progress-bar,#container > #steps,#main-tab').toggle();
+  $('#index_css').attr('href', './css/index.css');
+  $('#preview_css').attr('href', './css/preview1.css');
+  $(this).hide();
+  $('#preview-div').hide();
+  $('#print').show();
+  $('#view, .preview_templates, #download').toggle();
+
+})
 $('.template_btn').click(function () {
   $('#preview_css').attr('href', `./css/style${this.value}.css`);
 });
