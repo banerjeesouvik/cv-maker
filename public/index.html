@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome</title>
-  <link rel="stylesheet" href="./css/index.css">
+  <link id="index_css" rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -29,12 +29,13 @@
     </div>
     <div id="main-tab"></div>
     <div id="view-pane">
-      <button id="view">view</button>
-      <button id="print">print</button>
-      <div class="preview_templates">
+      <button id="view">Preview</button>
+      <button id="print">Proceed To Download</button>
+      <div class="preview_templates" style="display:none;">
         <button class="template_btn" value="1">Style 1</button>
         <button class="template_btn" value="2">Style 2</button>
       </div>
+      <button id="download" style="display:none;">Download</button>
     </div>
     <div id="preview-div">
       <div id="preview"></div>

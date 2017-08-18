@@ -41,6 +41,9 @@ app.post('/pdf', function (req, res) {
 
 });
 
+app.get('/printpreview', function (req, res) {
+  res.sendFile(path.join(__dirname, 'public/pages', 'printpreview_prev.html'));
+});
 app.listen(port, () =>{
   console.log(`Server deployed on port ${port}`);
 });

@@ -77,14 +77,38 @@ $('#print').on('click', function(){
     scale: 2.5,
 	  onrendered: myRenderFunction
   });*/
-  var pw = window.open();
-  var html = $('#preview').html();
-  $(pw.document.body).html(html);
-  //pw.print();
+  /*pw = window.open('/printpreview', '_blank');
+  console.log(pw);
+  pw.obj.dataFromParent = html;
+  pw.focus();
+  pw.obj.render();*/
+  var txt = $(this).text();
+  txt = 'Proceed To Download' == txt ? 'Back':'Proceed To Download';
+  $(this).text(txt);
+  $('#progress-bar,#container > #steps,#main-tab').toggle();
+  var css_nm = $('#index_css').attr('href');
+  css_nm = './css/index.css' == css_nm ? './css/printpreview.css': './css/index.css';
+  $('#index_css').attr('href', css_nm);
+  $('#preview-div').toggle();
+  css_nm = $('#preview_css').attr('href');
+  css_nm = './css/preview1.css' == css_nm ? './css/style1.css': './css/preview1.css';
+  $('#preview_css').attr('href', css_nm);
+  $('#view, .preview_templates, #download').toggle();
+
 });
 $('.template_btn').click(function () {
-  $('#preview_css').attr('href', `http://localhost:3000/css/preview${this.value}.css`);
-})
+  $('#preview_css').attr('href', `./css/preview${this.value}.css`);
+});
+
+$('#downlaod').click(function () {
+  //$('#preview').show();
+  var element = $('#preview');
+  $('#preview').scrollTop(0);
+  html2canvas(element, {
+    scale: 2.5,
+	  onrendered: myRenderFunction
+  });
+});
 
 function myRenderFunction(canvas) {
   document.body.appendChild(canvas);
