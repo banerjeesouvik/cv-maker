@@ -193,7 +193,7 @@
   float: right;
   margin-right: 2vw;
   height: auto;
-  width: 20vw;
+  width: 22vw;
   font-family: "century gothic";
 }
 .p-skill-div{
@@ -229,9 +229,8 @@
   bottom: .2vw;
   left: 3.5vw;
   height: .4vw;
-  width: 16vw;
+  width: 18vw;
   border: 1px solid #299;
-  border-radius: 2px;
   background-color: #fff;
 }
 #p-skill-prof-header{
@@ -246,7 +245,6 @@
   position: absolute;
   height: 100%;
   background-color: #299;
-  border-radius: 2px;
 }
 #p-experience{
   position: relative;
@@ -332,7 +330,7 @@
   border-left: 1vw solid #f44;
 }
 .p-intern-div, .p-training-div, .p-certification-div{
-  width: 19vw;
+  width: 21vw;
   border-left: 1vw solid #299;
 }
 #project-name, #intern-pos, #training-name, #certification-name, #publication-name{

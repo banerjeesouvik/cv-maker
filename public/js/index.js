@@ -66,15 +66,19 @@ $(document).ready(function () {
 });
 $('#view').on('click', function(){
   $('#preview-div').slideToggle();
+  var txt = $(this).text();
+  txt = 'Preview' == txt ? 'Close Preview':'Preview';
+  $(this).text(txt);
+  $('#print').toggle();
 });
 $('#print').on('click', function(){
-  /*$('#preview').show();
+  //$('#preview-div').show();
 
   //createPDF();
-  var element = $('#preview');
-  $('#preview').scrollTop(0);
+  /*var element = $('#preview');
+  $('#preview-div').scrollTop(0);
   html2canvas(element, {
-    scale: 2.5,
+    scale: 3,
 	  onrendered: myRenderFunction
   });*/
   /*pw = window.open('/printpreview', '_blank');
@@ -89,15 +93,15 @@ $('#print').on('click', function(){
   var css_nm = $('#index_css').attr('href');
   css_nm = './css/index.css' == css_nm ? './css/printpreview.css': './css/index.css';
   $('#index_css').attr('href', css_nm);
-  $('#preview-div').toggle();
   css_nm = $('#preview_css').attr('href');
   css_nm = './css/preview1.css' == css_nm ? './css/style1.css': './css/preview1.css';
   $('#preview_css').attr('href', css_nm);
+  $('#preview-div').toggle();
   $('#view, .preview_templates, #download').toggle();
 
 });
 $('.template_btn').click(function () {
-  $('#preview_css').attr('href', `./css/preview${this.value}.css`);
+  $('#preview_css').attr('href', `./css/style${this.value}.css`);
 });
 
 $('#downlaod').click(function () {
@@ -113,11 +117,11 @@ $('#downlaod').click(function () {
 function myRenderFunction(canvas) {
   document.body.appendChild(canvas);
   var doc;
-  var img = canvas.toDataURL("image/png"),
+   var img = canvas.toDataURL("image/png"),
      doc = new jsPDF({
      unit: 'px',
      format: 'a4'
-    });
+   });
    doc.addImage(img, 'JPEG', 0, 0);
    doc.save('cv.pdf');
 }
